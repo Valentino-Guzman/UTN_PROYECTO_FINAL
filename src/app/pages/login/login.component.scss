@@ -1,0 +1,76 @@
+.login {
+    width: 300px;
+    height: 380px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.7);
+    
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.email, .pass {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.email input, .pass input {
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #EAEBEC;
+    margin-top: 10px;
+    padding: 3px;
+    padding-left: 10px;
+}
+
+.login p {
+    color: #999BA1;
+    font-size: 13px;
+    margin-top: 5px;
+} 
+
+.login h1 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.formulario span {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #6236F5;
+    font-size: 13px;
+}
+
+.formulario button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    margin-top: 35px;
+    background: #6236F5;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    transition: 0.3s ease;
+}
+
+.formulario button:hover {
+    background: #502DC4;
+    cursor: pointer;
+}
+
+.formulario svg {
+    margin-top: 3px;
+    margin-left: 3px;
+}
+
+

@@ -1,0 +1,12 @@
+<div class="navegacion">
+    <button 
+    [ngClass]="{'active': selected === 'login'}" 
+    (click)="select('login')" 
+    [routerLink]="['/login']">
+    Login</button>
+    <button 
+    [ngClass]="{'active': selected === 'register'}" 
+    (click)="select('register')"
+    [routerLink]="['/register']">Register
+</button>
+</div>
