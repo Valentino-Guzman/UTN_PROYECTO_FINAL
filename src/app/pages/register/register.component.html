@@ -1,0 +1,30 @@
+<div class="container">
+    <app-navegacion></app-navegacion>
+    <section class="registro">
+        <h1>Bienvenido</h1>
+        <p>Por favor ingrese su email y contraseña</p>
+        <div>
+            <form class="formulario">
+                <div class="nombre">
+                    <label>Nombre</label>
+                    <input type="name" id="nombre" name="nombre" placeholder="Introduzca su nombre"
+                        [(ngModel)]="registerData.nombre" required />
+                </div>
+                <div class="email">
+                    <label>Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email"
+                        [(ngModel)]="registerData.email" required />
+                </div>
+                <div class="pass">
+                    <label>Contraseña</label>
+                    <input type="password" name="password" placeholder="Introduzca la contraseña"
+                        [(ngModel)]="registerData.password" required />
+                </div>
+                <span>Olvidó su contraseña?</span>
+                <button (click)="register()">Registrarse
+                    <app-svg-flecha></app-svg-flecha>          
+                </button>
+            </form>
+        </div>
+    </section> 
+</div>

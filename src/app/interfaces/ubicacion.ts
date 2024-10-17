@@ -1,3 +1,4 @@
 export interface ubicacion {
-    ubicacion: string
+    id: number;
+    ubicacion: string;
 }

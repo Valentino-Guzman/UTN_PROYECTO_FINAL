@@ -1,49 +1,61 @@
-<div>
+<div class="contenedor">
     <form class="formulario">
         <div class="informacion">
             <label>Tarea</label>
-            <input type="number" id="activo_tarea_descrip_id" name="activo_tarea_descrip_id" placeholder="Introduzca la tarea"
-                [(ngModel)]="ordenData.activo_tarea_descrip_id" required />
-        </div>
-        <div class="informacion">
+            <select [(ngModel)]="ordenData.usuario_id" name="operario" required>
+                <option *ngFor="let operario of operarios" [value]="operario.id">
+                    {{ operario.nombre }}
+                </option>
+            </select>
             <label>Código Único</label>
-            <input type="text" id="codigo_unico" name="codigo_unico" placeholder="Introduzca el código único"
-                [(ngModel)]="ordenData.codigo_unico" required />
-        </div>
-        <div class="informacion">
+            <select [(ngModel)]="ordenData.usuario_id" name="operario" required>
+                <option *ngFor="let operario of operarios" [value]="operario.id">
+                    {{ operario.nombre }}
+                </option>
+            </select>
+            <label>Ubicación</label>
+            <select [(ngModel)]="ubicaciones" name="operario" required>
+                <option *ngFor="let ubicacion of ubicaciones" [value]="ubicacion.id">
+                    {{ ubicacion.ubicacion }}
+                </option>
+            </select>
             <label>Edificio</label>
-            <input type="number" name="edificio" placeholder="Introduzca el edificio"
-                [(ngModel)]="ordenData.edificio_id" required />
-        </div>
-        <div class="informacion">
+            <select [(ngModel)]="ordenData.usuario_id" name="operario" required>
+                <option *ngFor="let operario of operarios" [value]="operario.id">
+                    {{ operario.nombre }}
+                </option>
+            </select>
             <label>Sector</label>
-            <input type="number" name="sector" placeholder="Introduzca el sector"
-                [(ngModel)]="ordenData.sector_id" required />
-        </div>
-        <div class="informacion">
+            <select [(ngModel)]="ordenData.usuario_id" name="operario" required>
+                <option *ngFor="let operario of operarios" [value]="operario.id">
+                    {{ operario.nombre }}
+                </option>
+            </select>
             <label>Piso</label>
-            <input type="number" name="piso" placeholder="Introduzca el piso"
-                [(ngModel)]="ordenData.piso_id" required />
-        </div>
-        <div class="informacion">
+            <select [(ngModel)]="ordenData.usuario_id" name="operario" required>
+                <option *ngFor="let operario of operarios" [value]="operario.id">
+                    {{ operario.nombre }}
+                </option>
+            </select>
             <label for="operario">Operario</label>
             <select [(ngModel)]="ordenData.usuario_id" name="operario" required>
                 <option *ngFor="let operario of operarios" [value]="operario.id">
                     {{ operario.nombre }}
                 </option>
             </select>
-        </div>
-        <div class="informacion">
             <label>Observacion</label>
-            <input type="text" name="usuario"
-                [(ngModel)]="ordenData.observacion" required />
-        </div>
-        <div class="informacion">
+            <select [(ngModel)]="ordenData.usuario_id" name="operario" required>
+                <option *ngFor="let operario of operarios" [value]="operario.id">
+                    {{ operario.nombre }}
+                </option>
+            </select>
             <label>Tipo de Orden</label>
-            <input type="number" id="tipo_ot_id" name="tipo_ot_id" placeholder="Introduzca la tarea"
-                [(ngModel)]="ordenData.tipo_ot_id" required />
+            <select [(ngModel)]="ordenData.usuario_id" name="operario" required>
+                <option *ngFor="let operario of operarios" [value]="operario.id">
+                    {{ operario.nombre }}
+                </option>
+            </select>
         </div>
-
         <button (click)="crearOrdenDeTrabajo()">Crear Orden</button>
     </form>
 </div>

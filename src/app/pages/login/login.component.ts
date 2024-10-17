@@ -4,7 +4,7 @@ import { Ilogin } from '../../interfaces/login';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { NavegacionComponent } from '../../components/header/navegacion/navegacion.component';
+import { NavegacionComponent } from '../../components/navegacion/navegacion.component';
 
 
 

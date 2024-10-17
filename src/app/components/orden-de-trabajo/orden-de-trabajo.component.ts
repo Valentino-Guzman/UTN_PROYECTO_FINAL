@@ -5,6 +5,8 @@ import { Orden } from '../../interfaces/orden';
 import { operario } from '../../interfaces/operario';
 import { OrdenDeTrabajoService } from '../../services/orden-de-trabajo.service';
 import { OperarioService } from '../../services/operario.service';
+import { UbicacionService } from '../../services/ubicacion.service';
+import { ubicacion } from '../../interfaces/ubicacion';
 
 @Component({
   selector: 'app-orden-de-trabajo',
@@ -28,16 +30,21 @@ export class OrdenDeTrabajoComponent implements OnInit{
   }
 
   operarios: operario[] = [];
-
+  ubicaciones: ubicacion[] = [];
+  
   ngOnInit(): void {
     this.operario.obtenerOperarios(this.operarios).subscribe(data => {
       this.operarios = data;
+    });
+    this.ubicacion.obtenerUbicacion(this.ubicaciones).subscribe(data => {
+      this.ubicaciones = data;
     });
   }
 
   constructor(
     private orden: OrdenDeTrabajoService,
-    private operario: OperarioService
+    private operario: OperarioService,
+    private ubicacion: UbicacionService
   ) {}
 
   crearOrdenDeTrabajo() {
