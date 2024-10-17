@@ -6,7 +6,7 @@ import { Ilogin, ILoginResponse } from '../interfaces/login';
 @Injectable({
   providedIn: 'root'
 })
-export class BackUtnService {
+export class authService {
 
   private apiUrl = environment.apiURL
 

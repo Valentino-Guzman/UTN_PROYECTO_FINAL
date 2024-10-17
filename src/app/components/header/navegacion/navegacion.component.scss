@@ -4,6 +4,7 @@
     border-radius: 50px;
     width: 300px; 
     justify-content: space-between;
+    margin-bottom: 15px;
 }
 
 .navegacion button {
@@ -19,10 +20,10 @@
 }
 
 .navegacion button.active {
-    background-color: #000000c8;
+    background-color: #2F80ED;
     color: white; 
 }
   
 .navegacion button:not(.active):hover {
-    background-color: rgba(160, 139, 114, 0.1); 
+    background-color: #2f81ed26; 
 }

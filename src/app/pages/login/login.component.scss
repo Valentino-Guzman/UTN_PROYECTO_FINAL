@@ -8,6 +8,15 @@
     
 }
 
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
 .formulario {
     display: flex;
     flex-direction: column;
@@ -41,12 +50,14 @@
 .login h1 {
     font-size: 30px;
     margin: 0;
+    color: #2F80ED;
+    font-weight: 500;
 }
 
 .formulario span {
     margin-top: 15px;
     margin-bottom: 15px;
-    color: #6236F5;
+    color: #2F80ED;
     font-size: 13px;
 }
 
@@ -56,7 +67,7 @@
     align-items: center;
     height: 35px;
     margin-top: 35px;
-    background: #6236F5;
+    background: #2F80ED;
     border-radius: 10px;
     border: none;
     color: white;
@@ -64,7 +75,7 @@
 }
 
 .formulario button:hover {
-    background: #502DC4;
+    background: #266ac2;
     cursor: pointer;
 }
 
