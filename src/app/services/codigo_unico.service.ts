@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../environments/api'
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Tarea } from '../interfaces/tarea';
+import { Codigo_unico } from '../interfaces/codigo_unico';
 
 @Injectable({
   providedIn: 'root'
@@ -13,11 +13,11 @@ export class TareaService {
 
   constructor(private http: HttpClient) { }
 
-  obtenerOrden(data:Tarea): Observable<Tarea>  {
-    return this.http.get<Tarea>(`${this.apiUrl}/tarea`)
+  obtenerOrden(data:Codigo_unico): Observable<Codigo_unico>  {
+    return this.http.get<Codigo_unico>(`${this.apiUrl}/codigo`)
   }
   
-  crearOrden(data: Tarea) {
-    return this.http.post<Tarea>(`${this.apiUrl}/tarea`, data);
+  crearOrden(data: Codigo_unico) {
+    return this.http.post<Codigo_unico>(`${this.apiUrl}/codigo`, data);
   }
 }
