@@ -122,7 +122,7 @@ export class OrdenDeTrabajoComponent implements OnInit{
     this.nuevaOrden.codigo_unico = this.codigo_unico;
     this.nuevaOrden.observacion = this.observacion || '';
     this.nuevaOrden.usuario_id = this.operarioSeleccionado;
-    this.nuevaOrden.activo_tarea_descrip_id = this.tarea_descripSeleccionado || 1
+    this.nuevaOrden.activo_tarea_descrip_id = this.tarea_descripSeleccionado || 18
 
     this.orden.crearOrden(this.nuevaOrden).subscribe({
       next: () => {
