@@ -7,8 +7,8 @@
             <form class="formulario">
                 <div class="nombre">
                     <label>Nombre</label>
-                    <input type="name" id="nombre" name="nombre" placeholder="Introduzca su nombre"
-                        [(ngModel)]="registerData.nombre" required />
+                    <input type="name" id="name" name="name" placeholder="Introduzca su nombre"
+                        [(ngModel)]="registerData.name" required />
                 </div>
                 <div class="email">
                     <label>Email</label>
@@ -21,7 +21,7 @@
                         [(ngModel)]="registerData.password" required />
                 </div>
                 <span>Olvidó su contraseña?</span>
-                <button (click)="register()">Registrarse
+                <button (click)="registro()">Registrarse
                     <app-svg-flecha></app-svg-flecha>          
                 </button>
             </form>

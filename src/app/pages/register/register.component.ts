@@ -4,6 +4,8 @@ import { Register } from '../../interfaces/registro';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { SvgFlechaComponent } from "../../components/svg-flecha/svg-flecha.component";
+import { authService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -16,13 +18,19 @@ import { SvgFlechaComponent } from "../../components/svg-flecha/svg-flecha.compo
 export class RegisterComponent {
 
   registerData: Register = {
-    nombre: '',
+    name: '',
     email: '',
     password: ''
   };
-  constructor() {}
+  constructor(
+    private register: authService,
+    private router: Router
+  ) {}
   
-  register() {
-    
+  registro() {
+    this.register.register(this.registerData).subscribe({
+      next: () => this.router.navigate(['/login'])
+      
+    })
   }
 }

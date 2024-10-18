@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { authService } from '../../services/auth.service';
-import { Ilogin } from '../../interfaces/login';
+import { Login } from '../../interfaces/login';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -17,7 +17,7 @@ import { NavegacionComponent } from '../../components/navegacion/navegacion.comp
 })
 export class LoginComponent {
 
-  loginData: Ilogin = {
+  loginData: Login = {
     email: '',
     password: ''
   };
