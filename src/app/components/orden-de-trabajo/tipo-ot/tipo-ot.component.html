@@ -1,6 +1,7 @@
 <div class="informacion">
     <label>Tipo de Orden</label>
-    <select [(ngModel)]="tipoOtSeleccionado" name="tipo_ot" required>
+    <select (change)="tipoOt($event)" name="tipo_ot" required>
+        <option value="0" disabled selected>Seleccione un tipo de orden</option>
         <option *ngFor="let tipo of tiposOt" [value]="tipo.id">
             {{ tipo.tipo }}
         </option>

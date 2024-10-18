@@ -15,4 +15,7 @@ export class UbicacionComponent {
  @Input() ubicaciones: Ubicacion[] = [];
  @Output() ubicacionSeleccionado = new EventEmitter<number>
  
+ ubicacion(event:any) {
+  this.ubicacionSeleccionado.emit(event.target.value);
+}
 }

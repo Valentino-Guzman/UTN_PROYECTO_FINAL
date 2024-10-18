@@ -14,10 +14,10 @@ export class TareaService {
   constructor(private http: HttpClient) { }
 
   obtenerTarea_descrip(): Observable<Tarea[]>  {
-    return this.http.get<Tarea[]>(`${this.apiUrl}/tarea`)
+    return this.http.get<Tarea[]>(`${this.apiUrl}/tareadesc`)
   }
   
-  crearOrden(data: Tarea) {
-    return this.http.post<Tarea>(`${this.apiUrl}/tarea`, data);
+  crearTarea_descrip(data: Tarea) {
+    return this.http.post<Tarea>(`${this.apiUrl}/tareadesc`, data);
   }
 }

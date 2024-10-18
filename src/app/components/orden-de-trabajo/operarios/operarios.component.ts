@@ -14,4 +14,8 @@ export class OperariosComponent {
 
   @Input() operarios: Operario[] = [];
   @Output() operarioSeleccionado = new EventEmitter<number>
+
+  operario(event:any) {
+    this.operarioSeleccionado.emit(event.target.value);
+  }
 }

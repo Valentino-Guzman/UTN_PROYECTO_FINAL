@@ -1,6 +1,7 @@
 <div class="informacion">
     <label>Sectores</label>
-    <select [(ngModel)]="sectorSeleccionado" name="piso" required>
+    <select (change)="sector($event)" name="piso" required>
+        <option value="0" disabled selected>Seleccione un sector</option>
         <option *ngFor="let sector of sectores" [value]="sector.id">
             {{ sector.nombre }}
         </option>

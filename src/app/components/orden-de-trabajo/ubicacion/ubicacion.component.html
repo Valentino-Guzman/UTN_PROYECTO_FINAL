@@ -1,6 +1,7 @@
 <div class="informacion">
     <label>Ubicación</label>
-    <select [(ngModel)]="ubicacionSeleccionado" name="ubicacion" required>
+    <select (change)="ubicacion($event)" name="ubicacion" required>
+        <option value="0" disabled selected>Seleccione una ubicación</option>
         <option *ngFor="let ubicacion of ubicaciones" [value]="ubicacion.id">
             {{ ubicacion.ubicacion }}
         </option>

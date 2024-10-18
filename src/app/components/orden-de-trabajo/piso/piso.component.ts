@@ -15,4 +15,7 @@ export class PisoComponent{
   @Input() pisos: Piso[] = [];
   @Output() pisoSeleccionado = new EventEmitter<number>();
   
+  piso(event:any) {
+    this.pisoSeleccionado.emit(event.target.value);
+  }
 }

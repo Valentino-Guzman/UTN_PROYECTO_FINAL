@@ -13,4 +13,8 @@ import { Tipo_ot } from '../../../interfaces/tipo_ot';
 export class TipoOtComponent {
   @Input() tiposOt: Tipo_ot[] = [];
   @Output() tipoOtSeleccionado = new EventEmitter<number>
+
+  tipoOt(event:any) {
+    this.tipoOtSeleccionado.emit(event.target.value);
+  }
 }

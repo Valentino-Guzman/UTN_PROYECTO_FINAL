@@ -15,4 +15,7 @@ export class ActivoComponent {
   @Input() activos: Activo[] = [];
   @Output() activoSeleccionado = new EventEmitter<number>
 
+  activo(event:any) {
+    this.activoSeleccionado.emit(event.target.value);
+  }
 }

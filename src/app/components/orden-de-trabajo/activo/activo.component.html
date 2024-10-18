@@ -1,6 +1,7 @@
 <div class="informacion">
     <label>Activo</label>
-    <select [(ngModel)]="activoSeleccionado" name="activo" required>
+    <select (change)="activo($event)" name="activo" required>
+        <option value="0" disabled selected>Seleccione un activo</option>
         <option *ngFor="let activo of activos" [value]="activo.id">
             {{ activo.nombre }}
         </option>

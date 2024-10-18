@@ -15,4 +15,7 @@ export class SectorComponent {
   @Input() sectores: Sector[] = [];
   @Output() sectorSeleccionado = new EventEmitter<number>
 
+  sector(event:any) {
+    this.sectorSeleccionado.emit(event.target.value);
+  }
 }

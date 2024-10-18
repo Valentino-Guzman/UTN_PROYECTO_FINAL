@@ -28,6 +28,8 @@ import { TipoOtComponent } from "./tipo-ot/tipo-ot.component";
 import { Sector } from '../../interfaces/sector';
 import { SectorService } from '../../services/sector.service';
 import { SectorComponent } from "./sector/sector.component";
+import { TareaService } from '../../services/tarea_descrip.service';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -40,16 +42,25 @@ import { SectorComponent } from "./sector/sector.component";
 export class OrdenDeTrabajoComponent implements OnInit{
 
   nuevaOrden: Orden = {
-    tipo_ot_id: 1,
-    piso_id: 1,
-    sector_id: 1,
-    edificio_id: 1,
+    tipo_ot_id: 0,
+    piso_id: 0,
+    sector_id: 0,
+    edificio_id: 0,
     codigo_unico: '',
     observacion: '',
-    usuario_id: 1,
-    activo_tarea_descrip_id: 1,
+    usuario_id: 0,
+    activo_tarea_descrip_id: 0,
     fecha_creacion: new Date()
   }
+
+  edificioSelecionado:number = 0;
+  ubicacionSeleccionado: number = 0;
+  operarioSeleccionado: number = 0; 
+  activoSeleccionado: number = 0;
+  pisoSeleccionado: number = 0;
+  tipoOtSeleccionado: number = 0;
+  sectorSeleccionado: number = 0;
+  tarea_descripSeleccionado: number = 0;
 
   listaOrdenes: Orden[] = [];
   operarios: Operario[] = [];
@@ -64,6 +75,7 @@ export class OrdenDeTrabajoComponent implements OnInit{
   codigo_unico: string = '';
 
   constructor(
+    private toastr: ToastrService,
     private orden: OrdenDeTrabajoService,
     private operario: OperarioService,
     private ubicacion: UbicacionService,
@@ -71,7 +83,8 @@ export class OrdenDeTrabajoComponent implements OnInit{
     private activo: ActivoService,
     private edificio: EdificioService,
     private tipoOt: TipoOtService,
-    private sector: SectorService
+    private sector: SectorService,
+    private tarea_desc: TareaService
   ) {}
 
   ngOnInit(): void {
@@ -96,21 +109,24 @@ export class OrdenDeTrabajoComponent implements OnInit{
     this.sector.obtenerSector().subscribe(data => {
       this.sectores = data;
     });
+    this.tarea_desc.obtenerTarea_descrip().subscribe(data => {
+      this.tarea_descrip = data;
+    })
   }
 
   crearOrdenDeTrabajo() {
-    this.nuevaOrden.tipo_ot_id 
-    this.nuevaOrden.piso_id 
-    this.nuevaOrden.sector_id
-    this.nuevaOrden.edificio_id
-    this.nuevaOrden.codigo_unico
-    this.nuevaOrden.observacion
-    this.nuevaOrden.usuario_id
-    this.nuevaOrden.activo_tarea_descrip_id
+    this.nuevaOrden.tipo_ot_id = this.tipoOtSeleccionado
+    this.nuevaOrden.piso_id = this.pisoSeleccionado
+    this.nuevaOrden.sector_id = this.sectorSeleccionado
+    this.nuevaOrden.edificio_id = this.edificioSelecionado 
+    this.nuevaOrden.codigo_unico = this.codigo_unico;
+    this.nuevaOrden.observacion = this.observacion || '';
+    this.nuevaOrden.usuario_id = this.operarioSeleccionado;
+    this.nuevaOrden.activo_tarea_descrip_id = this.tarea_descripSeleccionado || 1
 
     this.orden.crearOrden(this.nuevaOrden).subscribe({
       next: () => {
-        console.log('Orden creada');
+        this.toastr.success('Orden creada con éxito');
       }
     })
   }

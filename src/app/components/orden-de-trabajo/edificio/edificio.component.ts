@@ -14,5 +14,8 @@ export class EdificioComponent {
   
   @Input() edificios: Edificio[] = [];
   @Output() edificioSeleccionado = new EventEmitter<number>();
-
+  
+  edificio(event:any) {
+    this.edificioSeleccionado.emit(event.target.value);
+  }
 }
