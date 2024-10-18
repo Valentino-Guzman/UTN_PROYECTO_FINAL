@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/api'
 import { HttpClient } from '@angular/common/http';
-import { Login } from '../interfaces/login';
-import { Register } from '../interfaces/registro';
+import { Login, LoginResponse } from '../interfaces/login';
+import { Register, RegisterResponse } from '../interfaces/registro';
 
 @Injectable({
   providedIn: 'root'
@@ -14,10 +14,10 @@ export class authService {
   constructor(private http: HttpClient) { }
 
   login(data:Login) {
-    return this.http.post<Login>(`${this.apiUrl}/login`, data);
+    return this.http.post<LoginResponse>(`${this.apiUrl}/login`, data);
   }
 
   register(data:Register) {
-    return this.http.post<Register>(`${this.apiUrl}/register`, data)
+    return this.http.post<RegisterResponse>(`${this.apiUrl}/register`, data)
   }
 }

@@ -50,14 +50,14 @@
 .registro h1 {
     font-size: 30px;
     margin: 0;
-    color: #2F80ED;
+    color: #000000;
     font-weight: 500;
 }
 
 .formulario span {
     margin-top: 15px;
     margin-bottom: 15px;
-    color: #2F80ED;
+    color: #75767b;
     font-size: 13px;
 }
 
@@ -67,7 +67,7 @@
     align-items: center;
     height: 35px;
     margin-top: 35px;
-    background: #2F80ED;
+    background: #050505c4;
     border-radius: 10px;
     border: none;
     color: white;
@@ -75,7 +75,7 @@
 }
 
 .formulario button:hover {
-    background: #266ac2;
+    background: #212223;
     cursor: pointer;
 }
 

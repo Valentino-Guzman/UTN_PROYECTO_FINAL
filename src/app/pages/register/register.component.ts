@@ -3,7 +3,7 @@ import { NavegacionComponent } from "../../components/navegacion/navegacion.comp
 import { Register } from '../../interfaces/registro';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { SvgFlechaComponent } from "../../components/svg-flecha/svg-flecha.component";
+import { SvgFlechaComponent } from "../../components/svg/svg-flecha/svg-flecha.component";
 import { authService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 

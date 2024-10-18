@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import { authService } from '../../services/auth.service';
-import { Login } from '../../interfaces/login';
-import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
+
+import { authService } from '../../services/auth.service';
+import { Login, LoginResponse } from '../../interfaces/login';
 import { NavegacionComponent } from '../../components/navegacion/navegacion.component';
 
-
+import { ToastrService } from 'ngx-toastr';
+import { CookieService } from 'ngx-cookie-service'
 
 @Component({
   selector: 'app-login',
@@ -26,12 +28,20 @@ export class LoginComponent {
   constructor(
     private auth: authService,
     private router: Router,
+    private toastr: ToastrService,
+    private cookie: CookieService
   ) {}
 
   login() {
     this.auth.login(this.loginData).subscribe({
-      next: () => this.router.navigate(['/home']),
-      error: (err) => console.error('login fallido', err)
+      next: (response:LoginResponse) =>  {
+        this.toastr.success('Inicio de sesión exitoso', '¡Bienvenido!');
+        this.cookie.set('authtoken', response.token);
+        this.router.navigate(['/home'])
+      },
+        error: () => {
+          this.toastr.error('Error al iniciar sesión, intente nuevamente.')
+        }
     })
   }
 }
