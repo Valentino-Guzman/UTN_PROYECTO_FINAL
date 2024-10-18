@@ -1,0 +1,8 @@
+<div class="informacion">
+    <label>Sectores</label>
+    <select [(ngModel)]="sectorSeleccionado" name="piso" required>
+        <option *ngFor="let sector of sectores" [value]="sector.id">
+            {{ sector.nombre }}
+        </option>
+    </select>
+</div>

@@ -1,4 +1,4 @@
-export interface ubicacion {
+export interface Ubicacion {
     id: number;
     ubicacion: string;
 }

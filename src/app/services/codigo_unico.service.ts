@@ -13,7 +13,7 @@ export class TareaService {
 
   constructor(private http: HttpClient) { }
 
-  obtenerOrden(data:Codigo_unico): Observable<Codigo_unico>  {
+  obtenerOrden(): Observable<Codigo_unico>  {
     return this.http.get<Codigo_unico>(`${this.apiUrl}/codigo`)
   }
   

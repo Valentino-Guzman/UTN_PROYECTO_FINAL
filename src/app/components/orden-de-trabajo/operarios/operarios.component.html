@@ -1,0 +1,8 @@
+<div class="informacion">
+    <label>Operario</label>
+    <select [(ngModel)]="operarioSeleccionado" name="operario" required>
+        <option *ngFor="let operario of operarios" [value]="operario.id">
+            {{ operario.nombre }}
+        </option>
+    </select>           
+</div>

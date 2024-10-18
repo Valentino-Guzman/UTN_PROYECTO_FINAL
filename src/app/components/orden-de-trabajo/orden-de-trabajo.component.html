@@ -1,61 +1,54 @@
 <div class="contenedor">
     <form class="formulario">
+        <h1>Generar Orden de Trabajo</h1>
         <div class="informacion">
-            <label>Tarea</label>
-            <select [(ngModel)]="ordenData.usuario_id" name="operario" required>
-                <option *ngFor="let operario of operarios" [value]="operario.id">
-                    {{ operario.nombre }}
-                </option>
-            </select>
-            <label>Código Único</label>
-            <select [(ngModel)]="ordenData.usuario_id" name="operario" required>
-                <option *ngFor="let operario of operarios" [value]="operario.id">
-                    {{ operario.nombre }}
-                </option>
-            </select>
-            <label>Ubicación</label>
-            <select [(ngModel)]="ubicaciones" name="operario" required>
-                <option *ngFor="let ubicacion of ubicaciones" [value]="ubicacion.id">
-                    {{ ubicacion.ubicacion }}
-                </option>
-            </select>
-            <label>Edificio</label>
-            <select [(ngModel)]="ordenData.usuario_id" name="operario" required>
-                <option *ngFor="let operario of operarios" [value]="operario.id">
-                    {{ operario.nombre }}
-                </option>
-            </select>
-            <label>Sector</label>
-            <select [(ngModel)]="ordenData.usuario_id" name="operario" required>
-                <option *ngFor="let operario of operarios" [value]="operario.id">
-                    {{ operario.nombre }}
-                </option>
-            </select>
-            <label>Piso</label>
-            <select [(ngModel)]="ordenData.usuario_id" name="operario" required>
-                <option *ngFor="let operario of operarios" [value]="operario.id">
-                    {{ operario.nombre }}
-                </option>
-            </select>
-            <label for="operario">Operario</label>
-            <select [(ngModel)]="ordenData.usuario_id" name="operario" required>
-                <option *ngFor="let operario of operarios" [value]="operario.id">
-                    {{ operario.nombre }}
-                </option>
-            </select>
-            <label>Observacion</label>
-            <select [(ngModel)]="ordenData.usuario_id" name="operario" required>
-                <option *ngFor="let operario of operarios" [value]="operario.id">
-                    {{ operario.nombre }}
-                </option>
-            </select>
-            <label>Tipo de Orden</label>
-            <select [(ngModel)]="ordenData.usuario_id" name="operario" required>
-                <option *ngFor="let operario of operarios" [value]="operario.id">
-                    {{ operario.nombre }}
-                </option>
-            </select>
-        </div>
-        <button (click)="crearOrdenDeTrabajo()">Crear Orden</button>
+            
+            
+           
+
+            <app-activo
+            [activos]="activos"
+            ></app-activo>
+
+            <app-edificio
+            [edificios]="edificios"
+            ></app-edificio>
+        
+            <app-piso
+            [pisos]="pisos"
+            ></app-piso>
+
+            <app-sector
+            [sectores]="sectores"
+            ></app-sector>
+
+            <app-ubicacion
+            [ubicaciones]="ubicaciones"
+            ></app-ubicacion>
+
+            <app-operarios
+            [operarios]="operarios"
+            ></app-operarios>
+
+            <app-tipo-ot
+            [tiposOt]="tiposOt"
+            ></app-tipo-ot>
+
+            <app-observacion
+            [observacion]="observacion"
+            ></app-observacion>
+
+            <button (click)="crearOrdenDeTrabajo()">Crear Orden</button>
+        </div>     
     </form>
+    <!-- <div>
+        <ul *ngFor="let orden of ordenData">
+            <li>
+                {{orden.activo_tarea_descrip_id}}
+                {{getEdificioNombre(orden.edificio_id)}}
+                {{getPisoNombre(orden.piso_id)}}
+            </li>
+        </ul>
+        <button (click)="obtenerOrdenes()">sadsadsa</button>
+    </div> -->
 </div>

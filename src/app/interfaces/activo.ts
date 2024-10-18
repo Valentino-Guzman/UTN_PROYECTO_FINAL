@@ -1,5 +1,5 @@
 export interface Activo{
     id:number;
-    descripcion:string;
+    nombre:string;
     ubicacion_id:number;
 }

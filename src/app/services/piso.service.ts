@@ -13,11 +13,11 @@ export class PisoService {
 
   constructor(private http: HttpClient) { }
 
-  obtenerOrden(data:Piso): Observable<Piso>  {
-    return this.http.get<Piso>(`${this.apiUrl}/piso`)
+  obtenerPiso(): Observable<Piso[]>  {
+    return this.http.get<Piso[]>(`${this.apiUrl}/piso`)
   }
   
-  crearOrden(data: Piso) {
+  crearPiso(data: Piso) {
     return this.http.post<Piso>(`${this.apiUrl}/piso`, data);
   }
 }

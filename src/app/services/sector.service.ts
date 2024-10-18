@@ -13,11 +13,11 @@ export class SectorService {
 
   constructor(private http: HttpClient) { }
 
-  obtenerOrden(data:Sector): Observable<Sector>  {
-    return this.http.get<Sector>(`${this.apiUrl}/sector`)
+  obtenerSector(): Observable<Sector[]>  {
+    return this.http.get<Sector[]>(`${this.apiUrl}/sector`)
   }
   
-  crearOrden(data: Sector) {
+  crearSector(data: Sector) {
     return this.http.post<Sector>(`${this.apiUrl}/sector`, data);
   }
 }

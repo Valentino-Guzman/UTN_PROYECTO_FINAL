@@ -13,8 +13,8 @@ export class TareaService {
 
   constructor(private http: HttpClient) { }
 
-  obtenerOrden(data:Tarea): Observable<Tarea>  {
-    return this.http.get<Tarea>(`${this.apiUrl}/tarea`)
+  obtenerTarea_descrip(): Observable<Tarea[]>  {
+    return this.http.get<Tarea[]>(`${this.apiUrl}/tarea`)
   }
   
   crearOrden(data: Tarea) {

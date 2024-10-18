@@ -13,11 +13,11 @@ export class EdificioService {
 
   constructor(private http: HttpClient) { }
 
-  obtenerOrden(data:Edificio): Observable<Edificio>  {
-    return this.http.get<Edificio>(`${this.apiUrl}/edificio`)
+  obtenerEdificio(): Observable<Edificio[]>  {
+    return this.http.get<Edificio[]>(`${this.apiUrl}/edificio`)
   }
   
-  crearOrden(data: Edificio) {
+  crearEdificio(data: Edificio) {
     return this.http.post<Edificio>(`${this.apiUrl}/edificio`, data);
   }
 }

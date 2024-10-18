@@ -1,0 +1,8 @@
+<div class="informacion">
+    <label>Edificio</label>
+    <select [(ngModel)]="edificioSeleccionado" name="edificio" required>
+        <option *ngFor="let edificio of edificios" [value]="edificio.id">
+            {{ edificio.nombre }} - {{ edificio.calle }} {{ edificio.numero }}
+        </option>
+    </select>
+</div>

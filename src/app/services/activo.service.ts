@@ -13,11 +13,11 @@ export class ActivoService {
 
   constructor(private http: HttpClient) { }
 
-  obtenerOrden(data:Activo): Observable<Activo>  {
-    return this.http.get<Activo>(`${this.apiUrl}/activo`)
+  obtenerActivo(): Observable<Activo[]>  {
+    return this.http.get<Activo[]>(`${this.apiUrl}/activo`)
   }
   
-  crearOrden(data: Activo) {
+  crearActivo(data: Activo) {
     return this.http.post<Activo>(`${this.apiUrl}/activo`, data);
   }
 }

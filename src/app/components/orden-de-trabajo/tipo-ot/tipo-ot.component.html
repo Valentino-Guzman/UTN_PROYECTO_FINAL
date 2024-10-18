@@ -1,0 +1,8 @@
+<div class="informacion">
+    <label>Tipo de Orden</label>
+    <select [(ngModel)]="tipoOtSeleccionado" name="tipo_ot" required>
+        <option *ngFor="let tipo of tiposOt" [value]="tipo.id">
+            {{ tipo.tipo }}
+        </option>
+    </select>
+</div>

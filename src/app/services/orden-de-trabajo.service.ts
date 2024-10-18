@@ -14,8 +14,8 @@ export class OrdenDeTrabajoService {
 
   constructor(private http: HttpClient) { }
 
-  obtenerOrden(data:Orden): Observable<Orden>  {
-    return this.http.get<Orden>(`${this.apiUrl}/ordenes`)
+  obtenerOrden(): Observable<Orden[]>  {
+    return this.http.get<Orden[]>(`${this.apiUrl}/ordenes`)
   }
   
   crearOrden(data: Orden) {

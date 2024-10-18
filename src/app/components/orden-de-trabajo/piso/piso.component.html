@@ -1,0 +1,9 @@
+<div class="informacion">
+    <label>Piso / Nivel</label>
+    <select [(ngModel)]="pisoSeleccionado" name="piso" required>
+        <option *ngFor="let piso of pisos" [value]="piso.id">
+            {{ piso.numero }}
+        </option>
+    </select>
+</div>
+
