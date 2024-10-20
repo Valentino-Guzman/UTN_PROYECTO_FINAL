@@ -6,6 +6,16 @@
             {{ activo.nombre }}
         </option>
     </select>
+    <div *ngIf="descripcionDelActivo.length > 0" class="instrucciones-container">
+        <h1>Instrucciones</h1>
+        <div class="instrucciones-content">
+            <ul>
+                <li *ngFor="let desc of descripcionDelActivo">
+                      {{ desc }}
+                </li>
+              </ul>
+        </div>
+      </div>
 </div>
 
 

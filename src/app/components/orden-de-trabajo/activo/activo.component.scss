@@ -15,3 +15,30 @@
     border-color: #303336; 
 }
 
+.instrucciones-container {
+    border: 1px solid #ccc;
+    border-radius: 8px; 
+    width: 100%; 
+    background-color: #f9f9f9;
+        h1 {
+            font-size: 24px;
+            margin: 10px 0 10px 15px;
+        }
+    margin-bottom: 10px;
+}
+
+.instrucciones-content {
+    max-height: 200px;
+    margin-left: 15px;
+    overflow-y: auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-top: 7px;
+}

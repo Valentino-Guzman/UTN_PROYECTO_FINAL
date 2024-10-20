@@ -30,6 +30,7 @@ import { SectorService } from '../../services/sector.service';
 import { SectorComponent } from "./sector/sector.component";
 import { TareaService } from '../../services/tarea_descrip.service';
 import { ToastrService } from 'ngx-toastr';
+import { activo_desc } from '../../interfaces/activo_tarea_descrip';
 
 
 @Component({
@@ -56,17 +57,16 @@ export class OrdenDeTrabajoComponent implements OnInit{
   edificioSelecionado:number = 0;
   ubicacionSeleccionado: number = 0;
   operarioSeleccionado: number = 0; 
-  activoSeleccionado: number = 0;
   pisoSeleccionado: number = 0;
   tipoOtSeleccionado: number = 0;
   sectorSeleccionado: number = 0;
-  tarea_descripSeleccionado: number = 0;
+  activo_tarea_descripSeleccionado: number = 0;
 
   listaOrdenes: Orden[] = [];
   operarios: Operario[] = [];
   ubicaciones: Ubicacion[] = [];
   pisos: Piso[] = [];
-  activos: Activo[] = [];
+  activos: activo_desc[] = [];
   sectores: Sector[] = [];
   edificios: Edificio[] = [];
   tarea_descrip: Tarea[] = [];
@@ -122,7 +122,7 @@ export class OrdenDeTrabajoComponent implements OnInit{
     this.nuevaOrden.codigo_unico = this.codigo_unico;
     this.nuevaOrden.observacion = this.observacion || '';
     this.nuevaOrden.usuario_id = this.operarioSeleccionado;
-    this.nuevaOrden.activo_tarea_descrip_id = this.tarea_descripSeleccionado || 18
+    this.nuevaOrden.activo_tarea_descrip_id = this.activo_tarea_descripSeleccionado
 
     this.orden.crearOrden(this.nuevaOrden).subscribe({
       next: () => {
