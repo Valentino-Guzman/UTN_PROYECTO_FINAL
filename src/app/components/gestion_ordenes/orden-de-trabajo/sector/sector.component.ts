@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Sector } from '../../../interfaces/sector';
+import { Sector } from '../../../../interfaces/sector';
 
 @Component({
   selector: 'app-sector',

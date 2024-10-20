@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Ubicacion } from '../../../interfaces/ubicacion';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+
+import { Ubicacion } from '../../../../interfaces/ubicacion';
 
 @Component({
   selector: 'app-ubicacion',

@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output, output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Tipo_ot } from '../../../interfaces/tipo_ot';
+import { Tipo_ot } from '../../../../interfaces/tipo_ot';
 
 @Component({
   selector: 'app-tipo-ot',

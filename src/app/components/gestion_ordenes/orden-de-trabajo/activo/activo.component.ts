@@ -1,7 +1,8 @@
 import { CommonModule, NgIf } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { activo_desc } from '../../../interfaces/activo_tarea_descrip';
+import { activo_desc } from '../../../../interfaces/activo_tarea_descrip';
+
 
 @Component({
   selector: 'app-activo',
