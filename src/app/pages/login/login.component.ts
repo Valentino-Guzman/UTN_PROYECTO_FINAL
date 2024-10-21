@@ -9,15 +9,18 @@ import { NavegacionComponent } from '../../components/navegacion/navegacion.comp
 
 import { ToastrService } from 'ngx-toastr';
 import { CookieService } from 'ngx-cookie-service'
+import { SvgFlechaComponent } from "../../components/svg/svg-flecha/svg-flecha.component";
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule, CommonModule, NavegacionComponent],
+  imports: [FormsModule, CommonModule, NavegacionComponent, SvgFlechaComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
+
+  nombreOperario: string = '';
 
   loginData: Login = {
     email: '',
@@ -37,6 +40,7 @@ export class LoginComponent {
       next: (response:LoginResponse) =>  {
         this.toastr.success('Inicio de sesión exitoso', '¡Bienvenido!');
         this.cookie.set('authtoken', response.token);
+        this.cookie.set('operario', response.user.name)
         this.router.navigate(['/home'])
       },
         error: () => {

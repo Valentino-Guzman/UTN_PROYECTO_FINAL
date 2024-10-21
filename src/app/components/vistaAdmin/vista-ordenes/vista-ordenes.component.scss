@@ -1,0 +1,20 @@
+.btn-home {
+    margin-top: 20px;
+    width: 100px;
+    height: 64px;
+    border-radius: 5px;
+    background-color:#303336c5 ;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 14px;
+    flex-direction: column;
+}
+
+.btn-home:hover {
+    background-color: #303336 ; 
+    transform: scale(1.1);
+}

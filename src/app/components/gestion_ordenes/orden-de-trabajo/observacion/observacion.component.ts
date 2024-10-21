@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, input } from '@angular/core';
+import { Component, EventEmitter, Output} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -10,7 +10,12 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './observacion.component.scss'
 })
 export class ObservacionComponent {
+  
+  observacion: string = '';
+  @Output() observacionSeleccionado = new EventEmitter<string>();
 
-  @Input() observacion:string = ''
+  observacionCambio(value:string) {
+    this.observacionSeleccionado.emit(value);
+  }
 
 }

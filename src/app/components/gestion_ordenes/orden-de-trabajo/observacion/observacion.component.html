@@ -1,6 +1,11 @@
 <div class="informacion">
     <label>Observacion</label>
-    <textarea placeholder="¿Alguna observación?"
-    [(ngModel)]="observacion" name="observacion" required></textarea>
+    <textarea 
+        placeholder="¿Alguna observación?"
+        [(ngModel)]="observacion" 
+        (ngModelChange)="observacionCambio($event)"
+        name="observacion" 
+        required>
+    </textarea>
 </div>
 

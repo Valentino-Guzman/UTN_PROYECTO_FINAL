@@ -18,4 +18,5 @@ export class EdificioComponent {
   edificio(event:any) {
     this.edificioSeleccionado.emit(event.target.value);
   }
+  
 }

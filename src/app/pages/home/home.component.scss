@@ -1,40 +1,40 @@
-.left-side {
-    height: 625px;
-    width: 120px;
+.contenedor {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.centro {
     background-color: white;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-radius: 50px;
 }
 
-.btn-home {
-    margin-top: 20px;
-    width: 100px;
-    height: 64px;
-    border-radius: 5px;
-    background-color:#303336c5 ;
-    color: white;
+.botones {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    font-size: 14px;
-    flex-direction: column;
 }
 
-.btn-home i {
-    font-size: 24px; /* Tamaño del icono */
-    margin-bottom: 5px;
+.header {
+    display: flex;
 }
 
-.btn-home span {
-    font-size: 12px;
+.welcome {
+    width: 500px;
+    margin-left: 50px;
+
+    h1{
+        margin: 0
+    }
 }
 
-.btn-home:hover {
-    background-color: #303336 ; 
-    transform: scale(1.1);
+.campana {
+    margin-right: 25px;
+    margin-top: 3px;
 }

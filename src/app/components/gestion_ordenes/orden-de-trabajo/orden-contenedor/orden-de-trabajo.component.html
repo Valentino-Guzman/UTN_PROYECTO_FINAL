@@ -38,7 +38,7 @@
             ></app-tipo-ot>
 
             <app-observacion
-            [observacion]="observacion"
+            (observacionSeleccionado)="observacion = $event"
             ></app-observacion>
             
             <button (click)="crearOrdenDeTrabajo()">Crear Orden</button>

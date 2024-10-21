@@ -1,0 +1,13 @@
+<button class="btn-home" mat-button [matMenuTriggerFor]="infraestructura">
+  <app-svg-operador></app-svg-operador>
+  Gestión Operarios</button>
+  <mat-menu #infraestructura="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="operarios">Operarios</button>
+
+  </mat-menu>
+<mat-menu #operarios="matMenu">
+    <button mat-menu-item>Ver operarios</button>
+    <button mat-menu-item>Crear operarios</button>
+    <button mat-menu-item>Modificar operarios</button>
+    <button mat-menu-item>Eliminar operarios</button>
+</mat-menu>
