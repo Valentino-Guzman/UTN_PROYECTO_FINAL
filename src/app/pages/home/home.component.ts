@@ -6,9 +6,7 @@ import {  MatMenuModule } from '@angular/material/menu';
 import { OrdenDeTrabajoComponent } from "../../components/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component";
 import { VistaOrdenesComponent } from "../../components/vistaAdmin/vista-ordenes/vista-ordenes.component";
 import { VistaInfraestructuraComponent } from "../../components/vistaAdmin/vista-infraestructura/vista-infraestructura.component";
-import { authService } from '../../services/auth.service';
 import { CookieService } from 'ngx-cookie-service';
-import { LoginResponse } from '../../interfaces/login';
 import { VistaOperariosComponent } from "../../components/vistaAdmin/vista-operarios/vista-operarios.component";
 
 
@@ -24,7 +22,6 @@ export class HomeComponent implements OnInit{
   nombreOperario: string = ''
 
   constructor(
-    private auth:authService,
     private cookie: CookieService
   ) {}
 

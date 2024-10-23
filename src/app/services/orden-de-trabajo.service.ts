@@ -17,6 +17,10 @@ export class OrdenDeTrabajoService {
   obtenerOrden(): Observable<Orden[]>  {
     return this.http.get<Orden[]>(`${this.apiUrl}/ordenes`)
   }
+
+  obtenerOrdenId(id:number): Observable<Orden>  {
+    return this.http.get<Orden>(`${this.apiUrl}/ordenes/${id}`)
+  }
   
   crearOrden(data: Orden) {
     return this.http.post<Orden>(`${this.apiUrl}/ordenes`, data);

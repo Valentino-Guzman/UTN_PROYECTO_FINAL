@@ -17,6 +17,10 @@ export class ActivoService {
   obtenerActivo(): Observable<activo_desc[]>  {
     return this.http.get<activo_desc[]>(`${this.apiUrl}/activotarea`)
   }
+
+  obtenerActivos(): Observable<Activo[]> {
+    return this.http.get<Activo[]>(`${this.apiUrl}/activo`)
+  }
   
   crearActivo(data: Activo) {
     return this.http.post<Activo>(`${this.apiUrl}/activo`, data);

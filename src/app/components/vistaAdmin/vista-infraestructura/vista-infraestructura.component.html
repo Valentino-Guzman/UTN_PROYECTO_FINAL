@@ -6,8 +6,8 @@
     <button mat-menu-item [matMenuTriggerFor]="sectores">Sectores</button>
   </mat-menu>
 <mat-menu #activos="matMenu">
-    <button mat-menu-item>Ver activos</button>
-    <button mat-menu-item>Crear activo</button>
+    <button mat-menu-item [routerLink]="['/activos']">Ver activos</button>
+    <button mat-menu-item [routerLink]="['/crear/activos']">Crear activo</button>
     <button mat-menu-item>Modificar activo</button>
     <button mat-menu-item>Eliminar activo</button>
 </mat-menu>

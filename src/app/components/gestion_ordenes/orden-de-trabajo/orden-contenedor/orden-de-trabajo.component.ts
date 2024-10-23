@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule} from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 import { OrdenDeTrabajoService } from '../../../../services/orden-de-trabajo.service';
 import { OperarioService } from '../../../../services/operario.service';
@@ -8,6 +9,9 @@ import { UbicacionService } from '../../../../services/ubicacion.service';
 import { PisoService } from '../../../../services/piso.service';
 import { ActivoService } from '../../../../services/activo.service';
 import { EdificioService } from '../../../../services/edificio.service';
+import { SectorService } from '../../../../services/sector.service';
+import { TipoOtService } from '../../../../services/tipo-ot.service';
+import { TareaService } from '../../../../services/tarea_descrip.service';
 
 import { Orden } from '../../../../interfaces/orden';
 import { Operario } from '../../../../interfaces/operario';
@@ -15,8 +19,10 @@ import { Ubicacion } from '../../../../interfaces/ubicacion';
 import { Piso } from '../../../../interfaces/piso';
 import { Edificio } from '../../../../interfaces/edificio';
 import { Tarea } from '../../../../interfaces/tarea';
-import { TipoOtService } from '../../../../services/tipo-ot.service';
+import { Sector } from '../../../../interfaces/sector';
+import { activo_desc } from '../../../../interfaces/activo_tarea_descrip';
 import { Tipo_ot } from '../../../../interfaces/tipo_ot';
+
 import { EdificioComponent } from "../edificio/edificio.component";
 import { PisoComponent } from "../piso/piso.component";
 import { ActivoComponent } from "../activo/activo.component";
@@ -24,13 +30,9 @@ import { UbicacionComponent } from "../ubicacion/ubicacion.component";
 import { OperariosComponent } from "../operarios/operarios.component";
 import { ObservacionComponent } from "../observacion/observacion.component";
 import { TipoOtComponent } from "../tipo-ot/tipo-ot.component";
-import { Sector } from '../../../../interfaces/sector';
-import { SectorService } from '../../../../services/sector.service';
 import { SectorComponent } from "../sector/sector.component";
-import { TareaService } from '../../../../services/tarea_descrip.service';
-import { ToastrService } from 'ngx-toastr';
-import { activo_desc } from '../../../../interfaces/activo_tarea_descrip';
 
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-orden-de-trabajo',
@@ -42,6 +44,7 @@ import { activo_desc } from '../../../../interfaces/activo_tarea_descrip';
 export class OrdenDeTrabajoComponent implements OnInit{
 
   nuevaOrden: Orden = {
+    id: 0,
     tipo_ot_id: 0,
     piso_id: 0,
     sector_id: 0,
@@ -75,6 +78,7 @@ export class OrdenDeTrabajoComponent implements OnInit{
 
   constructor(
     private toastr: ToastrService,
+    private router: Router,
     private orden: OrdenDeTrabajoService,
     private operario: OperarioService,
     private ubicacion: UbicacionService,
@@ -124,17 +128,14 @@ export class OrdenDeTrabajoComponent implements OnInit{
     this.nuevaOrden.activo_tarea_descrip_id = this.activo_tarea_descripSeleccionado
 
     this.orden.crearOrden(this.nuevaOrden).subscribe({
-      next: () => {
+      next: (response) => {
         this.toastr.success('Orden creada con éxito');
-      }
+        this.router.navigate(['/plantilla', response.id]);
+      },
+      error: (err) => {
+        this.toastr.error('Error al crear la orden');
+        console.error(err);
+      } 
     })
   }
-
-  obtenerOrdenes() {
-    this.orden.obtenerOrden().subscribe(data => {
-      this.listaOrdenes = data;
-      console.log(data)
-    })
-  }
-
 }

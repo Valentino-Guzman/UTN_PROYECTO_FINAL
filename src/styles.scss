@@ -3,3 +3,9 @@
 
 html, body { height: 100%; margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+@media print {
+    app-header,
+  app-footer-contenedor, button {
+      display: none;
+    }
+}
