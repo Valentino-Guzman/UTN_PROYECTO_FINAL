@@ -8,12 +8,15 @@ import { VistaOrdenesComponent } from "../../components/vistaAdmin/vista-ordenes
 import { VistaInfraestructuraComponent } from "../../components/vistaAdmin/vista-infraestructura/vista-infraestructura.component";
 import { CookieService } from 'ngx-cookie-service';
 import { VistaOperariosComponent } from "../../components/vistaAdmin/vista-operarios/vista-operarios.component";
+import { SvgCampanaComponent } from "../../components/svg/svg-campana/svg-campana.component";
+import { SvgHeaderComponent } from "../../components/svg/svg-header/svg-header.component";
+import { SvgFooterComponent } from "../../components/svg/svg-footer/svg-footer.component";
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NgIf, RouterLink, SvgOrdenComponent, MatMenuModule, OrdenDeTrabajoComponent, VistaOrdenesComponent, VistaInfraestructuraComponent, VistaOperariosComponent],
+  imports: [NgIf, RouterLink, SvgOrdenComponent, MatMenuModule, OrdenDeTrabajoComponent, VistaOrdenesComponent, VistaInfraestructuraComponent, VistaOperariosComponent, SvgCampanaComponent, SvgHeaderComponent, SvgFooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

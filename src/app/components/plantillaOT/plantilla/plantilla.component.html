@@ -1,67 +1,98 @@
 <div class="contenedor">
     <div class="plantilla" *ngIf="ordenes">
-        <header class="encabezado">
-            <div class="titulo"><h1>Orden de Trabajo de Mantenimiento</h1></div>
-            <div class="imagen">
-                <img src="/images/utn-logo-ot.png" alt="">
+        <div class="margen">
+            <header class="encabezado">
+                <div class="titulo">
+                    <h1>Orden de Trabajo de Mantenimiento</h1>
+                </div>
+                <div class="imagen">
+                    <img src="/images/utn-logo-ot.png" alt="">
+                </div>
+            </header>
+    
+            <div class="datos">
+                <div class="ot"><span>OT N°</span></div>
+                <div class="num"><span>20241023 _ 30 _ ILUM - 001002081001001 - 566</span></div>
             </div>
-        </header>
-        <div class="datos">
-            <div class="ot"><span>OT N°</span></div>
-            <div class="num"><span>20241023 _ 30 _ ILUM - 001002081001001 - 566</span></div>
-        </div>
-        <div class="datos">
-            <div class="ot"><span>Código Único de Identificación de Activo:</span></div>
-            <div class="num"><span>ILUM - 001002081001001 - 566</span></div>
-        </div>
-        <div class="datos">
-            <div class="ot"><span>Tipo de Activo:</span></div>
-            <div class="num"><span>{{ordenes.activo_tarea_descrip_id}}</span></div>
-        </div>
-        <div class="datos">
-            <div class="ot"><span>Edificio:</span></div>
-            <div class="num"><span>{{ ordenes.edificio_id }}</span></div>
-        </div>
-        <div class="datos">
-            <div class="ot"><span>Piso / Nivel:</span></div>
-            <div class="num"><span>{{ ordenes.piso_id }}</span></div>
-        </div>
-        <div class="datos">
-            <div class="ot"><span>Sector:</span></div>
-            <div class="num"><span>{{ ordenes.sector_id }}</span></div>
-        </div>
-        <div class="instrucciones">
-            <div class="head">
-                <div class="pasos">#</div>
-                <div class="tareas"><span>Instrucciones de la tarea</span></div>
+    
+            <div class="datos">
+                <div class="ot"><span>Código Único de Identificación de Activo:</span></div>
+                <div class="num"><span>ILUM - 001002081001001 - 566</span></div>
             </div>
-            <div class="pasos">1</div>
-            <div class="pasos">2</div>
-            <div class="pasos">3</div>
-            <div class="pasos">4</div>
-            <div class="pasos">5</div>
-            <div class="pasos">6</div>
-        </div>
-        <div class="container-fecha">
-            <div class="fecha">
-                <span>{{ordenes.fecha_creacion}}</span>
+    
+            <div class="datos">
+                <div class="ot"><span>Tipo de Activo:</span></div>
+                <div class="num"><span>{{ordenes.activo_tarea_descrip_id}}</span></div>
             </div>
-           <div class="fecha-realizacion">
-                <span>Fecha de realización:</span>
-           </div>
+    
+            <div class="datos">
+                <div class="ot"><span>Edificio:</span></div>
+                <div class="num"><span>{{ ordenes.edificio_id }}</span></div>
+            </div>
+    
+            <div class="datos">
+                <div class="ot"><span>Piso / Nivel:</span></div>
+                <div class="num"><span>{{ ordenes.piso_id }}</span></div>
+            </div>
+    
+            <div class="datos">
+                <div class="ot"><span>Sector:</span></div>
+                <div class="num"><span>{{ ordenes.sector_id }}</span></div>
+            </div>
+    
+            <div class="instrucciones">
+                <div class="head">
+                    <div class="pasos">#</div>
+                    <div class="tareas"><span>Instrucciones de la tarea</span></div>
+                </div>
+                <div class="pasos">1</div>
+                <div class="pasos">2</div>
+                <div class="pasos">3</div>
+                <div class="pasos">4</div>
+                <div class="pasos">5</div>
+                <div class="pasos">6</div>
+            </div>
+    
+            <div class="container-fecha">
+                <div class="fecha">
+                    <span>Fecha Impresión: {{ fechaCreacion }}</span>
+                </div>
+                <div class="fecha-realizacion">
+                    <span>Fecha de realización:</span>
+                </div>
+            </div>
+    
+            <div class="container-fecha">
+                <div class="tiempo">
+                    <span>Tiempo total utilizado:</span>
+                </div>
+                <div class="tarea_operario">
+                    <div class="realizada">
+                        <span>Tarea Realizada por:</span>
+                    </div>
+                    <div class="operario">
+                        <span>{{ordenes.usuario_id}}</span>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="observaciones">
+                <span>Observaciones: {{ordenes.observacion}}</span>
+            </div>
+    
+            <div class="datos">
+                <div class="controlada">
+                    <span>Tarea Controlada por:</span>
+                </div>
+                <div class="control">
+                    <span>Fecha de Control:</span>
+                </div>
+            </div>
         </div>
-        <div class="container-fecha">
-            <div class="tiempo">
-                <span>Tiempo total utilizado:</span>
-            </div> 
-            <div class="realizada">
-                <span>Tarea Realizada por:</span>
-           </div>
-           <div class="operario">
-            <span>{{ordenes.usuario_id}}</span>
-           </div>
         </div>
-        <div class="observaciones">Observaciones: {{ordenes.observacion}}</div>
+        
+
+    <div class="btn-imprimir">
+        <button (click)="print()">Imprimir</button>
     </div>
-    <button (click)="print()">Imprimir</button>
 </div>

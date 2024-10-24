@@ -41,6 +41,7 @@ export class LoginComponent {
         this.toastr.success('Inicio de sesión exitoso', '¡Bienvenido!');
         this.cookie.set('authtoken', response.token);
         this.cookie.set('operario', response.user.name)
+        this.cookie.set('role', response.user.rol);
         this.router.navigate(['/home'])
       },
         error: () => {

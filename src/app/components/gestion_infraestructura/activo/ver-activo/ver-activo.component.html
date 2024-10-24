@@ -1,8 +1,16 @@
-<div>
-    <ul *ngFor="let activo of activos">
-        <li>
-            {{activo.id}}
-            {{activo.nombre}}
-        </li>
-    </ul>
+<div class="card">
+    <table class="activos-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre del Activo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let activo of activos">
+                <td>{{ activo.id }}</td>
+                <td>{{ activo.nombre }}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
