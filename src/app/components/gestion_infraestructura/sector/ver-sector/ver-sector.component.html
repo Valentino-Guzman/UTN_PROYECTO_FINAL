@@ -1,0 +1,16 @@
+<div class="card">
+    <table class="activos-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre del Sector</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let sector  of sectores">
+                <td>{{ sector.id }}</td>
+                <td>{{ sector.nombre }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
