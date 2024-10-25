@@ -25,4 +25,10 @@ export class ActivoService {
   crearActivo(data: Activo) {
     return this.http.post<Activo>(`${this.apiUrl}/activo`, data);
   }
+  modificarActivo(data: Activo, id:number) {
+    return this.http.put<Activo>(`${this.apiUrl}/activo/${id}`, data);
+  }
+  // eliminarActivo(data: Activo) {
+  //   return this.http.delete<Activo>(`${this.apiUrl}/activo`, data);
+  // }
 }

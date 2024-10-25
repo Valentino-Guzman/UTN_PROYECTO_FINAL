@@ -1,0 +1,18 @@
+<div>
+    <form class="formulario">
+        <div class="email">
+            <label>Email</label>
+            <input type="email" id="email" name="email" placeholder="Email"
+                [(ngModel)]="datosActivo.nombre" required />
+        </div>
+        <div class="pass">
+            <label>Contraseña</label>
+            <input type="password" name="password" placeholder="Introduzca la contraseña"
+                [(ngModel)]="datosActivo.ubicacion_id" required />
+        </div>
+        <span>Olvidó su contraseña?</span>
+        <button (click)="modificarActivo()">Iniciar Sesión
+                          
+        </button>
+    </form>
+</div>
