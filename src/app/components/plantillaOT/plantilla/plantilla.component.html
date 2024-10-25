@@ -3,7 +3,7 @@
         <div class="margen">
             <header class="encabezado">
                 <div class="titulo">
-                    <h1>Orden de Trabajo de Mantenimiento</h1>
+                    <h1>Orden de Trabajo de Mantenimiento {{ordenes.tipo_ot_id}}</h1>
                 </div>
                 <div class="imagen">
                     <img src="/images/utn-logo-ot.png" alt="">
@@ -12,17 +12,17 @@
     
             <div class="datos">
                 <div class="ot"><span>OT N°</span></div>
-                <div class="num"><span>20241023 _ 30 _ ILUM - 001002081001001 - 566</span></div>
+                <div class="num"><span>{{ordenes.numero_de_orden}}</span></div>
             </div>
     
             <div class="datos">
                 <div class="ot"><span>Código Único de Identificación de Activo:</span></div>
-                <div class="num"><span>ILUM - 001002081001001 - 566</span></div>
+                <div class="num"><span>{{ordenes.codigo_concatenado}}</span></div>
             </div>
     
             <div class="datos">
                 <div class="ot"><span>Tipo de Activo:</span></div>
-                <div class="num"><span>{{ordenes.activo_tarea_descrip_id}}</span></div>
+                <div class="num"><span>{{ordenes.activo_nombre}}</span></div>
             </div>
     
             <div class="datos">
@@ -42,17 +42,15 @@
     
             <div class="instrucciones">
                 <div class="head">
-                    <div class="pasos">#</div>
                     <div class="tareas"><span>Instrucciones de la tarea</span></div>
                 </div>
-                <div class="pasos">1</div>
-                <div class="pasos">2</div>
-                <div class="pasos">3</div>
-                <div class="pasos">4</div>
-                <div class="pasos">5</div>
-                <div class="pasos">6</div>
+                <ng-container *ngFor="let desc of descripcionDelActivo; let i = index">
+                    <div class="instruccion">
+                        <div class="pasos">{{ i + 1 }}</div>
+                        <div class="descripciones"><span>{{ desc }}</span></div>
+                    </div>
+                </ng-container>
             </div>
-    
             <div class="container-fecha">
                 <div class="fecha">
                     <span>Fecha Impresión: {{ fechaCreacion }}</span>
@@ -77,7 +75,7 @@
             </div>
     
             <div class="observaciones">
-                <span>Observaciones: {{ordenes.observacion}}</span>
+                <span>Observaciones: {{ ordenes.observacion }}</span>
             </div>
     
             <div class="datos">

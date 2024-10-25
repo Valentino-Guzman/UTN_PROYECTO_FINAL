@@ -10,8 +10,8 @@
 .plantilla {
     background-color: transparent;
     border: 2px solid black;
-    height: 900px;
-    width: 700px;
+    height: 1080px;
+    width: 780px;
 }
 
 .encabezado {
@@ -21,8 +21,10 @@
     margin-top: 15px;
     margin-bottom: 10px;
     h1 {
-        font-size: 28px;
-        margin: 0;
+        font-size: 24px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 5px;
         font-weight: 400;
     }
 }
@@ -30,7 +32,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 70%;
+    width: 80%;
     background-color: rgba(26, 27, 31, 0.12);
     border: 2px solid black;
 }
@@ -82,35 +84,53 @@
 }
 
 .tareas {
-    width: 95%;
+    display: flex;
+    width: 97%;
     background-color: rgba(26, 27, 31, 0.12);
-    justify-content: flex-end;
     border: 1px solid black;
-    span {
-        margin-right: 5px;
-    }
-}
-
-.instrucciones {
-    width: 95%;
-    display: flex;
-    flex-direction: column;
-    margin-left: 15px;
-}
-.pasos, .tareas {
-    display: flex;
-    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
     justify-content: center;
     
 }
-.pasos {
-    flex-direction: column;
-    width: 5%;
-    border: 1px solid black;
+
+.instrucciones {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    margin-top: 15px; 
 }
+
+.instruccion {
+    display: flex;
+    width: 96%;
+    margin-left: 15px; 
+}
+
+.descripciones {
+    width: 93%; 
+    justify-content: flex-end;
+    border: 1px solid black;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 14px;
+    span {
+        margin-left: 2px;
+    }
+}
+
+.pasos {
+    display: flex;
+    width: 44px;
+    align-items: center;
+    border: 1px solid black;
+    text-align: center;
+    justify-content: center;
+}   
 
 .head {
     display: flex;
+    margin-left: 15px;
 }
 
 .container-fecha {
