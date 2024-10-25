@@ -49,12 +49,12 @@
       piso_id: 0,
       sector_id: 0,
       edificio_id: 0,
-      codigo_unico: '',
+      codigo_concatenado: '',
       observacion: '',
       usuario_id: 0,
       activo_tarea_descrip_id: 0,
       fecha_creacion: new Date(),
-      
+      numero_de_orden: ''
     }
 
     edificioSelecionado:number = 0;
@@ -76,6 +76,7 @@
     tiposOt: Tipo_ot[] = [];
     observacion: string = '';
     codigo_unico: string = '';
+    numero_de_orden: string = '';
 
     constructor(
       private toastr: ToastrService,
@@ -123,11 +124,12 @@
       this.nuevaOrden.piso_id = this.pisoSeleccionado
       this.nuevaOrden.sector_id = this.sectorSeleccionado
       this.nuevaOrden.edificio_id = this.edificioSelecionado 
-      this.nuevaOrden.codigo_unico = this.codigo_unico;
+      this.nuevaOrden.codigo_concatenado = this.codigo_unico;
       this.nuevaOrden.observacion = this.observacion;
       this.nuevaOrden.usuario_id = this.operarioSeleccionado;
       this.nuevaOrden.activo_tarea_descrip_id = this.activo_tarea_descripSeleccionado;
       this.nuevaOrden.fecha_creacion = new Date();
+      this.nuevaOrden.numero_de_orden = this.numero_de_orden;
 
       this.orden.crearOrden(this.nuevaOrden).subscribe({
         next: (response) => {
