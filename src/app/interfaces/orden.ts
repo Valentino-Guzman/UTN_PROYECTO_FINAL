@@ -3,6 +3,7 @@ export interface Orden {
     tipo_ot_id: number;
     piso_id: number;
     sector_id: number;
+    ubicacion_id: number;
     edificio_id: number;
     codigo_concatenado: string;
     observacion: string;

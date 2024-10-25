@@ -54,7 +54,8 @@
       usuario_id: 0,
       activo_tarea_descrip_id: 0,
       fecha_creacion: new Date(),
-      numero_de_orden: ''
+      numero_de_orden: '',
+      ubicacion_id: 0
     }
 
     edificioSelecionado:number = 0;
@@ -130,6 +131,7 @@
       this.nuevaOrden.activo_tarea_descrip_id = this.activo_tarea_descripSeleccionado;
       this.nuevaOrden.fecha_creacion = new Date();
       this.nuevaOrden.numero_de_orden = this.numero_de_orden;
+      this.nuevaOrden.ubicacion_id = this.ubicacionSeleccionado;
 
       this.orden.crearOrden(this.nuevaOrden).subscribe({
         next: (response) => {
