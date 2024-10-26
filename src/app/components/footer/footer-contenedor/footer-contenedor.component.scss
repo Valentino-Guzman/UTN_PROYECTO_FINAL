@@ -1,8 +1,11 @@
 .footer {
     display: flex;
     width: 100%;
-    background-color: #1A1A1A;
-    margin-top: 15px;
+    background-color: #060640;
+    border-left: 1px solid #ecf9ff;
+    border-right: 1px solid #ecf9ff;
+    border-bottom: 1px solid #ecf9ff;
+    box-sizing: border-box;
 }
 
 .container {
@@ -13,6 +16,7 @@
     padding: 0 20px;
     margin: 25px auto;
 }
+
 .sides {
     display: flex;
     justify-content: space-between;
@@ -22,7 +26,7 @@
 .left-side, .right-side {
     padding-top: 25px;
     padding-bottom: 25px;
-    color: #808080;
+    color: #ecf9ff;
     display: flex;
     flex-direction: column; 
     font-size: 15px;
@@ -36,7 +40,8 @@
     margin-left: auto; 
     margin-right: 10px;
 }
-img{
+
+img {
     max-width: 100%;
     height: auto; 
     margin-top: 18px;
@@ -60,8 +65,8 @@ img{
 .copyright {
     display: flex;
     flex-direction: column;
-    border-top: 1px solid #333333;
-    color: #808080;
+    border-top: 1px solid #ecf9ff;
+    color: #ecf9ff;
     text-align: center;
     margin-top: 20px; 
     font-size: 14px;

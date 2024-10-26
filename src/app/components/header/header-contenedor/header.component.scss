@@ -1,9 +1,56 @@
 .header {
     width: 100%;
-    height: 80px;
-    background-color: #333333;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.238);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(6, 6, 64);
+    box-sizing: border-box;
+}
+
+
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    h1{
+        color: rgb(6, 6, 64);
+        margin: 0;
+    }
+    span {
+        color: rgb(6, 6, 64);
+    }
+}
+
+.contenedor {
+    display: flex;
+    padding: 10px;
+}
+
+.navegacion {
+    height: 60px;
+    width: 200px;
+}
+
+.navegacion button {
+    display: flex;
+    height: 100%;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    color: rgb(6, 6, 64);
+    text-decoration: none;
+    margin-right: 45px;
+    background-color: transparent;
+    border: 1px solid rgb(6, 6, 64);
+    border-radius: 10px;
+    padding: 15px;
+    transition: ease 0.3s;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.navegacion button:hover {
+    background-color: #ecf9ff;
+    cursor: pointer;
 }
