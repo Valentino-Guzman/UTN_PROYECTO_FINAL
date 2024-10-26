@@ -11,6 +11,7 @@ import { ModificarActivoComponent } from './components/gestion_infraestructura/a
 import { VerSectorComponent } from './components/gestion_infraestructura/sector/ver-sector/ver-sector.component';
 import { MenuPrincipalComponent } from './components/vistaAdmin/menu/menu-principal/menu-principal.component';
 import { DashboardComponent } from './components/vistaAdmin/menu/dashboard/dashboard.component';
+import { CrearSectorComponent } from './components/gestion_infraestructura/sector/crear-sector/crear-sector.component';
 
 
 export const routes: Routes = [
@@ -32,5 +33,6 @@ export const routes: Routes = [
     {path: 'crear/activos', component: CrearActivoComponent},
     {path: 'plantilla/:id', component: PlantillaComponent},
     {path: 'modificarActivo/:id', component: ModificarActivoComponent},
-    {path: 'sectores', component:VerSectorComponent}
+    {path: 'sectores', component:VerSectorComponent},
+    {path: 'sectores', component:CrearSectorComponent}
 ];
