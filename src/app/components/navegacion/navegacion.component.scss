@@ -21,10 +21,11 @@
 }
 
 .navegacion button.active {
-    background-color: #2e2f30;
+    background-color: #060640;
     color: white; 
 }
   
 .navegacion button:not(.active):hover {
-    background-color: #0505051d; 
+    background-color: #1a1a7f;  
+    color: white; 
 }
