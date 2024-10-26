@@ -5,7 +5,9 @@
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.7);
-    
+    border: 1px solid #060640;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .container {
@@ -30,34 +32,34 @@
     margin-top: 15px;
     font-weight: bold;
     font-size: 15px;
+    color:#060640;
 }
 
 .email input, .pass input {
     height: 30px;
     border-radius: 10px;
-    border: 1px solid #EAEBEC;
+    border: 1px solid #060640;
     margin-top: 10px;
     padding: 3px;
     padding-left: 10px;
 }
 
 .login p {
-    color: #999BA1;
+    color: rgba(0, 0, 0, 0.70);
     font-size: 13px;
     margin-top: 5px;
 } 
 
 .login h1 {
-    font-size: 30px;
+    font-size: 35px;
     margin: 0;
-    color: #000000;
-    font-weight: 500;
+    color: rgb(6, 6, 64);
 }
 
 .formulario span {
     margin-top: 15px;
     margin-bottom: 15px;
-    color: #75767b;
+    color: rgba(0, 0, 0, 0.70);
     font-size: 13px;
 }
 
@@ -65,17 +67,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 35px;
+    height: 45px;
     margin-top: 35px;
-    background: #050505c4;
+    background: #060640;
     border-radius: 10px;
     border: none;
     color: white;
     transition: 0.3s ease;
+    font-weight: 700;
 }
 
 .formulario button:hover {
-    background: #212223;
+    background: #1a1a7f;
     cursor: pointer;
 }
 

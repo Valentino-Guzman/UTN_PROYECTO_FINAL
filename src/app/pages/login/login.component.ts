@@ -42,7 +42,7 @@ export class LoginComponent {
         this.cookie.set('authtoken', response.token);
         this.cookie.set('operario', response.user.name)
         this.cookie.set('role', response.user.rol);
-        this.router.navigate(['/menu'])
+        this.router.navigate(['/menu/dashboard'])
       },
         error: () => {
           this.toastr.error('Error al iniciar sesión, intente nuevamente.')
