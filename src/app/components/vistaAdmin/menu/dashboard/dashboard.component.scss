@@ -1,0 +1,22 @@
+.dashboard {
+    border-right: 1px solid black;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.linea-bottom {
+    border-bottom: 1px solid black;
+}
+.contenedor-contenido {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    padding: 15px;
+}
+.cuadrado {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 30px;
+}

@@ -1,0 +1,9 @@
+<button class="btn-home" mat-button [matMenuTriggerFor]="ordenes">
+    <app-svg-orden></app-svg-orden>
+    Gestión de Ordenes</button>
+    <mat-menu #ordenes="matMenu">
+      <button mat-menu-item>Ver ordenes</button>
+      <button mat-menu-item [routerLink]="['/ordenes']">Crear ordenes</button>
+      <button mat-menu-item>Modificar ordenes</button>
+      <button mat-menu-item>Eliminar ordenes</button>
+    </mat-menu>
