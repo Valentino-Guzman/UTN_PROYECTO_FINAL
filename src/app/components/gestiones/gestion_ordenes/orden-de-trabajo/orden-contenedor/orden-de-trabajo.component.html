@@ -1,47 +1,53 @@
-<div class="contenedor">
-    <form class="formulario">
-        <h1>Generar Orden de Trabajo</h1>
-        <div class="informacion">
-            <app-activo
-            [activos]="activos"
-            (activoSeleccionado)="activo_tarea_descripSeleccionado = $event"
-            ></app-activo>
-
-            <app-edificio
-            [edificios]="edificios"
-            (edificioSeleccionado)="edificioSelecionado = $event"
-            ></app-edificio>
-        
-            <app-piso
-            [pisos]="pisos"
-            (pisoSeleccionado)="pisoSeleccionado = $event"
-            ></app-piso>
-
-            <app-sector
-            [sectores]="sectores"
-            (sectorSeleccionado)="sectorSeleccionado = $event"
-            ></app-sector>
-
-            <app-ubicacion
-            [ubicaciones]="ubicaciones"
-            (ubicacionSeleccionado)="ubicacionSeleccionado = $event"
-            ></app-ubicacion>
-
-            <app-operarios
-            [operarios]="operarios"
-            (operarioSeleccionado)="operarioSeleccionado = $event"
-            ></app-operarios>
-
-            <app-tipo-ot
-            [tiposOt]="tiposOt"
-            (tipoOtSeleccionado)="tipoOtSeleccionado = $event"
-            ></app-tipo-ot>
-
-            <app-observacion
-            (observacionSeleccionado)="observacion = $event"
-            ></app-observacion>
+<div class="dashboard">
+    <div class="contenedor">
+        <form class="formulario">
+            <div class="welcome">
+                <span>Bienvenido a</span>
+                <h1>Generar Orden de Trabajo</h1>
+            </div>
+            <div class="informacion">
+                <app-activo
+                [activos]="activos"
+                (activoSeleccionado)="activo_tarea_descripSeleccionado = $event"
+                ></app-activo>
+    
+                <app-edificio
+                [edificios]="edificios"
+                (edificioSeleccionado)="edificioSelecionado = $event"
+                ></app-edificio>
             
-            <button (click)="crearOrdenDeTrabajo()">Crear Orden</button>
-        </div>     
-    </form>
+                <app-piso
+                [pisos]="pisos"
+                (pisoSeleccionado)="pisoSeleccionado = $event"
+                ></app-piso>
+    
+                <app-sector
+                [sectores]="sectores"
+                (sectorSeleccionado)="sectorSeleccionado = $event"
+                ></app-sector>
+    
+                <app-ubicacion
+                [ubicaciones]="ubicaciones"
+                (ubicacionSeleccionado)="ubicacionSeleccionado = $event"
+                ></app-ubicacion>
+    
+                <app-operarios
+                [operarios]="operarios"
+                (operarioSeleccionado)="operarioSeleccionado = $event"
+                ></app-operarios>
+    
+                <app-tipo-ot
+                [tiposOt]="tiposOt"
+                (tipoOtSeleccionado)="tipoOtSeleccionado = $event"
+                ></app-tipo-ot>
+    
+                <app-observacion
+                (observacionSeleccionado)="observacion = $event"
+                ></app-observacion>
+                
+                <button (click)="crearOrdenDeTrabajo()">Crear Orden</button>
+            </div>     
+        </form>
+    </div>
+    
 </div>

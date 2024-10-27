@@ -1,7 +1,14 @@
 .container {
-    height: 100%;
     width: 100%;
     display: flex;
+    align-items: stretch;
+}
+
+.layout {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .menu-titulo {
@@ -20,7 +27,7 @@
 
 .menu-contenedor {
     width: 327px;
-    height: 100%;
+    min-height: 650px;
     padding-left: 15px;
     padding-right: 15px;
     color: rgb(6, 6, 64);
@@ -60,9 +67,7 @@
     transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out;
 }
 
-.contenido {
-    width: 100%;
-}
+
 
 .linea-bottom {
     height: 31px;
@@ -70,9 +75,11 @@
 }
 
 .menu-contenido {
+    width: 100%;
     margin-top: 15px;
-    color: #060640;
     margin-left: 15px;
+    margin-bottom: 15px;
+    color: #060640;
     h1 {
         font-size: 18px;
         font-weight: 500;
@@ -87,5 +94,11 @@
 .fade-in {
     animation: fadeIn 0.4s ease forwards;
     opacity: 0;
+}
+
+@media print {
+    .menu-contenido {
+        margin: 0;
+      }
 }
 

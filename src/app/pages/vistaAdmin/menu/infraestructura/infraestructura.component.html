@@ -6,16 +6,29 @@
     
     <div class="contenedor-contenido">
         <div class="cuadrado">
-            <button [routerLink]="['/menu', 'activos']"  routerLinkActive="active">
+            <button>
                 <span class="texto">Activo</span>
-                <span class="tooltip">Gestion de los activos</span>
+                <span class="tooltip">Gestión de los activos</span>
             </button>
+            <div class="dropdown-menu">
+                <a [routerLink]="['/menu', 'ver-activos']">Ver Activos</a>
+                <a [routerLink]="['/menu', 'infraestructura' ,'crear-activos']">Crear Activo</a>
+                <a [routerLink]="['/menu', 'infraestructura' ,'editar-activos']">Editar Activo</a>
+                <a [routerLink]="['/menu', 'infraestructura' ,'eliminar-activos']">Eliminar Activo</a>
+            </div>
         </div>
+
         <div class="cuadrado">
-            <button [routerLink]="['/menu', 'sectores']"  routerLinkActive="active">
+            <button>
                 <span class="texto">Sectores</span>
                 <span class="tooltip">Gestion de los sectores</span>
             </button>
+            <div class="dropdown-menu">
+                <a [routerLink]="['/menu', 'sectores', 'ver']">Ver Sectores</a>
+                <a [routerLink]="['/menu', 'sectores', 'crear']">Crear Sector</a>
+                <a [routerLink]="['/menu', 'sectores', 'editar']">Editar Sector</a>
+                <a [routerLink]="['/menu', 'sectores', 'eliminar']">Eliminar Sector</a>
+            </div>
         </div>
         <div class="cuadrado">
             <button [routerLink]="['/menu', 'ordenes']"  routerLinkActive="active">

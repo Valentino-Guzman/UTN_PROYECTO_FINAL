@@ -12,6 +12,7 @@ import { VistaOrdenOperarioComponent } from './pages/vistaOperario/vista-orden-o
 import { CrearSectorComponent } from './components/gestiones/gestion_infraestructura/sector/crear-sector/crear-sector.component';
 import { OrdenDeTrabajoComponent } from './components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component';
 import { VerActivoComponent } from './components/gestiones/gestion_infraestructura/activo/ver-activo/ver-activo.component';
+import { SectorComponent } from './components/gestiones/gestion_ordenes/orden-de-trabajo/sector/sector.component';
 
 
 
@@ -25,14 +26,16 @@ export const routes: Routes = [
         canActivate: [verificarGuard],
         children: [
             { path: 'dashboard', component: DashboardComponent },
-            { path: 'activos', component: VerActivoComponent },
             { path: 'ordenes', component: OrdenDeTrabajoComponent },
             { path: 'infraestructura', 
             component: InfraestructuraComponent, 
             children: [
-                {path: 'crear-sector', component: CrearSectorComponent}
-            ] },
-            { path: 'operarios', component: OperariosComponent }
+                { path: 'sectores', component: SectorComponent },
+            ] 
+            },
+            { path: 'operarios', component: OperariosComponent },
+            { path: 'ver-activos', component: VerActivoComponent },
+            {path: 'plantilla/:id', component:PlantillaComponent}
         ]
     },
     

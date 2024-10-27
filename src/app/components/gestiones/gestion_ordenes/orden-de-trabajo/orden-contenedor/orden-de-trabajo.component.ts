@@ -32,11 +32,6 @@ import { TipoOtService } from '../../../../../services/tipo-ot.service';
 import { SectorService } from '../../../../../services/sector.service';
 import { TareaService } from '../../../../../services/tarea_descrip.service';
 
-  
-
-  
-
-
   @Component({
     selector: 'app-orden-de-trabajo',
     standalone: true,
@@ -139,7 +134,7 @@ import { TareaService } from '../../../../../services/tarea_descrip.service';
       this.orden.crearOrden(this.nuevaOrden).subscribe({
         next: (response) => {
           this.toastr.success('Orden creada con éxito');
-          this.router.navigate(['/plantilla', response.id]);
+          this.router.navigate(['/menu/plantilla', response.id]);
         },
         error: (err) => {
           this.toastr.error('Error al crear la orden');

@@ -1,17 +1,17 @@
 .informacion select {
     width: 100%;
-    height: 30px;
+    height: 25px;
     border-radius: 10px;
     border: 1px solid #EAEBEC;
-    margin-top: 10px;
+    margin-top: 5px;
     padding: 3px;
     padding-left: 10px;
     box-sizing: border-box;
-    margin-top: 15px;
     margin-bottom: 15px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    color: #060640;
 }
 
 .informacion select:hover {
-    border-color: #303336; 
+    border-color: #060640; 
 }
