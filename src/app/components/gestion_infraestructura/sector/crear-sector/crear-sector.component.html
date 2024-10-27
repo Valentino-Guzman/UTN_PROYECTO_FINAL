@@ -1,0 +1,11 @@
+
+<div class="card">
+    <form class="formulario">
+        <div class="sector">
+            <label for="nombre">Nombre del Activo</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre del nuevo sector"
+                [(ngModel)]="SectorData.nombre" required />
+        </div>
+        <button (click)="crearSector()">Crear</button>
+    </form>
+</div>
