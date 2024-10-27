@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { SectorService } from '../../../../services/sector.service';
-import { Sector } from '../../../../interfaces/sector';
+
 import { NgFor } from '@angular/common';
+import { SectorService } from '../../../../../services/sector.service';
+import { Sector } from '../../../../../interfaces/sector';
 
 @Component({
   selector: 'app-ver-sector',
@@ -11,16 +12,16 @@ import { NgFor } from '@angular/common';
   styleUrl: './ver-sector.component.scss'
 })
 export class VerSectorComponent implements OnInit {
- sectores: Sector[]=[]
-  constructor (private sector:SectorService){
+  sectores: Sector[] = []
 
+  constructor (
+    private sector:SectorService
+  ){}
 
-}
-ngOnInit(): void {
-  this.sector.obtenerSector().subscribe(data=>{
-    this.sectores=data
-  })
-    
-}
+  ngOnInit(): void {
+    this.sector.obtenerSector().subscribe(data => {
+      this.sectores = data
+    }) 
+  }
 }
 

@@ -15,7 +15,7 @@
                 <button [routerLink]="['/menu', 'operarios']" class="btn-navegacion fade-in">
                     <app-svg-operarios></app-svg-operarios>
                     Operarios</button>
-                <button class="btn-navegacion fade-in">
+                <button [routerLink]="['/menu', 'configuracion']" class="btn-navegacion fade-in">
                         <app-svg-configuracion></app-svg-configuracion>
                     Configuración</button>
                 <button (click)="logout()" class="btn-navegacion fade-in">Cerrar sesión</button>

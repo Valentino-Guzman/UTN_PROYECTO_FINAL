@@ -13,13 +13,18 @@ import { CrearSectorComponent } from './components/gestiones/gestion_infraestruc
 import { OrdenDeTrabajoComponent } from './components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component';
 import { VerActivoComponent } from './components/gestiones/gestion_infraestructura/activo/ver-activo/ver-activo.component';
 import { SectorComponent } from './components/gestiones/gestion_ordenes/orden-de-trabajo/sector/sector.component';
+import { CrearActivoComponent } from './components/gestiones/gestion_infraestructura/activo/crear-activo/crear-activo.component';
+import { VerSectorComponent } from './components/gestiones/gestion_infraestructura/sector/ver-sector/ver-sector.component';
+import { ConfiguracionComponent } from './components/configuracion/configuracion.component';
+import { VerOperariosComponent } from './components/gestiones/gestion_operarios/ver-operarios/ver-operarios.component';
+import { CrearOperarioComponent } from './components/gestiones/gestion_operarios/crear-operario/crear-operario.component';
 
 
 
 
 export const routes: Routes = [
-    {path: 'login', component: LoginComponent},
-    {path: 'register', component: RegisterComponent},
+    { path: 'login', component: LoginComponent },
+    { path: 'register', component: RegisterComponent },
     { 
         path: 'menu', 
         component: MenuPrincipalComponent, 
@@ -27,19 +32,23 @@ export const routes: Routes = [
         children: [
             { path: 'dashboard', component: DashboardComponent },
             { path: 'ordenes', component: OrdenDeTrabajoComponent },
-            { path: 'infraestructura', 
-            component: InfraestructuraComponent, 
-            children: [
-                { path: 'sectores', component: SectorComponent },
-            ] 
-            },
+            { path: 'plantilla/:id', component: PlantillaComponent },
+            { path: 'infraestructura', component: InfraestructuraComponent },
             { path: 'operarios', component: OperariosComponent },
+
             { path: 'ver-activos', component: VerActivoComponent },
-            {path: 'plantilla/:id', component:PlantillaComponent}
+            { path: 'crear-activo', component: CrearActivoComponent},
+
+            { path: 'ver-sectores', component: VerSectorComponent },
+            { path: 'crear-sector', component: CrearSectorComponent},
+            
+            { path: 'ver-operarios', component: VerOperariosComponent },
+            { path: 'crear-operario', component: CrearOperarioComponent },
+
+            { path: 'configuracion', component: ConfiguracionComponent }
         ]
     },
     
     { path: 'vistaUsuario', component:VistaOrdenOperarioComponent},
-    {path: 'plantilla/:id', component: PlantillaComponent},
     { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];

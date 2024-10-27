@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { ToastrService } from 'ngx-toastr';
 import { Sector } from '../../../../../interfaces/sector';
 import { SectorService } from '../../../../../services/sector.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -24,12 +25,13 @@ export class CrearSectorComponent {
 
   constructor (
     private sector: SectorService,
-    private toastr: ToastrService
-
+    private toastr: ToastrService,
+    private router: Router
   ){}
   crearSector() {
     this.sector.crearSector(this.SectorData).subscribe({
       next: () => {
+        this.router.navigate(['/menu/ver-sectores'])
         this.toastr.success('Sector creado con éxito.')
       }
 })

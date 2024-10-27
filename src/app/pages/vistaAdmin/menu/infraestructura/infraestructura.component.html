@@ -12,9 +12,9 @@
             </button>
             <div class="dropdown-menu">
                 <a [routerLink]="['/menu', 'ver-activos']">Ver Activos</a>
-                <a [routerLink]="['/menu', 'infraestructura' ,'crear-activos']">Crear Activo</a>
-                <a [routerLink]="['/menu', 'infraestructura' ,'editar-activos']">Editar Activo</a>
-                <a [routerLink]="['/menu', 'infraestructura' ,'eliminar-activos']">Eliminar Activo</a>
+                <a [routerLink]="['/menu', 'crear-activo']">Crear Activo</a>
+                <a [routerLink]="['/menu', 'editar-activos']">Editar Activo</a>
+                <a [routerLink]="['/menu', 'eliminar-activos']">Eliminar Activo</a>
             </div>
         </div>
 
@@ -24,23 +24,35 @@
                 <span class="tooltip">Gestion de los sectores</span>
             </button>
             <div class="dropdown-menu">
-                <a [routerLink]="['/menu', 'sectores', 'ver']">Ver Sectores</a>
-                <a [routerLink]="['/menu', 'sectores', 'crear']">Crear Sector</a>
-                <a [routerLink]="['/menu', 'sectores', 'editar']">Editar Sector</a>
-                <a [routerLink]="['/menu', 'sectores', 'eliminar']">Eliminar Sector</a>
+                <a [routerLink]="['/menu', 'ver-sectores']">Ver Sectores</a>
+                <a [routerLink]="['/menu', 'crear-sector']">Crear Sector</a>
+                <a [routerLink]="['/menu', 'editar-sectores']">Editar Sector</a>
+                <a [routerLink]="['/menu', 'eliminar-sectores']">Eliminar Sector</a>
             </div>
         </div>
         <div class="cuadrado">
-            <button [routerLink]="['/menu', 'ordenes']"  routerLinkActive="active">
+            <button>
                 <span class="texto">Edificio</span>
                 <span class="tooltip">Gestion de los edificios</span>
-            </button> 
+            </button>
+            <div class="dropdown-menu">
+                <a [routerLink]="['/menu', 'ver-edificios']">Ver Edificios</a>
+                <a [routerLink]="['/menu', 'crear-edificio']">Crear Edificio</a>
+                <a [routerLink]="['/menu', 'editar-edificios']">Editar edificios</a>
+                <a [routerLink]="['/menu', 'eliminar-edificios']">Eliminar Edificio</a>
+            </div>
         </div>
         <div class="cuadrado">
             <button [routerLink]="['/menu', 'ordenes']"  routerLinkActive="active">
                 <span class="texto">Piso</span>
                 <span class="tooltip">Gestion de los pisos</span>
             </button> 
+            <div class="dropdown-menu">
+                <a [routerLink]="['/menu', 'ver-pisos']">Ver Pisos</a>
+                <a [routerLink]="['/menu', 'crear-piso']">Crear Piso</a>
+                <a [routerLink]="['/menu', 'editar-piso']">Editar Piso</a>
+                <a [routerLink]="['/menu', 'eliminar-piso']">Eliminar Piso</a>
+            </div>
         </div>
         <div class="cuadrado">
             <button [routerLink]="['/menu', 'ordenes']"  routerLinkActive="active">
