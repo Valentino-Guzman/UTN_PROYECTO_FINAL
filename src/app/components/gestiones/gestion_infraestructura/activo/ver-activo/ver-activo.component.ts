@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivoService } from '../../../../../../services/activo.service';
-import { Activo } from '../../../../../../interfaces/activo';
+
 
 import { NgFor } from '@angular/common';
+import { ActivoService } from '../../../../../services/activo.service';
+import { Activo } from '../../../../../interfaces/activo';
 
 @Component({
   selector: 'app-ver-activo',
