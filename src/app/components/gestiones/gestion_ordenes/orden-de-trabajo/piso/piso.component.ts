@@ -1,7 +1,8 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CommonModule, NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Piso } from '../../../../../../interfaces/piso';
+import { Piso } from '../../../../../interfaces/piso';
+
 
 @Component({
   selector: 'app-piso',

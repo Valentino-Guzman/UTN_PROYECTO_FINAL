@@ -13,25 +13,26 @@
   import { SectorComponent } from "../sector/sector.component";
 
   import { ToastrService } from 'ngx-toastr';
+import { Orden } from '../../../../../interfaces/orden';
+import { Operario } from '../../../../../interfaces/operario';
+import { Ubicacion } from '../../../../../interfaces/ubicacion';
+import { Piso } from '../../../../../interfaces/piso';
+import { activo_desc } from '../../../../../interfaces/activo_tarea_descrip';
+import { Sector } from '../../../../../interfaces/sector';
+import { Edificio } from '../../../../../interfaces/edificio';
+import { Tarea } from '../../../../../interfaces/tarea';
+import { Tipo_ot } from '../../../../../interfaces/tipo_ot';
+import { OrdenDeTrabajoService } from '../../../../../services/orden-de-trabajo.service';
+import { OperarioService } from '../../../../../services/operario.service';
+import { UbicacionService } from '../../../../../services/ubicacion.service';
+import { PisoService } from '../../../../../services/piso.service';
+import { ActivoService } from '../../../../../services/activo.service';
+import { EdificioService } from '../../../../../services/edificio.service';
+import { TipoOtService } from '../../../../../services/tipo-ot.service';
+import { SectorService } from '../../../../../services/sector.service';
+import { TareaService } from '../../../../../services/tarea_descrip.service';
 
-  import { Orden } from '../../../../../../interfaces/orden';
-  import { Operario } from '../../../../../../interfaces/operario';
-  import { Ubicacion } from '../../../../../../interfaces/ubicacion';
-  import { Piso } from '../../../../../../interfaces/piso';
-  import { activo_desc } from '../../../../../../interfaces/activo_tarea_descrip';
-  import { Edificio } from '../../../../../../interfaces/edificio';
-  import { Sector } from '../../../../../../interfaces/sector';
-  import { Tarea } from '../../../../../../interfaces/tarea';
-  import { Tipo_ot } from '../../../../../../interfaces/tipo_ot';
-  import { OrdenDeTrabajoService } from '../../../../../../services/orden-de-trabajo.service';
-  import { OperarioService } from '../../../../../../services/operario.service';
-  import { UbicacionService } from '../../../../../../services/ubicacion.service';
-  import { PisoService } from '../../../../../../services/piso.service';
-  import { ActivoService } from '../../../../../../services/activo.service';
-  import { EdificioService } from '../../../../../../services/edificio.service';
-  import { TipoOtService } from '../../../../../../services/tipo-ot.service';
-  import { SectorService } from '../../../../../../services/sector.service';
-  import { TareaService } from '../../../../../../services/tarea_descrip.service';
+  
 
   
 

@@ -1,7 +1,7 @@
 import { CommonModule, NgFor } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Operario } from '../../../../../../interfaces/operario';
+import { Operario } from '../../../../../interfaces/operario';
 
 
 @Component({
