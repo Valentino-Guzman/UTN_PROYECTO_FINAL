@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { verificarGuard } from './guard/verificar.guard';
 
+import { InicioComponent } from './components/inicio/inicio.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { PlantillaComponent } from './components/plantillaOT/plantilla/plantilla.component';
@@ -21,8 +22,10 @@ import { CrearOperarioComponent } from './components/gestiones/gestion_operarios
 
 
 
-
-export const routes: Routes = [
+export const routes:Routes = [
+    { path: '', component: InicioComponent }, 
+     { path: 'login', component: LoginComponent }, 
+     { path: '**', redirectTo: '' },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { 
