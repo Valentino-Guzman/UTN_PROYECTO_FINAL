@@ -1,0 +1,19 @@
+<div class="card">
+    <table class="edificio-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre del Edificio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let edificio of edificios">
+                <td>{{ edificio.id }}</td>
+                <td>{{ edificio.nombre }}</td>
+                <td>{{ edificio.calle}}</td>
+                <td>{{ edificio.numero}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

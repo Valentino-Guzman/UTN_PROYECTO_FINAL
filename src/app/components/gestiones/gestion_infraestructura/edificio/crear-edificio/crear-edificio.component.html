@@ -1,0 +1,10 @@
+<div class="card">
+    <form class="formulario">
+        <div class="edificio">
+            <label for="nombre">Nombre del Edificio</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre del nuevo edificio"
+                [(ngModel)]="edificioData.nombre" required />
+        </div>
+        <button (click)="crearEdificio()">Crear</button>
+    </form>
+</div>

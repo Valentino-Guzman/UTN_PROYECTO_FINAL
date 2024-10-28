@@ -1,0 +1,10 @@
+<div class="card">
+    <form class="formulario">
+        <div class="piso">
+            <label for="nombre">Nombre del piso</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre del nuevo piso"
+                [(ngModel)]="PisoData.numero" required />
+        </div>
+        <button (click)="crearPiso()">Crear</button>
+    </form>
+</div>

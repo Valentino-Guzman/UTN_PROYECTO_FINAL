@@ -1,0 +1,17 @@
+<div class="card">
+    <table class="piso-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre del Piso</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let piso  of pisos">
+                <td>{{ piso.id }}</td>
+                <td>{{ piso.numero }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

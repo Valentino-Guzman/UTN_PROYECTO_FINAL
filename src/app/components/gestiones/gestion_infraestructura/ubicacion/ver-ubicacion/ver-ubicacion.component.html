@@ -1,0 +1,16 @@
+<div class="card">
+    <table class="ubicacion-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre de la ubicacion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ubicacion of ubicaciones">
+                <td>{{ ubicacion.id }}</td>
+                <td>{{ ubicacion.ubicacion }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

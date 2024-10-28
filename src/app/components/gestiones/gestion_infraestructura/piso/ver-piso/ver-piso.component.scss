@@ -1,0 +1,25 @@
+.card {
+    max-width: 600px;
+    margin: 20px auto; 
+    padding: 10px; 
+    background-color: #fff; 
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.piso-table {
+    width: 100%; 
+    border-collapse: collapse; 
+    font-size: 14px; 
+}
+
+.piso-table th, .activos-table td {
+    border: 1px solid #ddd;
+    padding: 4px; 
+    text-align: left; 
+}
+
+.piso-table th {
+    background-color: #f2f2f2; 
+}

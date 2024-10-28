@@ -18,7 +18,12 @@ import { VerSectorComponent } from './components/gestiones/gestion_infraestructu
 import { ConfiguracionComponent } from './components/configuracion/configuracion.component';
 import { VerOperariosComponent } from './components/gestiones/gestion_operarios/ver-operarios/ver-operarios.component';
 import { CrearOperarioComponent } from './components/gestiones/gestion_operarios/crear-operario/crear-operario.component';
-
+import { CrearEdificioComponent } from './components/gestiones/gestion_infraestructura/edificio/crear-edificio/crear-edificio.component';
+import { VerEdificioComponent } from './components/gestiones/gestion_infraestructura/edificio/ver-edificio/ver-edificio.component';
+import { CrearPisoComponent } from './components/gestiones/gestion_infraestructura/piso/crear-piso/crear-piso.component';
+import { VerPisoComponent } from './components/gestiones/gestion_infraestructura/piso/ver-piso/ver-piso.component';
+import { VerUbicacionComponent } from './components/gestiones/gestion_infraestructura/ubicacion/ver-ubicacion/ver-ubicacion.component';
+import { CrearUbicaciomComponent } from './components/gestiones/gestion_infraestructura/ubicacion/crear-ubicacion/crear-ubicacion.component';
 
 
 
@@ -45,7 +50,17 @@ export const routes: Routes = [
             { path: 'ver-operarios', component: VerOperariosComponent },
             { path: 'crear-operario', component: CrearOperarioComponent },
 
-            { path: 'configuracion', component: ConfiguracionComponent }
+            { path: 'configuracion', component: ConfiguracionComponent },
+
+            {path: 'crear-edificio', component: CrearEdificioComponent},
+            {path: 'ver-edificio', component: VerEdificioComponent},
+
+            {path: 'crear-piso', component: CrearPisoComponent},
+            {path: 'ver-piso',component: VerPisoComponent},
+
+            {path: 'ver-ubicacion',component: VerUbicacionComponent},
+            {path: 'crear-ubicacion', component: CrearUbicaciomComponent}
+
         ]
     },
     
