@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { verificarGuard } from './guard/verificar.guard';
 
+import { InicioComponent } from './components/inicio/inicio.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { PlantillaComponent } from './components/plantillaOT/plantilla/plantilla.component';
@@ -22,8 +23,10 @@ import { OrdenesComponent } from './pages/vistaAdmin/menu/ordenes/ordenes.compon
 
 
 
-
-export const routes: Routes = [
+export const routes:Routes = [
+    { path: '', component: InicioComponent }, 
+     { path: 'login', component: LoginComponent }, 
+     { path: '**', redirectTo: '' },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { 
