@@ -1,0 +1,15 @@
+.btn-atras {
+    width: 150px;
+    height: 25px;
+    border: 1px solid #060640;
+    margin-right: 10px;
+    color: #060640;
+    transition: 0.3s ease;
+    cursor: pointer;
+    
+    background-color: transparent;
+}
+
+.btn-atras:hover {
+    background-color: #ecf9ff;
+}

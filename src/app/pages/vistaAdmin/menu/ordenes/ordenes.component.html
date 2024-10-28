@@ -1,0 +1,26 @@
+<div class="dashboard">
+    <div class="welcome">
+        <span>Bienvenido a</span>
+        <h1>Gestion de Ordenes</h1>
+    </div>
+    <div class="contenedor-contenido">
+        <div class="cuadrado">
+            <button [routerLink]="['/menu', 'ver-ordenes']"  routerLinkActive="active">
+                <span class="texto">Ordenes</span>
+                <span class="tooltip">Ver las ordenes</span>
+            </button>
+        </div>
+        <div class="cuadrado">
+            <button [routerLink]="['/menu', 'ordenes-pendientes']"  routerLinkActive="active">
+                <span class="texto">Ordenes pendientes</span>
+                <span class="tooltip">Ver lista de las ordenes pendientes</span>
+            </button>
+        </div>
+        <div class="cuadrado">
+            <button [routerLink]="['/menu', 'generar-orden']"  routerLinkActive="active">
+                <span class="texto">Generar orden</span>
+                <span class="tooltip">Crea una nueva orden de trabajo</span>
+            </button> 
+        </div>
+    </div>
+</div>

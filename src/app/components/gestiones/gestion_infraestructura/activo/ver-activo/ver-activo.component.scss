@@ -1,25 +1,86 @@
-.card {
-    max-width: 600px;
-    margin: 20px auto; 
-    padding: 10px; 
-    background-color: #fff; 
-    border: 1px solid #ddd;
-    border-radius: 8px; 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+.activo-contenedor {
+    display: flex;
 }
 
-.activos-table {
-    width: 100%; 
+.contenedor {
+    border: 1px solid #060640;
+}
+.card {
+    display: flex;
+    max-width: 700px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background-color: #fff; 
+    border: 1px solid #060640;
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+    animation: fadeIn 0.8s ease backwards;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    animation: fadeIn 0.8s ease forwards;
+    margin-left: 15px;
+    
+    h1 {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+}
+
+.activos-table  {
+    width: 700px; 
     border-collapse: collapse; 
     font-size: 14px; 
+    border-bottom: 1px solid #060640;
+    border-right: 1px solid #060640;
+    animation: fadeIn 0.8s ease backwards;
 }
 
+
 .activos-table th, .activos-table td {
-    border: 1px solid #ddd;
-    padding: 4px; 
-    text-align: left; 
+    border-left: 1px solid #060640;
+    border-top: 1px solid #060640;
+    padding: 4px;  
+}
+
+.activos-table td {
+    height: 24px;
 }
 
 .activos-table th {
-    background-color: #f2f2f2; 
+    background-color: #ecf9ff;
+}
+
+.columna {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+app-svg-basura {
+    height: 20px;
+    width: 20px;
+}
+
+.btn-eliminar, .btn-editar {
+    cursor: pointer;
+    border: transparent;
+    background-color: transparent;
+}
+
+.acciones {
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }

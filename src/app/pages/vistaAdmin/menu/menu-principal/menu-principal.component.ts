@@ -10,12 +10,15 @@ import { SvgOperariosComponent } from '../../../../components/svg/imagenes-menu/
 import { SvgConfiguracionComponent } from '../../../../components/svg/imagenes-menu/svg-configuracion/svg-configuracion.component';
 import { SvgInfraestructuraComponent } from '../../../../components/svg/imagenes-menu/svg-infraestructura/svg-infraestructura.component';
 import { SvgLlaveComponent } from '../../../../components/svg/imagenes-menu/svg-llave/svg-llave.component';
+import { SvgOrdenComponent } from "../../../../components/svg/svg-orden/svg-orden.component";
+import { SvgEdificioComponent } from '../../../../components/svg/imagenes-menu/svg-edificio/svg-edificio.component';
+
 
 
 @Component({
   selector: 'app-menu-principal',
   standalone: true,
-  imports: [RouterLink, RouterOutlet, DashboardComponent, SvgDashboardComponent, SvgOperariosComponent, SvgConfiguracionComponent, SvgInfraestructuraComponent, SvgLlaveComponent],
+  imports: [RouterLink, RouterOutlet, DashboardComponent, SvgDashboardComponent, SvgOperariosComponent, SvgConfiguracionComponent, SvgInfraestructuraComponent, SvgLlaveComponent, SvgOrdenComponent, SvgEdificioComponent],
   templateUrl: './menu-principal.component.html',
   styleUrl: './menu-principal.component.scss'
 })

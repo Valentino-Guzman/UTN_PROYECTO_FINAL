@@ -18,6 +18,7 @@ import { VerSectorComponent } from './components/gestiones/gestion_infraestructu
 import { ConfiguracionComponent } from './components/configuracion/configuracion.component';
 import { VerOperariosComponent } from './components/gestiones/gestion_operarios/ver-operarios/ver-operarios.component';
 import { CrearOperarioComponent } from './components/gestiones/gestion_operarios/crear-operario/crear-operario.component';
+import { OrdenesComponent } from './pages/vistaAdmin/menu/ordenes/ordenes.component';
 
 
 
@@ -31,7 +32,8 @@ export const routes: Routes = [
         canActivate: [verificarGuard],
         children: [
             { path: 'dashboard', component: DashboardComponent },
-            { path: 'ordenes', component: OrdenDeTrabajoComponent },
+            { path: 'ordenes', component: OrdenesComponent },
+            { path: 'generar-orden', component: OrdenDeTrabajoComponent },
             { path: 'plantilla/:id', component: PlantillaComponent },
             { path: 'infraestructura', component: InfraestructuraComponent },
             { path: 'operarios', component: OperariosComponent },

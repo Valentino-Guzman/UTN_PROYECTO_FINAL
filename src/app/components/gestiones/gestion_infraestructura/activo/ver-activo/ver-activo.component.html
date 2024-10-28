@@ -1,16 +1,35 @@
-<div class="card">
-    <table class="activos-table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nombre del Activo</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let activo of activos">
-                <td>{{ activo.id }}</td>
-                <td>{{ activo.nombre }}</td>
-            </tr>
-        </tbody>
-    </table>
+<div class="activo-contenedor">
+    <app-btn-atras></app-btn-atras>
+    <div class="contenedor">
+        <div class="welcome">
+            <h1>Lista Activos</h1>
+        </div>
+        <div class="card">
+            <table class="activos-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre del Activo</th>
+                        <th>Siglas</th> 
+                        <th>Acciones</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let activo of activos">
+                        <td>{{ activo.id }}</td>
+                        <td>{{ activo.nombre }}</td>
+                        <td class="siglas">{{ activo.siglas }}</td> 
+                        <td class="acciones">
+                            <button (click)="editar()" class="btn-editar">
+                               <app-svg-editar></app-svg-editar>
+                            </button>
+                            <button (click)="eliminar()" class="btn-eliminar">
+                                <app-svg-basura></app-svg-basura>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>

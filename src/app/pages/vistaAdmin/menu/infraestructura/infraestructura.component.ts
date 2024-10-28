@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { WelcomeComponent } from "../dashboard/welcome/welcome.component";
+import { WelcomeComponent } from "../ordenes/welcome/welcome.component";
 import { MatMenuModule } from '@angular/material/menu';
 import { NgIf } from '@angular/common';
 

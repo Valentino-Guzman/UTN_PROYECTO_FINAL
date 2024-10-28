@@ -4,9 +4,9 @@ import { Component } from '@angular/core';
   selector: 'app-svg-edificio',
   standalone: true,
   imports: [],
-  templateUrl: './edificio.component.html',
-  styleUrl: './edificio.component.scss'
+  templateUrl: './svg-edificio.component.html',
+  styleUrl: './svg-edificio.component.scss'
 })
-export class EdificioComponent {
+export class SvgEdificioComponent {
 
 }
