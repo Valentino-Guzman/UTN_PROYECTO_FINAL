@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { verificarGuard } from './guard/verificar.guard';
 
+import { InicioComponent } from './components/inicio/inicio.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { PlantillaComponent } from './components/plantillaOT/plantilla/plantilla.component';
@@ -18,6 +19,7 @@ import { VerSectorComponent } from './components/gestiones/gestion_infraestructu
 import { ConfiguracionComponent } from './components/configuracion/configuracion.component';
 import { VerOperariosComponent } from './components/gestiones/gestion_operarios/ver-operarios/ver-operarios.component';
 import { CrearOperarioComponent } from './components/gestiones/gestion_operarios/crear-operario/crear-operario.component';
+import { OrdenesComponent } from './pages/vistaAdmin/menu/ordenes/ordenes.component';
 import { CrearEdificioComponent } from './components/gestiones/gestion_infraestructura/edificio/crear-edificio/crear-edificio.component';
 import { VerEdificioComponent } from './components/gestiones/gestion_infraestructura/edificio/ver-edificio/ver-edificio.component';
 import { CrearPisoComponent } from './components/gestiones/gestion_infraestructura/piso/crear-piso/crear-piso.component';
@@ -27,7 +29,10 @@ import { CrearUbicaciomComponent } from './components/gestiones/gestion_infraest
 
 
 
-export const routes: Routes = [
+export const routes:Routes = [
+    { path: '', component: InicioComponent }, 
+     { path: 'login', component: LoginComponent }, 
+     { path: '**', redirectTo: '' },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { 
@@ -36,7 +41,8 @@ export const routes: Routes = [
         canActivate: [verificarGuard],
         children: [
             { path: 'dashboard', component: DashboardComponent },
-            { path: 'ordenes', component: OrdenDeTrabajoComponent },
+            { path: 'ordenes', component: OrdenesComponent },
+            { path: 'generar-orden', component: OrdenDeTrabajoComponent },
             { path: 'plantilla/:id', component: PlantillaComponent },
             { path: 'infraestructura', component: InfraestructuraComponent },
             { path: 'operarios', component: OperariosComponent },

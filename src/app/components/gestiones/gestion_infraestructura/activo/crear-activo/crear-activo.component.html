@@ -1,13 +1,22 @@
-<div class="card">
-    <form class="formulario">
-        <div class="activo">
-            <label for="nombre">Nombre del Activo</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre del nuevo activo"
-                [(ngModel)]="activoData.nombre" required />
-                <label for="nombre">Siglas</label>
-            <input type="text" id="siglas" name="siglas" placeholder="Ingrese las siglas del nuevo activo"
-                [(ngModel)]="activoData.siglas" required />
+<div class="activo-contenedor">
+    <app-btn-atras></app-btn-atras>
+    <div class="contenedor">
+        <div class="welcome">
+            <span>Complete los datos</span>
+            <h1>Crear Activos</h1>
         </div>
-        <button (click)="crearActivo()">Crear</button>
-    </form>
+        <div class="card">
+            <form class="formulario">
+                <div class="activo">
+                    <label for="nombre">Nombre del Activo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingrese el nombre del nuevo activo"
+                        [(ngModel)]="activoData.nombre" required />
+                        <label for="nombre">Siglas</label>
+                    <input type="text" id="siglas" name="siglas" placeholder="Ingrese las siglas del nuevo activo"
+                        [(ngModel)]="activoData.siglas" required />
+                </div>
+                <button (click)="crearActivo()">Crear</button>
+            </form>
+        </div>
+    </div>
 </div>

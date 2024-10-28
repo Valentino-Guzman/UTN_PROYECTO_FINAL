@@ -1,23 +1,30 @@
-<div class="dashboard">
-    <app-welcome></app-welcome>
-    <div class="contenedor-contenido">
-        <div class="cuadrado">
-            <button [routerLink]="['/menu', 'ver-ordenes']"  routerLinkActive="active">
-                <span class="texto">Ordenes</span>
-                <span class="tooltip">Ver las ordenes</span>
-            </button>
+<div class="main">
+    <div class="contenedor">
+        <div class="dashboard">
+            <app-welcome></app-welcome>
         </div>
-        <div class="cuadrado">
-            <button [routerLink]="['/menu', 'ordenes-pendientes']"  routerLinkActive="active">
-                <span class="texto">Ordenes pendientes</span>
-                <span class="tooltip">Ver lista de las ordenes pendientes</span>
-            </button>
+        <div class="contenedor-contenido">
+            <div class="grafico">
+                <div class="grafico-descripcion">
+                    <div class="titulo">
+                        <h1>Estado de Ordenes</h1>
+                    </div>
+                    <div class="cuadrado">
+                        <app-grafico-ordenes></app-grafico-ordenes>
+                    </div>
+                </div>
+                <div class="grafico-descripcion">
+                    <div class="titulo">
+                        <h1>Estado de Infraestructura</h1>
+                    </div>
+                    <div class="cuadrado">
+                        <app-grafico-ordenes></app-grafico-ordenes>
+                    </div>
+                </div>   
+            </div>
         </div>
-        <div class="cuadrado">
-            <button [routerLink]="['/menu', 'ordenes']"  routerLinkActive="active">
-                <span class="texto">Generar orden</span>
-                <span class="tooltip">Crea una nueva orden de trabajo</span>
-            </button> 
-        </div>
+    </div>
+    <div class="calendario">
+        <app-calendario></app-calendario>
     </div>
 </div>

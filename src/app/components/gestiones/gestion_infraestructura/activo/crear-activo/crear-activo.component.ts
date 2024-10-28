@@ -6,11 +6,12 @@ import { ToastrService } from 'ngx-toastr';
 import { ActivoService } from '../../../../../services/activo.service';
 import { Activo } from '../../../../../interfaces/activo';
 import { Router } from '@angular/router';
+import { BtnAtrasComponent } from "../btn-atras/btn-atras.component";
 
 @Component({
   selector: 'app-crear-activo',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, BtnAtrasComponent],
   templateUrl: './crear-activo.component.html',
   styleUrl: './crear-activo.component.scss'
 })
