@@ -25,14 +25,13 @@ import { VerEdificioComponent } from './components/gestiones/gestion_infraestruc
 import { CrearPisoComponent } from './components/gestiones/gestion_infraestructura/piso/crear-piso/crear-piso.component';
 import { VerPisoComponent } from './components/gestiones/gestion_infraestructura/piso/ver-piso/ver-piso.component';
 import { VerUbicacionComponent } from './components/gestiones/gestion_infraestructura/ubicacion/ver-ubicacion/ver-ubicacion.component';
-import { CrearUbicaciomComponent } from './components/gestiones/gestion_infraestructura/ubicacion/crear-ubicacion/crear-ubicacion.component';
+// import { CrearUbicaciomComponent } from './components/gestiones/gestion_infraestructura/ubicacion/crear-ubicacion/crear-ubicacion.component';
 
 
 
 export const routes:Routes = [
     { path: '', component: InicioComponent }, 
-     { path: 'login', component: LoginComponent }, 
-     { path: '**', redirectTo: '' },
+    { path: 'login', component: LoginComponent }, 
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { 
@@ -65,7 +64,7 @@ export const routes:Routes = [
             {path: 'ver-piso',component: VerPisoComponent},
 
             {path: 'ver-ubicacion',component: VerUbicacionComponent},
-            {path: 'crear-ubicacion', component: CrearUbicaciomComponent}
+            // {path: 'crear-ubicacion', component: CrearUbicaciomComponent}
 
         ]
     },

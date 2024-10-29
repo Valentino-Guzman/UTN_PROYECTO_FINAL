@@ -17,7 +17,7 @@ export class UbicacionService {
     return this.http.get<Ubicacion[]>(`${this.apiUrl}/ubicacion`)
   }
 
-  crearUbicacion(data: Ubicacion[]): Observable<Ubicacion[]> {
-    return this.http.get<Ubicacion[]>(`${this.apiUrl}/ubicacion`)
+  crearUbicacion(data: Ubicacion): Observable<Ubicacion> {
+    return this.http.get<Ubicacion>(`${this.apiUrl}/ubicacion`)
   }
 }
