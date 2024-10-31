@@ -246,7 +246,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/components/gestiones/gestion_infraestructura/activo/modificar-activo/modificar-activo.component.ts:23</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/components/gestiones/gestion_infraestructura/activo/modificar-activo/modificar-activo.component.ts:24</a></div>
                             </td>
                         </tr>
 
@@ -325,8 +325,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="36"
-                                    class="link-to-prism">src/app/components/gestiones/gestion_infraestructura/activo/modificar-activo/modificar-activo.component.ts:36</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="37"
+                                    class="link-to-prism">src/app/components/gestiones/gestion_infraestructura/activo/modificar-activo/modificar-activo.component.ts:37</a></div>
                         </td>
                     </tr>
 
@@ -362,8 +362,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="30"
-                                    class="link-to-prism">src/app/components/gestiones/gestion_infraestructura/activo/modificar-activo/modificar-activo.component.ts:30</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="31"
+                                    class="link-to-prism">src/app/components/gestiones/gestion_infraestructura/activo/modificar-activo/modificar-activo.component.ts:31</a></div>
                         </td>
                     </tr>
 
@@ -409,7 +409,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/components/gestiones/gestion_infraestructura/activo/modificar-activo/modificar-activo.component.ts:23</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/components/gestiones/gestion_infraestructura/activo/modificar-activo/modificar-activo.component.ts:24</a></div>
                         </td>
                     </tr>
 
@@ -437,14 +437,14 @@
                     <td class="col-md-4">
                         <i>Default value : </i><code>{
     nombre: &#x27;&#x27;,
-    ubicacion_id: 0,
-    id: 0
+    id: 0,
+    siglas: &#x27;&#x27;
   }</code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/components/gestiones/gestion_infraestructura/activo/modificar-activo/modificar-activo.component.ts:17</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/components/gestiones/gestion_infraestructura/activo/modificar-activo/modificar-activo.component.ts:18</a></div>
                         </td>
                     </tr>
 
@@ -458,11 +458,12 @@
 
     <div class="tab-pane fade  tab-source-code" id="source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
-import { ActivoService } from &#x27;../../../../services/activo.service&#x27;;
-import { Activo } from &#x27;../../../../interfaces/activo&#x27;;
+
 import { ActivatedRoute, Route, Router } from &#x27;@angular/router&#x27;;
 import { CommonModule } from &#x27;@angular/common&#x27;;
 import { FormsModule } from &#x27;@angular/forms&#x27;;
+import { Activo } from &#x27;../../../../../interfaces/activo&#x27;;
+import { ActivoService } from &#x27;../../../../../services/activo.service&#x27;;
 
 @Component({
   selector: &#x27;app-modificar-activo&#x27;,
@@ -475,8 +476,8 @@ export class ModificarActivoComponent implements OnInit{
 
   datosActivo: Activo &#x3D; {
     nombre: &#x27;&#x27;,
-    ubicacion_id: 0,
-    id: 0
+    id: 0,
+    siglas: &#x27;&#x27;
   }
 
   activos: Activo[] &#x3D; []
