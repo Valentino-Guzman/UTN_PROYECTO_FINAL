@@ -1,0 +1,748 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>utn-proyecto-final documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">utn-proyecto-final documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  PlantillaComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/plantillaOT/plantilla/plantilla.component.ts</code>
+</p>
+
+
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-plantilla</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                            <code>NgIf</code>
+                            <code>NgFor</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./plantilla.component.html</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrl</td>
+                <td class="col-md-9"><code>./plantilla.component.scss</code></td>
+            </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#descripcionDelActivo" >descripcionDelActivo</a>
+                            </li>
+                            <li>
+                                <a href="#fechaCreacion" >fechaCreacion</a>
+                            </li>
+                            <li>
+                                <a href="#ordenes" >ordenes</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#print" >print</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(orden: <a href="../injectables/OrdenDeTrabajoService.html" target="_self">OrdenDeTrabajoService</a>, route: ActivatedRoute)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/components/plantillaOT/plantilla/plantilla.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>orden</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/OrdenDeTrabajoService.html" target="_self" >OrdenDeTrabajoService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                    <code>ActivatedRoute</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="25"
+                                    class="link-to-prism">src/app/components/plantillaOT/plantilla/plantilla.component.ts:25</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="print"></a>
+                    <span class="name">
+                        <span ><b>print</b></span>
+                        <a href="#print"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>print()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="46"
+                                    class="link-to-prism">src/app/components/plantillaOT/plantilla/plantilla.component.ts:46</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="descripcionDelActivo"></a>
+                    <span class="name">
+                        <span ><b>descripcionDelActivo</b></span>
+                        <a href="#descripcionDelActivo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string[]</code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/components/plantillaOT/plantilla/plantilla.component.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fechaCreacion"></a>
+                    <span class="name">
+                        <span ><b>fechaCreacion</b></span>
+                        <a href="#fechaCreacion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>string | undefined</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/components/plantillaOT/plantilla/plantilla.component.ts:17</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ordenes"></a>
+                    <span class="name">
+                        <span ><b>ordenes</b></span>
+                        <a href="#ordenes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Orden.html" target="_self" >Orden | undefined</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/components/plantillaOT/plantilla/plantilla.component.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { OrdenDeTrabajoService } from &#x27;../../../services/orden-de-trabajo.service&#x27;;
+import { ActivatedRoute } from &#x27;@angular/router&#x27;;
+import { Orden } from &#x27;../../../interfaces/orden&#x27;;
+import { NgFor, NgIf } from &#x27;@angular/common&#x27;;
+
+@Component({
+  selector: &#x27;app-plantilla&#x27;,
+  standalone: true,
+  imports: [NgIf,NgFor],
+  templateUrl: &#x27;./plantilla.component.html&#x27;,
+  styleUrl: &#x27;./plantilla.component.scss&#x27;
+})
+export class PlantillaComponent {
+  
+  ordenes: Orden | undefined;
+  fechaCreacion: string | undefined;
+  descripcionDelActivo: string[] &#x3D; [];
+
+  constructor(
+    private orden: OrdenDeTrabajoService,
+    private route: ActivatedRoute
+  ) {}
+
+  ngOnInit(): void {
+    const id &#x3D; +this.route.snapshot.paramMap.get(&#x27;id&#x27;)!;
+    this.orden.obtenerOrdenId(id).subscribe(data &#x3D;&gt; {
+      this.ordenes &#x3D; data;
+      console.log(data)
+      if (this.ordenes) {
+        const date &#x3D; new Date(this.ordenes.fecha_creacion);
+        this.fechaCreacion &#x3D; date.toLocaleString(&#x27;es-ES&#x27;, {
+          year: &#x27;numeric&#x27;,
+          month: &#x27;2-digit&#x27;,
+          day: &#x27;2-digit&#x27;,
+          hour: &#x27;2-digit&#x27;,
+          minute: &#x27;2-digit&#x27;,
+          hour12: false
+        });
+  
+        this.descripcionDelActivo &#x3D; (this.ordenes.descripciones ?? &#x27;&#x27;).split(&#x27;\n&#x27;);
+      }
+    });
+  }
+
+  print() {
+    window.print();
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;borde&quot;&gt;
+    &lt;div class&#x3D;&quot;contenedor&quot;&gt;
+        &lt;div class&#x3D;&quot;plantilla&quot; *ngIf&#x3D;&quot;ordenes&quot;&gt;
+            &lt;div class&#x3D;&quot;margen&quot;&gt;
+                &lt;header class&#x3D;&quot;encabezado&quot;&gt;
+                    &lt;div class&#x3D;&quot;titulo&quot;&gt;
+                        &lt;h1&gt;Orden de Trabajo de Mantenimiento {{ordenes.tipo_ot_id}}&lt;/h1&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;imagen&quot;&gt;
+                        &lt;img src&#x3D;&quot;/images/utn-logo-ot.png&quot; alt&#x3D;&quot;&quot;&gt;
+                    &lt;/div&gt;
+                &lt;/header&gt;
+        
+                &lt;div class&#x3D;&quot;datos&quot;&gt;
+                    &lt;div class&#x3D;&quot;ot&quot;&gt;&lt;span&gt;OT N°&lt;/span&gt;&lt;/div&gt;
+                    &lt;div class&#x3D;&quot;num&quot;&gt;&lt;span&gt;{{ordenes.numero_de_orden}}&lt;/span&gt;&lt;/div&gt;
+                &lt;/div&gt;
+        
+                &lt;div class&#x3D;&quot;datos&quot;&gt;
+                    &lt;div class&#x3D;&quot;ot&quot;&gt;&lt;span&gt;Código Único de Identificación de Activo:&lt;/span&gt;&lt;/div&gt;
+                    &lt;div class&#x3D;&quot;num&quot;&gt;&lt;span&gt;{{ordenes.codigo_concatenado}}&lt;/span&gt;&lt;/div&gt;
+                &lt;/div&gt;
+        
+                &lt;div class&#x3D;&quot;datos&quot;&gt;
+                    &lt;div class&#x3D;&quot;ot&quot;&gt;&lt;span&gt;Tipo de Activo:&lt;/span&gt;&lt;/div&gt;
+                    &lt;div class&#x3D;&quot;num&quot;&gt;&lt;span&gt;{{ordenes.activo_nombre}}&lt;/span&gt;&lt;/div&gt;
+                &lt;/div&gt;
+        
+                &lt;div class&#x3D;&quot;datos&quot;&gt;
+                    &lt;div class&#x3D;&quot;ot&quot;&gt;&lt;span&gt;Edificio:&lt;/span&gt;&lt;/div&gt;
+                    &lt;div class&#x3D;&quot;num&quot;&gt;&lt;span&gt;{{ ordenes.edificio_id }}&lt;/span&gt;&lt;/div&gt;
+                &lt;/div&gt;
+        
+                &lt;div class&#x3D;&quot;datos&quot;&gt;
+                    &lt;div class&#x3D;&quot;ot&quot;&gt;&lt;span&gt;Piso / Nivel:&lt;/span&gt;&lt;/div&gt;
+                    &lt;div class&#x3D;&quot;num&quot;&gt;&lt;span&gt;{{ ordenes.piso_id }}&lt;/span&gt;&lt;/div&gt;
+                &lt;/div&gt;
+        
+                &lt;div class&#x3D;&quot;datos&quot;&gt;
+                    &lt;div class&#x3D;&quot;ot&quot;&gt;&lt;span&gt;Sector:&lt;/span&gt;&lt;/div&gt;
+                    &lt;div class&#x3D;&quot;num&quot;&gt;&lt;span&gt;{{ ordenes.sector_id }}&lt;/span&gt;&lt;/div&gt;
+                &lt;/div&gt;
+        
+                &lt;div class&#x3D;&quot;instrucciones&quot;&gt;
+                    &lt;div class&#x3D;&quot;head&quot;&gt;
+                        &lt;div class&#x3D;&quot;tareas&quot;&gt;&lt;span&gt;Instrucciones de la tarea&lt;/span&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;ng-container *ngFor&#x3D;&quot;let desc of descripcionDelActivo; let i &#x3D; index&quot;&gt;
+                        &lt;div class&#x3D;&quot;instruccion&quot;&gt;
+                            &lt;div class&#x3D;&quot;pasos&quot;&gt;{{ i + 1 }}&lt;/div&gt;
+                            &lt;div class&#x3D;&quot;descripciones&quot;&gt;&lt;span&gt;{{ desc }}&lt;/span&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/ng-container&gt;
+                &lt;/div&gt;
+                &lt;div class&#x3D;&quot;container-fecha&quot;&gt;
+                    &lt;div class&#x3D;&quot;fecha&quot;&gt;
+                        &lt;span&gt;Fecha Impresión: {{ fechaCreacion }}&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;fecha-realizacion&quot;&gt;
+                        &lt;span&gt;Fecha de realización:&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+        
+                &lt;div class&#x3D;&quot;container-fecha&quot;&gt;
+                    &lt;div class&#x3D;&quot;tiempo&quot;&gt;
+                        &lt;span&gt;Tiempo total utilizado:&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;tarea_operario&quot;&gt;
+                        &lt;div class&#x3D;&quot;realizada&quot;&gt;
+                            &lt;span&gt;Tarea Realizada por:&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class&#x3D;&quot;operario&quot;&gt;
+                            &lt;span&gt;{{ordenes.usuario_id}}&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+        
+                &lt;div class&#x3D;&quot;observaciones&quot;&gt;
+                    &lt;span&gt;Observaciones: {{ ordenes.observacion }}&lt;/span&gt;
+                &lt;/div&gt;
+        
+                &lt;div class&#x3D;&quot;datos&quot;&gt;
+                    &lt;div class&#x3D;&quot;controlada&quot;&gt;
+                        &lt;span&gt;Tarea Controlada por:&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class&#x3D;&quot;control&quot;&gt;
+                        &lt;span&gt;Fecha de Control:&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;/div&gt;
+            
+    
+        &lt;div class&#x3D;&quot;btn-imprimir&quot;&gt;
+            &lt;button (click)&#x3D;&quot;print()&quot;&gt;Imprimir&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="borde">    <div class="contenedor">        <div class="plantilla" *ngIf="ordenes">            <div class="margen">                <header class="encabezado">                    <div class="titulo">                        <h1>Orden de Trabajo de Mantenimiento {{ordenes.tipo_ot_id}}</h1>                    </div>                    <div class="imagen">                        <img src="/images/utn-logo-ot.png" alt="">                    </div>                </header>                        <div class="datos">                    <div class="ot"><span>OT N°</span></div>                    <div class="num"><span>{{ordenes.numero_de_orden}}</span></div>                </div>                        <div class="datos">                    <div class="ot"><span>Código Único de Identificación de Activo:</span></div>                    <div class="num"><span>{{ordenes.codigo_concatenado}}</span></div>                </div>                        <div class="datos">                    <div class="ot"><span>Tipo de Activo:</span></div>                    <div class="num"><span>{{ordenes.activo_nombre}}</span></div>                </div>                        <div class="datos">                    <div class="ot"><span>Edificio:</span></div>                    <div class="num"><span>{{ ordenes.edificio_id }}</span></div>                </div>                        <div class="datos">                    <div class="ot"><span>Piso / Nivel:</span></div>                    <div class="num"><span>{{ ordenes.piso_id }}</span></div>                </div>                        <div class="datos">                    <div class="ot"><span>Sector:</span></div>                    <div class="num"><span>{{ ordenes.sector_id }}</span></div>                </div>                        <div class="instrucciones">                    <div class="head">                        <div class="tareas"><span>Instrucciones de la tarea</span></div>                    </div>                    <ng-container *ngFor="let desc of descripcionDelActivo; let i = index">                        <div class="instruccion">                            <div class="pasos">{{ i + 1 }}</div>                            <div class="descripciones"><span>{{ desc }}</span></div>                        </div>                    </ng-container>                </div>                <div class="container-fecha">                    <div class="fecha">                        <span>Fecha Impresión: {{ fechaCreacion }}</span>                    </div>                    <div class="fecha-realizacion">                        <span>Fecha de realización:</span>                    </div>                </div>                        <div class="container-fecha">                    <div class="tiempo">                        <span>Tiempo total utilizado:</span>                    </div>                    <div class="tarea_operario">                        <div class="realizada">                            <span>Tarea Realizada por:</span>                        </div>                        <div class="operario">                            <span>{{ordenes.usuario_id}}</span>                        </div>                    </div>                </div>                        <div class="observaciones">                    <span>Observaciones: {{ ordenes.observacion }}</span>                </div>                        <div class="datos">                    <div class="controlada">                        <span>Tarea Controlada por:</span>                    </div>                    <div class="control">                        <span>Fecha de Control:</span>                    </div>                </div>            </div>            </div>                        <div class="btn-imprimir">            <button (click)="print()">Imprimir</button>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'ActivoComponent', 'selector': 'app-activo'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BtnAtrasComponent', 'selector': 'app-btn-atras'},{'name': 'CalendarioComponent', 'selector': 'app-calendario'},{'name': 'CodigoUnicoComponent', 'selector': 'app-codigo-unico'},{'name': 'ConfiguracionComponent', 'selector': 'app-configuracion'},{'name': 'CrearActivoComponent', 'selector': 'app-crear-activo'},{'name': 'CrearEdificioComponent', 'selector': 'app-crear-edificio'},{'name': 'CrearOperarioComponent', 'selector': 'app-crear-operario'},{'name': 'CrearPisoComponent', 'selector': 'app-crear-piso'},{'name': 'CrearSectorComponent', 'selector': 'app-crear-sector'},{'name': 'CrearUbicacionComponent', 'selector': 'app-crear-ubicacion'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DescripcionComponent', 'selector': 'app-descripcion'},{'name': 'EdificioComponent', 'selector': 'app-edificio'},{'name': 'FooterContenedorComponent', 'selector': 'app-footer-contenedor'},{'name': 'GraficoOrdenesComponent', 'selector': 'app-grafico-ordenes'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HeaderLogoComponent', 'selector': 'app-header-logo'},{'name': 'InfraestructuraComponent', 'selector': 'app-infraestructura'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MenuPrincipalComponent', 'selector': 'app-menu-principal'},{'name': 'ModificarActivoComponent', 'selector': 'app-modificar-activo'},{'name': 'NavegacionComponent', 'selector': 'app-navegacion'},{'name': 'ObservacionComponent', 'selector': 'app-observacion'},{'name': 'OperariosComponent', 'selector': 'app-operarios'},{'name': 'OperariosComponent', 'selector': 'app-operarios'},{'name': 'OrdenDeTrabajoComponent', 'selector': 'app-orden-de-trabajo'},{'name': 'OrdenesComponent', 'selector': 'app-ordenes'},{'name': 'PisoComponent', 'selector': 'app-piso'},{'name': 'PlantillaComponent', 'selector': 'app-plantilla'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SectorComponent', 'selector': 'app-sector'},{'name': 'SvgBasuraComponent', 'selector': 'app-svg-basura'},{'name': 'SvgChecklistComponent', 'selector': 'app-svg-checklist'},{'name': 'SvgConfiguracionComponent', 'selector': 'app-svg-configuracion'},{'name': 'SvgDashboardComponent', 'selector': 'app-svg-dashboard'},{'name': 'SvgEdificioComponent', 'selector': 'app-svg-edificio'},{'name': 'SvgEditarComponent', 'selector': 'app-svg-editar'},{'name': 'SvgFlechaComponent', 'selector': 'app-svg-flecha'},{'name': 'SvgInfraestructuraComponent', 'selector': 'app-svg-infraestructura'},{'name': 'SvgLlaveComponent', 'selector': 'app-svg-llave'},{'name': 'SvgOperadorComponent', 'selector': 'app-svg-operador'},{'name': 'SvgOperariosComponent', 'selector': 'app-svg-operarios'},{'name': 'SvgOrdenComponent', 'selector': 'app-svg-orden'},{'name': 'SvgUtnComponent', 'selector': 'app-svg-utn'},{'name': 'TareaComponent', 'selector': 'app-tarea'},{'name': 'TipoOtComponent', 'selector': 'app-tipo-ot'},{'name': 'UbicacionComponent', 'selector': 'app-ubicacion'},{'name': 'VerActivoComponent', 'selector': 'app-ver-activo'},{'name': 'VerEdificioComponent', 'selector': 'app-ver-edificio'},{'name': 'VerOperariosComponent', 'selector': 'app-ver-operarios'},{'name': 'VerPisoComponent', 'selector': 'app-ver-piso'},{'name': 'VerSectorComponent', 'selector': 'app-ver-sector'},{'name': 'VerUbicacionComponent', 'selector': 'app-ver-ubicacion'},{'name': 'VistaOrdenComponent', 'selector': 'app-vista-orden'},{'name': 'VistaOrdenOperarioComponent', 'selector': 'app-vista-orden-operario'},{'name': 'VistaUsuarioComponent', 'selector': 'app-vista-usuario'},{'name': 'WelcomeComponent', 'selector': 'app-welcome'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'PlantillaComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'PlantillaComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

@@ -14,3 +14,19 @@ export interface Orden {
     descripciones?: string;
     numero_de_orden?: string;
 }
+
+export interface OrdenStatus {
+    id: number
+    estado: string;  
+}
+
+export interface OrdenResponse {
+    completas: string;
+    pendientes: string;
+    en_progreso: string;
+}
+
+export interface GraficoOrden {
+    name: string; 
+    value: number;
+  }

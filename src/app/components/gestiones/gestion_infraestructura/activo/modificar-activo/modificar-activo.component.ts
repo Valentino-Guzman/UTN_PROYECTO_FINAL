@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivoService } from '../../../../services/activo.service';
-import { Activo } from '../../../../interfaces/activo';
+
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Activo } from '../../../../../interfaces/activo';
+import { ActivoService } from '../../../../../services/activo.service';
 
 @Component({
   selector: 'app-modificar-activo',
@@ -16,8 +17,8 @@ export class ModificarActivoComponent implements OnInit{
 
   datosActivo: Activo = {
     nombre: '',
-    ubicacion_id: 0,
-    id: 0
+    id: 0,
+    siglas: ''
   }
 
   activos: Activo[] = []

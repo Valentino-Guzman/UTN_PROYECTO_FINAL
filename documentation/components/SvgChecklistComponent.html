@@ -1,0 +1,351 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>utn-proyecto-final documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">utn-proyecto-final documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  SvgChecklistComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/svg/inicio/svg-checklist/svg-checklist.component.ts</code>
+</p>
+
+
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-svg-checklist</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./svg-checklist.component.html</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrl</td>
+                <td class="col-md-9"><code>./svg-checklist.component.scss</code></td>
+            </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+
+@Component({
+  selector: &#x27;app-svg-checklist&#x27;,
+  standalone: true,
+  imports: [],
+  templateUrl: &#x27;./svg-checklist.component.html&#x27;,
+  styleUrl: &#x27;./svg-checklist.component.scss&#x27;
+})
+export class SvgChecklistComponent {
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;svg xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot; xml:space&#x3D;&quot;preserve&quot; id&#x3D;&quot;task-management&quot; x&#x3D;&quot;0&quot; y&#x3D;&quot;0&quot; enable-background&#x3D;&quot;new 0 0 300 225&quot; version&#x3D;&quot;1.1&quot; viewBox&#x3D;&quot;0 0 300 225&quot; width&#x3D;&quot;200px&quot; height&#x3D;&quot;200px&quot;&gt;
+    &lt;g&gt;
+      &lt;g id&#x3D;&quot;XMLID_17_&quot;&gt;
+        &lt;path id&#x3D;&quot;XMLID_19_&quot; fill&#x3D;&quot;none&quot; stroke&#x3D;&quot;#060640&quot; stroke-miterlimit&#x3D;&quot;10&quot; stroke-width&#x3D;&quot;.316&quot; d&#x3D;&quot;M210.53,24.23c33.22,4.24,5.73,32.62,46.09,55.63c26.28,14.98,29.93,35.75,23.77,55.06    c-8.75,27.43-36.6,49.34-72.95,58.47c-22.73,5.7-53.12,8.97-89.82,2.88c-51.69-8.57-95.5-26.3-100.58-77.18    c0,0,0-27.28,29.56-15.06c24.71,10.21,54.97,10.22,51.18-13.71c-3.8-23.93-18-24.91-40.03-33.18S43.91,18.51,64.2,18.51    s33.08,42,72.4,31.5S158.45,17.59,210.53,24.23z&quot;/&gt;
+      &lt;/g&gt;
+      &lt;path d&#x3D;&quot;M254.35 54.67c-.42-1.43-.99-2.8-1.69-4.09l3.37-5.31-3.15-3.15-3.15-3.15-5.31 3.37c-1.29-.71-2.66-1.27-4.09-1.69l-1.38-6.14h-8.91l-1.38 6.14c-1.43.42-2.8.99-4.09 1.69l-5.31-3.37-3.15 3.15-3.15 3.15 3.37 5.31c-.7 1.29-1.27 2.66-1.69 4.09l-6.14 1.38v8.91l6.14 1.38c.42 1.43.99 2.8 1.69 4.09l-3.37 5.31 3.15 3.15 3.15 3.15 5.31-3.37c1.29.71 2.65 1.27 4.09 1.69l1.38 6.14h8.91l1.38-6.14c1.43-.42 2.8-.99 4.09-1.69l5.31 3.37 3.15-3.15 3.15-3.15-3.37-5.31c.71-1.29 1.27-2.66 1.69-4.09l6.14-1.38v-8.91L254.35 54.67zM234.5 73.81c-7.35 0-13.31-5.96-13.31-13.31 0-7.35 5.96-13.31 13.31-13.31 7.35 0 13.31 5.96 13.31 13.31C247.81 67.85 241.85 73.81 234.5 73.81zM224.64 93.56c-.26-.89-.61-1.73-1.05-2.53l2.08-3.29-1.95-1.95-1.95-1.95-3.29 2.09c-.8-.44-1.65-.79-2.53-1.05l-.85-3.8h-5.51l-.85 3.8c-.89.26-1.73.61-2.53 1.05l-3.29-2.09-1.95 1.95-1.95 1.95 2.08 3.29c-.43.8-.79 1.64-1.05 2.53l-3.8.85v5.51l3.8.85c.26.89.61 1.73 1.05 2.53l-2.08 3.29 1.95 1.95 1.95 1.95 3.29-2.09c.8.44 1.64.79 2.53 1.05l.85 3.8h5.51l.85-3.8c.89-.26 1.73-.61 2.53-1.05l3.29 2.09 1.95-1.95 1.95-1.95-2.08-3.29c.44-.8.79-1.64 1.05-2.53l3.8-.85v-5.51L224.64 93.56zM212.35 105.41c-4.55 0-8.24-3.69-8.24-8.24 0-4.55 3.69-8.24 8.24-8.24 4.55 0 8.24 3.69 8.24 8.24C220.59 101.72 216.9 105.41 212.35 105.41z&quot; fill&#x3D;&quot;#060640&quot;/&gt;
+      &lt;g&gt;
+        &lt;path d&#x3D;&quot;M189.51,206.49H61.47c-1.84,0-3.33-1.49-3.33-3.33V35.9c0-1.84,1.49-3.33,3.33-3.33h128.05c1.84,0,3.33,1.49,3.33,3.33    v167.25C192.84,205,191.35,206.49,189.51,206.49z&quot; fill&#x3D;&quot;white&quot; stroke&#x3D;&quot;#060640&quot;/&gt;
+        &lt;rect width&#x3D;&quot;160.04&quot; height&#x3D;&quot;120.83&quot; x&#x3D;&quot;45.47&quot; y&#x3D;&quot;59.12&quot; fill&#x3D;&quot;white&quot; transform&#x3D;&quot;rotate(90 125.491 119.531)&quot;/&gt;
+        &lt;path fill&#x3D;&quot;#060640&quot; d&#x3D;&quot;M149.64,25.47h-48.29c-2.45,0-4.44,1.99-4.44,4.44v9.6h57.17v-9.6C154.08,27.46,152.09,25.47,149.64,25.47z&quot;/&gt;
+        &lt;rect width&#x3D;&quot;11.38&quot; height&#x3D;&quot;11.38&quot; x&#x3D;&quot;78.92&quot; y&#x3D;&quot;92.66&quot; fill&#x3D;&quot;#060640&quot;/&gt;
+        &lt;rect width&#x3D;&quot;11.38&quot; height&#x3D;&quot;11.38&quot; x&#x3D;&quot;78.92&quot; y&#x3D;&quot;113.84&quot; fill&#x3D;&quot;#060640&quot;/&gt;
+        &lt;rect width&#x3D;&quot;11.38&quot; height&#x3D;&quot;11.38&quot; x&#x3D;&quot;78.92&quot; y&#x3D;&quot;135.02&quot; fill&#x3D;&quot;#060640&quot;/&gt;
+        &lt;rect width&#x3D;&quot;11.38&quot; height&#x3D;&quot;11.38&quot; x&#x3D;&quot;78.92&quot; y&#x3D;&quot;156.2&quot; fill&#x3D;&quot;#060640&quot;/&gt;
+        &lt;line x1&#x3D;&quot;96.4&quot; x2&#x3D;&quot;172.06&quot; y1&#x3D;&quot;98.35&quot; y2&#x3D;&quot;98.35&quot; fill&#x3D;&quot;none&quot; stroke&#x3D;&quot;#060640&quot; stroke-miterlimit&#x3D;&quot;10&quot; stroke-width&#x3D;&quot;.947&quot;/&gt;
+        &lt;line x1&#x3D;&quot;96.4&quot; x2&#x3D;&quot;172.06&quot; y1&#x3D;&quot;119.53&quot; y2&#x3D;&quot;119.53&quot; fill&#x3D;&quot;none&quot; stroke&#x3D;&quot;#060640&quot; stroke-miterlimit&#x3D;&quot;10&quot; stroke-width&#x3D;&quot;.947&quot;/&gt;
+        &lt;line x1&#x3D;&quot;96.4&quot; x2&#x3D;&quot;172.06&quot; y1&#x3D;&quot;140.71&quot; y2&#x3D;&quot;140.71&quot; fill&#x3D;&quot;none&quot; stroke&#x3D;&quot;#060640&quot; stroke-miterlimit&#x3D;&quot;10&quot; stroke-width&#x3D;&quot;.947&quot;/&gt;
+        &lt;line x1&#x3D;&quot;96.4&quot; x2&#x3D;&quot;172.06&quot; y1&#x3D;&quot;161.89&quot; y2&#x3D;&quot;161.89&quot; fill&#x3D;&quot;none&quot; stroke&#x3D;&quot;#060640&quot; stroke-miterlimit&#x3D;&quot;10&quot; stroke-width&#x3D;&quot;.947&quot;/&gt;
+        &lt;polyline fill&#x3D;&quot;none&quot; stroke&#x3D;&quot;green&quot; stroke-miterlimit&#x3D;&quot;10&quot; stroke-width&#x3D;&quot;1.263&quot; points&#x3D;&quot;79.98 95.15 84.35 98.92 94.18 87.78&quot;/&gt;
+        &lt;polyline fill&#x3D;&quot;none&quot; stroke&#x3D;&quot;green&quot; stroke-miterlimit&#x3D;&quot;10&quot; stroke-width&#x3D;&quot;1.263&quot; points&#x3D;&quot;79.98 139.84 84.35 143.61 94.18 132.47&quot;/&gt;
+        &lt;polyline fill&#x3D;&quot;none&quot; stroke&#x3D;&quot;green&quot; stroke-miterlimit&#x3D;&quot;10&quot; stroke-width&#x3D;&quot;1.263&quot; points&#x3D;&quot;79.98 118.66 84.35 122.42 94.18 111.28&quot;/&gt;
+      &lt;/g&gt;
+    &lt;/g&gt;
+&lt;/svg&gt;
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="task-management" x="0" y="0" enable-background="new 0 0 300 225" version="1.1" viewBox="0 0 300 225" width="200px" height="200px">    <g>      <g id="XMLID_17_">        <path id="XMLID_19_" fill="none" stroke="#060640" stroke-miterlimit="10" stroke-width=".316" d="M210.53,24.23c33.22,4.24,5.73,32.62,46.09,55.63c26.28,14.98,29.93,35.75,23.77,55.06    c-8.75,27.43-36.6,49.34-72.95,58.47c-22.73,5.7-53.12,8.97-89.82,2.88c-51.69-8.57-95.5-26.3-100.58-77.18    c0,0,0-27.28,29.56-15.06c24.71,10.21,54.97,10.22,51.18-13.71c-3.8-23.93-18-24.91-40.03-33.18S43.91,18.51,64.2,18.51    s33.08,42,72.4,31.5S158.45,17.59,210.53,24.23z"/>      </g>      <path d="M254.35 54.67c-.42-1.43-.99-2.8-1.69-4.09l3.37-5.31-3.15-3.15-3.15-3.15-5.31 3.37c-1.29-.71-2.66-1.27-4.09-1.69l-1.38-6.14h-8.91l-1.38 6.14c-1.43.42-2.8.99-4.09 1.69l-5.31-3.37-3.15 3.15-3.15 3.15 3.37 5.31c-.7 1.29-1.27 2.66-1.69 4.09l-6.14 1.38v8.91l6.14 1.38c.42 1.43.99 2.8 1.69 4.09l-3.37 5.31 3.15 3.15 3.15 3.15 5.31-3.37c1.29.71 2.65 1.27 4.09 1.69l1.38 6.14h8.91l1.38-6.14c1.43-.42 2.8-.99 4.09-1.69l5.31 3.37 3.15-3.15 3.15-3.15-3.37-5.31c.71-1.29 1.27-2.66 1.69-4.09l6.14-1.38v-8.91L254.35 54.67zM234.5 73.81c-7.35 0-13.31-5.96-13.31-13.31 0-7.35 5.96-13.31 13.31-13.31 7.35 0 13.31 5.96 13.31 13.31C247.81 67.85 241.85 73.81 234.5 73.81zM224.64 93.56c-.26-.89-.61-1.73-1.05-2.53l2.08-3.29-1.95-1.95-1.95-1.95-3.29 2.09c-.8-.44-1.65-.79-2.53-1.05l-.85-3.8h-5.51l-.85 3.8c-.89.26-1.73.61-2.53 1.05l-3.29-2.09-1.95 1.95-1.95 1.95 2.08 3.29c-.43.8-.79 1.64-1.05 2.53l-3.8.85v5.51l3.8.85c.26.89.61 1.73 1.05 2.53l-2.08 3.29 1.95 1.95 1.95 1.95 3.29-2.09c.8.44 1.64.79 2.53 1.05l.85 3.8h5.51l.85-3.8c.89-.26 1.73-.61 2.53-1.05l3.29 2.09 1.95-1.95 1.95-1.95-2.08-3.29c.44-.8.79-1.64 1.05-2.53l3.8-.85v-5.51L224.64 93.56zM212.35 105.41c-4.55 0-8.24-3.69-8.24-8.24 0-4.55 3.69-8.24 8.24-8.24 4.55 0 8.24 3.69 8.24 8.24C220.59 101.72 216.9 105.41 212.35 105.41z" fill="#060640"/>      <g>        <path d="M189.51,206.49H61.47c-1.84,0-3.33-1.49-3.33-3.33V35.9c0-1.84,1.49-3.33,3.33-3.33h128.05c1.84,0,3.33,1.49,3.33,3.33    v167.25C192.84,205,191.35,206.49,189.51,206.49z" fill="white" stroke="#060640"/>        <rect width="160.04" height="120.83" x="45.47" y="59.12" fill="white" transform="rotate(90 125.491 119.531)"/>        <path fill="#060640" d="M149.64,25.47h-48.29c-2.45,0-4.44,1.99-4.44,4.44v9.6h57.17v-9.6C154.08,27.46,152.09,25.47,149.64,25.47z"/>        <rect width="11.38" height="11.38" x="78.92" y="92.66" fill="#060640"/>        <rect width="11.38" height="11.38" x="78.92" y="113.84" fill="#060640"/>        <rect width="11.38" height="11.38" x="78.92" y="135.02" fill="#060640"/>        <rect width="11.38" height="11.38" x="78.92" y="156.2" fill="#060640"/>        <line x1="96.4" x2="172.06" y1="98.35" y2="98.35" fill="none" stroke="#060640" stroke-miterlimit="10" stroke-width=".947"/>        <line x1="96.4" x2="172.06" y1="119.53" y2="119.53" fill="none" stroke="#060640" stroke-miterlimit="10" stroke-width=".947"/>        <line x1="96.4" x2="172.06" y1="140.71" y2="140.71" fill="none" stroke="#060640" stroke-miterlimit="10" stroke-width=".947"/>        <line x1="96.4" x2="172.06" y1="161.89" y2="161.89" fill="none" stroke="#060640" stroke-miterlimit="10" stroke-width=".947"/>        <polyline fill="none" stroke="green" stroke-miterlimit="10" stroke-width="1.263" points="79.98 95.15 84.35 98.92 94.18 87.78"/>        <polyline fill="none" stroke="green" stroke-miterlimit="10" stroke-width="1.263" points="79.98 139.84 84.35 143.61 94.18 132.47"/>        <polyline fill="none" stroke="green" stroke-miterlimit="10" stroke-width="1.263" points="79.98 118.66 84.35 122.42 94.18 111.28"/>      </g>    </g></svg></div>'
+    var COMPONENTS = [{'name': 'ActivoComponent', 'selector': 'app-activo'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BtnAtrasComponent', 'selector': 'app-btn-atras'},{'name': 'CalendarioComponent', 'selector': 'app-calendario'},{'name': 'CodigoUnicoComponent', 'selector': 'app-codigo-unico'},{'name': 'ConfiguracionComponent', 'selector': 'app-configuracion'},{'name': 'CrearActivoComponent', 'selector': 'app-crear-activo'},{'name': 'CrearEdificioComponent', 'selector': 'app-crear-edificio'},{'name': 'CrearOperarioComponent', 'selector': 'app-crear-operario'},{'name': 'CrearPisoComponent', 'selector': 'app-crear-piso'},{'name': 'CrearSectorComponent', 'selector': 'app-crear-sector'},{'name': 'CrearUbicacionComponent', 'selector': 'app-crear-ubicacion'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DescripcionComponent', 'selector': 'app-descripcion'},{'name': 'EdificioComponent', 'selector': 'app-edificio'},{'name': 'FooterContenedorComponent', 'selector': 'app-footer-contenedor'},{'name': 'GraficoOrdenesComponent', 'selector': 'app-grafico-ordenes'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HeaderLogoComponent', 'selector': 'app-header-logo'},{'name': 'InfraestructuraComponent', 'selector': 'app-infraestructura'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MenuPrincipalComponent', 'selector': 'app-menu-principal'},{'name': 'ModificarActivoComponent', 'selector': 'app-modificar-activo'},{'name': 'NavegacionComponent', 'selector': 'app-navegacion'},{'name': 'ObservacionComponent', 'selector': 'app-observacion'},{'name': 'OperariosComponent', 'selector': 'app-operarios'},{'name': 'OperariosComponent', 'selector': 'app-operarios'},{'name': 'OrdenDeTrabajoComponent', 'selector': 'app-orden-de-trabajo'},{'name': 'OrdenesComponent', 'selector': 'app-ordenes'},{'name': 'PisoComponent', 'selector': 'app-piso'},{'name': 'PlantillaComponent', 'selector': 'app-plantilla'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SectorComponent', 'selector': 'app-sector'},{'name': 'SvgBasuraComponent', 'selector': 'app-svg-basura'},{'name': 'SvgChecklistComponent', 'selector': 'app-svg-checklist'},{'name': 'SvgConfiguracionComponent', 'selector': 'app-svg-configuracion'},{'name': 'SvgDashboardComponent', 'selector': 'app-svg-dashboard'},{'name': 'SvgEdificioComponent', 'selector': 'app-svg-edificio'},{'name': 'SvgEditarComponent', 'selector': 'app-svg-editar'},{'name': 'SvgFlechaComponent', 'selector': 'app-svg-flecha'},{'name': 'SvgInfraestructuraComponent', 'selector': 'app-svg-infraestructura'},{'name': 'SvgLlaveComponent', 'selector': 'app-svg-llave'},{'name': 'SvgOperadorComponent', 'selector': 'app-svg-operador'},{'name': 'SvgOperariosComponent', 'selector': 'app-svg-operarios'},{'name': 'SvgOrdenComponent', 'selector': 'app-svg-orden'},{'name': 'SvgUtnComponent', 'selector': 'app-svg-utn'},{'name': 'TareaComponent', 'selector': 'app-tarea'},{'name': 'TipoOtComponent', 'selector': 'app-tipo-ot'},{'name': 'UbicacionComponent', 'selector': 'app-ubicacion'},{'name': 'VerActivoComponent', 'selector': 'app-ver-activo'},{'name': 'VerEdificioComponent', 'selector': 'app-ver-edificio'},{'name': 'VerOperariosComponent', 'selector': 'app-ver-operarios'},{'name': 'VerPisoComponent', 'selector': 'app-ver-piso'},{'name': 'VerSectorComponent', 'selector': 'app-ver-sector'},{'name': 'VerUbicacionComponent', 'selector': 'app-ver-ubicacion'},{'name': 'VistaOrdenComponent', 'selector': 'app-vista-orden'},{'name': 'VistaOrdenOperarioComponent', 'selector': 'app-vista-orden-operario'},{'name': 'VistaUsuarioComponent', 'selector': 'app-vista-usuario'},{'name': 'WelcomeComponent', 'selector': 'app-welcome'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'SvgChecklistComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SvgChecklistComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

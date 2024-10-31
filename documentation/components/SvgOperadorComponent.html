@@ -1,0 +1,345 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>utn-proyecto-final documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">utn-proyecto-final documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  SvgOperadorComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/svg/svg-operador/svg-operador.component.ts</code>
+</p>
+
+
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-svg-operador</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./svg-operador.component.html</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrl</td>
+                <td class="col-md-9"><code>./svg-operador.component.scss</code></td>
+            </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+
+@Component({
+  selector: &#x27;app-svg-operador&#x27;,
+  standalone: true,
+  imports: [],
+  templateUrl: &#x27;./svg-operador.component.html&#x27;,
+  styleUrl: &#x27;./svg-operador.component.scss&#x27;
+})
+export class SvgOperadorComponent {
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;svg width&#x3D;&quot;28&quot; height&#x3D;&quot;28&quot; viewBox&#x3D;&quot;0 0 53 52&quot; fill&#x3D;&quot;none&quot; xmlns&#x3D;&quot;http://www.w3.org/2000/svg&quot;&gt;
+    &lt;g filter&#x3D;&quot;url(#filter0_d_20_60)&quot;&gt;
+    &lt;path d&#x3D;&quot;M47.3641 37.2498C46.4653 35.5097 45.0534 34.3773 43.6741 33.6079C42.2947 32.8372 40.9129 32.3997 40.0084 32.0581C39.2928 31.7914 38.54 31.4456 38.0345 31.0888C37.7814 30.913 37.5962 30.7358 37.5007 30.6042C37.4022 30.4675 37.397 30.4069 37.3955 30.3726C37.3961 29.6926 37.3969 28.8454 37.3978 27.7433C37.8481 27.24 38.3888 26.6092 38.8954 25.799C39.4236 24.9551 39.8945 23.905 40.1855 22.6449C40.3507 22.5643 40.5152 22.4718 40.6759 22.3591C41.1701 22.0196 41.5882 21.5231 41.928 20.8772C42.2722 20.2282 42.5688 19.4154 42.8843 18.3167C43.0844 17.6168 43.1784 17.0491 43.1795 16.5477C43.1806 16.083 43.0951 15.6607 42.8975 15.3004C42.7513 15.0313 42.5444 14.8137 42.3362 14.6677C42.1263 14.5211 41.93 14.4388 41.7678 14.3849C41.7671 14.364 41.7664 14.3461 41.7664 14.3228C41.7646 13.7781 41.8738 12.8623 41.9977 12.0241C42.0721 11.5115 42.1182 10.9669 42.1187 10.4044C42.1195 9.54367 42.0142 8.63645 41.7386 7.74119C41.3296 6.39974 40.5081 5.0795 39.1386 4.08456C37.7789 3.09337 35.9161 2.43287 33.4551 2.23263C30.7103 1.89555 29.0878 1.57801 27.7767 1.27274C26.4672 0.96897 25.4342 0.664694 23.9282 0.369755C23.8401 0.353272 23.7534 0.344946 23.6734 0.344876C23.4761 0.343204 23.2646 0.394581 23.0919 0.485555C22.7616 0.66011 22.5909 0.908772 22.481 1.11342C22.2954 1.47936 22.2353 1.81108 22.1759 2.16137C22.097 2.68058 22.0659 3.2319 22.0222 3.68842C22.0011 3.91556 21.9762 4.11794 21.9499 4.2592C21.9371 4.3294 21.9229 4.38395 21.9139 4.4131L21.9071 4.43475C20.5834 6.75202 20.254 9.17404 20.2524 11.0494C20.2511 12.5423 20.4586 13.7073 20.5605 14.2184C20.5976 14.409 20.6125 14.5398 20.6207 14.6444C20.5153 14.7189 20.4046 14.807 20.2894 14.9197C20.0837 15.122 19.8781 15.3953 19.7284 15.7418C19.5786 16.0868 19.4879 16.5007 19.4882 16.961C19.4879 17.3196 19.5399 17.7044 19.6517 18.1199C20.0567 19.6296 20.561 20.6782 21.1894 21.435C21.6581 22.007 22.2009 22.3817 22.7245 22.6325C23.0148 23.8918 23.4831 24.9419 24.0091 25.7859C24.5143 26.597 25.0539 27.2288 25.5033 27.7328C25.5023 28.8349 25.5016 29.6821 25.501 30.3621C25.5017 30.3748 25.4956 30.4451 25.385 30.5935C25.2256 30.8108 24.8436 31.1169 24.3793 31.3772C23.9159 31.6405 23.374 31.8709 22.9016 32.0372C22.288 32.2533 21.4629 32.5193 20.5757 32.8989C19.2453 33.467 17.7509 34.2935 16.5662 35.6628C15.377 37.0276 14.5536 38.9471 14.5589 41.456C14.5586 41.8012 14.5732 42.1598 14.6035 42.529L14.6775 43.4219L15.5734 43.4227L48.1965 43.4512L48.272 42.5584C48.3029 42.1901 48.3182 41.833 48.3185 41.4885C48.3213 39.8164 47.9638 38.4062 47.3641 37.2498Z&quot; fill&#x3D;&quot;white&quot;/&gt;
+    &lt;/g&gt;
+    &lt;path d&#x3D;&quot;M12.2635 41.4541C12.2577 38.6194 13.1468 36.0933 14.8356 34.1552C16.0352 32.7687 17.6194 31.6658 19.6741 30.7881C20.0793 30.6152 20.4664 30.4653 20.8273 30.3333C20.8276 30.024 20.8279 29.6975 20.8282 29.3299C21.2329 28.8782 21.7182 28.3117 22.1732 27.5835C22.2181 27.5126 22.2592 27.4312 22.3027 27.3566C22.222 27.2361 22.1408 27.1278 22.0609 26.9992C21.5117 26.1186 21.074 25.1573 20.7544 24.1319C20.2526 23.7811 19.804 23.366 19.4143 22.8897C18.5515 21.8511 17.9198 20.5214 17.435 18.7151C17.2741 18.1164 17.1925 17.5254 17.193 16.959C17.1922 16.2051 17.337 15.4865 17.623 14.8285C17.7698 14.4879 17.953 14.1682 18.1693 13.8726C18.0281 12.9483 17.9564 11.9993 17.9573 11.0474C17.9586 9.47465 18.1632 7.98421 18.5537 6.5829C18.151 6.51449 17.7334 6.45665 17.2873 6.42045C14.8227 6.11793 13.366 5.83278 12.1888 5.55894C11.0123 5.28604 10.0845 5.01242 8.73238 4.74752C8.65327 4.7332 8.57546 4.72573 8.50384 4.72566C8.32684 4.72401 8.13696 4.77015 7.98145 4.85149C7.68469 5.00891 7.53205 5.23219 7.43327 5.41585C7.26639 5.74448 7.21232 6.04181 7.15889 6.35704C7.08826 6.82329 7.06017 7.3178 7.021 7.72801C7.00217 7.93199 6.9796 8.11422 6.95624 8.24048C6.94419 8.30403 6.93149 8.35259 6.92406 8.37874L6.91729 8.39804C5.72898 10.4794 5.43346 12.6541 5.43198 14.3382C5.43081 15.6786 5.61665 16.7248 5.70822 17.1843C5.74163 17.3554 5.75503 17.4727 5.76235 17.5669C5.66742 17.6333 5.56797 17.7124 5.46485 17.8139C5.2801 17.9953 5.0953 18.241 4.96059 18.5525C4.82654 18.8624 4.74474 19.2337 4.74513 19.6468C4.74485 19.9689 4.79161 20.3148 4.89216 20.6878C5.25547 22.0434 5.70821 22.9852 6.27255 23.6649C6.69341 24.1785 7.18099 24.5152 7.65161 24.7405C7.91218 25.8712 8.33267 26.8137 8.80497 27.5717C9.25865 28.3006 9.74302 28.8681 10.1469 29.3204C10.146 30.3097 10.1453 31.071 10.1448 31.6815C10.1456 31.6927 10.1402 31.7554 10.0408 31.8891C9.89715 32.0839 9.55397 32.3595 9.13762 32.5929C8.72126 32.8294 8.2347 33.0367 7.81017 33.1857C7.25931 33.3795 6.51867 33.6188 5.72197 33.9595C4.52678 34.4695 3.18495 35.2118 2.12141 36.4414C1.05338 37.6674 0.31378 39.3912 0.318375 41.6439C0.318104 41.9541 0.331323 42.2761 0.358689 42.6077L0.425207 43.4095L1.22911 43.4102L12.3737 43.42L12.3161 42.7183C12.2806 42.2894 12.2631 41.865 12.2635 41.4541Z&quot; fill&#x3D;&quot;#E0E8F3&quot; fill-opacity&#x3D;&quot;0.7&quot;/&gt;
+    &lt;defs&gt;
+    &lt;filter id&#x3D;&quot;filter0_d_20_60&quot; x&#x3D;&quot;10.5588&quot; y&#x3D;&quot;0.344849&quot; width&#x3D;&quot;41.7598&quot; height&#x3D;&quot;51.1063&quot; filterUnits&#x3D;&quot;userSpaceOnUse&quot; color-interpolation-filters&#x3D;&quot;sRGB&quot;&gt;
+    &lt;feFlood flood-opacity&#x3D;&quot;0&quot; result&#x3D;&quot;BackgroundImageFix&quot;/&gt;
+    &lt;feColorMatrix in&#x3D;&quot;SourceAlpha&quot; type&#x3D;&quot;matrix&quot; values&#x3D;&quot;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0&quot; result&#x3D;&quot;hardAlpha&quot;/&gt;
+    &lt;feOffset dy&#x3D;&quot;4&quot;/&gt;
+    &lt;feGaussianBlur stdDeviation&#x3D;&quot;2&quot;/&gt;
+    &lt;feComposite in2&#x3D;&quot;hardAlpha&quot; operator&#x3D;&quot;out&quot;/&gt;
+    &lt;feColorMatrix type&#x3D;&quot;matrix&quot; values&#x3D;&quot;0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0&quot;/&gt;
+    &lt;feBlend mode&#x3D;&quot;normal&quot; in2&#x3D;&quot;BackgroundImageFix&quot; result&#x3D;&quot;effect1_dropShadow_20_60&quot;/&gt;
+    &lt;feBlend mode&#x3D;&quot;normal&quot; in&#x3D;&quot;SourceGraphic&quot; in2&#x3D;&quot;effect1_dropShadow_20_60&quot; result&#x3D;&quot;shape&quot;/&gt;
+    &lt;/filter&gt;
+    &lt;/defs&gt;
+    &lt;/svg&gt;
+    </code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><svg width="28" height="28" viewBox="0 0 53 52" fill="none" xmlns="http://www.w3.org/2000/svg">    <g filter="url(#filter0_d_20_60)">    <path d="M47.3641 37.2498C46.4653 35.5097 45.0534 34.3773 43.6741 33.6079C42.2947 32.8372 40.9129 32.3997 40.0084 32.0581C39.2928 31.7914 38.54 31.4456 38.0345 31.0888C37.7814 30.913 37.5962 30.7358 37.5007 30.6042C37.4022 30.4675 37.397 30.4069 37.3955 30.3726C37.3961 29.6926 37.3969 28.8454 37.3978 27.7433C37.8481 27.24 38.3888 26.6092 38.8954 25.799C39.4236 24.9551 39.8945 23.905 40.1855 22.6449C40.3507 22.5643 40.5152 22.4718 40.6759 22.3591C41.1701 22.0196 41.5882 21.5231 41.928 20.8772C42.2722 20.2282 42.5688 19.4154 42.8843 18.3167C43.0844 17.6168 43.1784 17.0491 43.1795 16.5477C43.1806 16.083 43.0951 15.6607 42.8975 15.3004C42.7513 15.0313 42.5444 14.8137 42.3362 14.6677C42.1263 14.5211 41.93 14.4388 41.7678 14.3849C41.7671 14.364 41.7664 14.3461 41.7664 14.3228C41.7646 13.7781 41.8738 12.8623 41.9977 12.0241C42.0721 11.5115 42.1182 10.9669 42.1187 10.4044C42.1195 9.54367 42.0142 8.63645 41.7386 7.74119C41.3296 6.39974 40.5081 5.0795 39.1386 4.08456C37.7789 3.09337 35.9161 2.43287 33.4551 2.23263C30.7103 1.89555 29.0878 1.57801 27.7767 1.27274C26.4672 0.96897 25.4342 0.664694 23.9282 0.369755C23.8401 0.353272 23.7534 0.344946 23.6734 0.344876C23.4761 0.343204 23.2646 0.394581 23.0919 0.485555C22.7616 0.66011 22.5909 0.908772 22.481 1.11342C22.2954 1.47936 22.2353 1.81108 22.1759 2.16137C22.097 2.68058 22.0659 3.2319 22.0222 3.68842C22.0011 3.91556 21.9762 4.11794 21.9499 4.2592C21.9371 4.3294 21.9229 4.38395 21.9139 4.4131L21.9071 4.43475C20.5834 6.75202 20.254 9.17404 20.2524 11.0494C20.2511 12.5423 20.4586 13.7073 20.5605 14.2184C20.5976 14.409 20.6125 14.5398 20.6207 14.6444C20.5153 14.7189 20.4046 14.807 20.2894 14.9197C20.0837 15.122 19.8781 15.3953 19.7284 15.7418C19.5786 16.0868 19.4879 16.5007 19.4882 16.961C19.4879 17.3196 19.5399 17.7044 19.6517 18.1199C20.0567 19.6296 20.561 20.6782 21.1894 21.435C21.6581 22.007 22.2009 22.3817 22.7245 22.6325C23.0148 23.8918 23.4831 24.9419 24.0091 25.7859C24.5143 26.597 25.0539 27.2288 25.5033 27.7328C25.5023 28.8349 25.5016 29.6821 25.501 30.3621C25.5017 30.3748 25.4956 30.4451 25.385 30.5935C25.2256 30.8108 24.8436 31.1169 24.3793 31.3772C23.9159 31.6405 23.374 31.8709 22.9016 32.0372C22.288 32.2533 21.4629 32.5193 20.5757 32.8989C19.2453 33.467 17.7509 34.2935 16.5662 35.6628C15.377 37.0276 14.5536 38.9471 14.5589 41.456C14.5586 41.8012 14.5732 42.1598 14.6035 42.529L14.6775 43.4219L15.5734 43.4227L48.1965 43.4512L48.272 42.5584C48.3029 42.1901 48.3182 41.833 48.3185 41.4885C48.3213 39.8164 47.9638 38.4062 47.3641 37.2498Z" fill="white"/>    </g>    <path d="M12.2635 41.4541C12.2577 38.6194 13.1468 36.0933 14.8356 34.1552C16.0352 32.7687 17.6194 31.6658 19.6741 30.7881C20.0793 30.6152 20.4664 30.4653 20.8273 30.3333C20.8276 30.024 20.8279 29.6975 20.8282 29.3299C21.2329 28.8782 21.7182 28.3117 22.1732 27.5835C22.2181 27.5126 22.2592 27.4312 22.3027 27.3566C22.222 27.2361 22.1408 27.1278 22.0609 26.9992C21.5117 26.1186 21.074 25.1573 20.7544 24.1319C20.2526 23.7811 19.804 23.366 19.4143 22.8897C18.5515 21.8511 17.9198 20.5214 17.435 18.7151C17.2741 18.1164 17.1925 17.5254 17.193 16.959C17.1922 16.2051 17.337 15.4865 17.623 14.8285C17.7698 14.4879 17.953 14.1682 18.1693 13.8726C18.0281 12.9483 17.9564 11.9993 17.9573 11.0474C17.9586 9.47465 18.1632 7.98421 18.5537 6.5829C18.151 6.51449 17.7334 6.45665 17.2873 6.42045C14.8227 6.11793 13.366 5.83278 12.1888 5.55894C11.0123 5.28604 10.0845 5.01242 8.73238 4.74752C8.65327 4.7332 8.57546 4.72573 8.50384 4.72566C8.32684 4.72401 8.13696 4.77015 7.98145 4.85149C7.68469 5.00891 7.53205 5.23219 7.43327 5.41585C7.26639 5.74448 7.21232 6.04181 7.15889 6.35704C7.08826 6.82329 7.06017 7.3178 7.021 7.72801C7.00217 7.93199 6.9796 8.11422 6.95624 8.24048C6.94419 8.30403 6.93149 8.35259 6.92406 8.37874L6.91729 8.39804C5.72898 10.4794 5.43346 12.6541 5.43198 14.3382C5.43081 15.6786 5.61665 16.7248 5.70822 17.1843C5.74163 17.3554 5.75503 17.4727 5.76235 17.5669C5.66742 17.6333 5.56797 17.7124 5.46485 17.8139C5.2801 17.9953 5.0953 18.241 4.96059 18.5525C4.82654 18.8624 4.74474 19.2337 4.74513 19.6468C4.74485 19.9689 4.79161 20.3148 4.89216 20.6878C5.25547 22.0434 5.70821 22.9852 6.27255 23.6649C6.69341 24.1785 7.18099 24.5152 7.65161 24.7405C7.91218 25.8712 8.33267 26.8137 8.80497 27.5717C9.25865 28.3006 9.74302 28.8681 10.1469 29.3204C10.146 30.3097 10.1453 31.071 10.1448 31.6815C10.1456 31.6927 10.1402 31.7554 10.0408 31.8891C9.89715 32.0839 9.55397 32.3595 9.13762 32.5929C8.72126 32.8294 8.2347 33.0367 7.81017 33.1857C7.25931 33.3795 6.51867 33.6188 5.72197 33.9595C4.52678 34.4695 3.18495 35.2118 2.12141 36.4414C1.05338 37.6674 0.31378 39.3912 0.318375 41.6439C0.318104 41.9541 0.331323 42.2761 0.358689 42.6077L0.425207 43.4095L1.22911 43.4102L12.3737 43.42L12.3161 42.7183C12.2806 42.2894 12.2631 41.865 12.2635 41.4541Z" fill="#E0E8F3" fill-opacity="0.7"/>    <defs>    <filter id="filter0_d_20_60" x="10.5588" y="0.344849" width="41.7598" height="51.1063" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">    <feFlood flood-opacity="0" result="BackgroundImageFix"/>    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>    <feOffset dy="4"/>    <feGaussianBlur stdDeviation="2"/>    <feComposite in2="hardAlpha" operator="out"/>    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_20_60"/>    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_20_60" result="shape"/>    </filter>    </defs>    </svg>    </div>'
+    var COMPONENTS = [{'name': 'ActivoComponent', 'selector': 'app-activo'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BtnAtrasComponent', 'selector': 'app-btn-atras'},{'name': 'CalendarioComponent', 'selector': 'app-calendario'},{'name': 'CodigoUnicoComponent', 'selector': 'app-codigo-unico'},{'name': 'ConfiguracionComponent', 'selector': 'app-configuracion'},{'name': 'CrearActivoComponent', 'selector': 'app-crear-activo'},{'name': 'CrearEdificioComponent', 'selector': 'app-crear-edificio'},{'name': 'CrearOperarioComponent', 'selector': 'app-crear-operario'},{'name': 'CrearPisoComponent', 'selector': 'app-crear-piso'},{'name': 'CrearSectorComponent', 'selector': 'app-crear-sector'},{'name': 'CrearUbicacionComponent', 'selector': 'app-crear-ubicacion'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DescripcionComponent', 'selector': 'app-descripcion'},{'name': 'EdificioComponent', 'selector': 'app-edificio'},{'name': 'FooterContenedorComponent', 'selector': 'app-footer-contenedor'},{'name': 'GraficoOrdenesComponent', 'selector': 'app-grafico-ordenes'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HeaderLogoComponent', 'selector': 'app-header-logo'},{'name': 'InfraestructuraComponent', 'selector': 'app-infraestructura'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MenuPrincipalComponent', 'selector': 'app-menu-principal'},{'name': 'ModificarActivoComponent', 'selector': 'app-modificar-activo'},{'name': 'NavegacionComponent', 'selector': 'app-navegacion'},{'name': 'ObservacionComponent', 'selector': 'app-observacion'},{'name': 'OperariosComponent', 'selector': 'app-operarios'},{'name': 'OperariosComponent', 'selector': 'app-operarios'},{'name': 'OrdenDeTrabajoComponent', 'selector': 'app-orden-de-trabajo'},{'name': 'OrdenesComponent', 'selector': 'app-ordenes'},{'name': 'PisoComponent', 'selector': 'app-piso'},{'name': 'PlantillaComponent', 'selector': 'app-plantilla'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SectorComponent', 'selector': 'app-sector'},{'name': 'SvgBasuraComponent', 'selector': 'app-svg-basura'},{'name': 'SvgChecklistComponent', 'selector': 'app-svg-checklist'},{'name': 'SvgConfiguracionComponent', 'selector': 'app-svg-configuracion'},{'name': 'SvgDashboardComponent', 'selector': 'app-svg-dashboard'},{'name': 'SvgEdificioComponent', 'selector': 'app-svg-edificio'},{'name': 'SvgEditarComponent', 'selector': 'app-svg-editar'},{'name': 'SvgFlechaComponent', 'selector': 'app-svg-flecha'},{'name': 'SvgInfraestructuraComponent', 'selector': 'app-svg-infraestructura'},{'name': 'SvgLlaveComponent', 'selector': 'app-svg-llave'},{'name': 'SvgOperadorComponent', 'selector': 'app-svg-operador'},{'name': 'SvgOperariosComponent', 'selector': 'app-svg-operarios'},{'name': 'SvgOrdenComponent', 'selector': 'app-svg-orden'},{'name': 'SvgUtnComponent', 'selector': 'app-svg-utn'},{'name': 'TareaComponent', 'selector': 'app-tarea'},{'name': 'TipoOtComponent', 'selector': 'app-tipo-ot'},{'name': 'UbicacionComponent', 'selector': 'app-ubicacion'},{'name': 'VerActivoComponent', 'selector': 'app-ver-activo'},{'name': 'VerEdificioComponent', 'selector': 'app-ver-edificio'},{'name': 'VerOperariosComponent', 'selector': 'app-ver-operarios'},{'name': 'VerPisoComponent', 'selector': 'app-ver-piso'},{'name': 'VerSectorComponent', 'selector': 'app-ver-sector'},{'name': 'VerUbicacionComponent', 'selector': 'app-ver-ubicacion'},{'name': 'VistaOrdenComponent', 'selector': 'app-vista-orden'},{'name': 'VistaOrdenOperarioComponent', 'selector': 'app-vista-orden-operario'},{'name': 'VistaUsuarioComponent', 'selector': 'app-vista-usuario'},{'name': 'WelcomeComponent', 'selector': 'app-welcome'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'SvgOperadorComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SvgOperadorComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

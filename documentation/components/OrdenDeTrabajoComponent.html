@@ -1,0 +1,1521 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>utn-proyecto-final documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">utn-proyecto-final documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  OrdenDeTrabajoComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code>OnInit</code>
+    </p>
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-orden-de-trabajo</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">standalone</td>
+                <td class="col-md-9"><code>true</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">imports</td>
+                <td class="col-md-9">
+                            <code>FormsModule</code>
+                            <code>CommonModule</code>
+                                <code><a href="../components/EdificioComponent.html" target="_self" >EdificioComponent</a></code>
+                                <code><a href="../components/PisoComponent.html" target="_self" >PisoComponent</a></code>
+                                <code><a href="../components/ActivoComponent.html" target="_self" >ActivoComponent</a></code>
+                                <code><a href="../components/UbicacionComponent.html" target="_self" >UbicacionComponent</a></code>
+                                <code><a href="../components/OperariosComponent.html" target="_self" >OperariosComponent</a></code>
+                                <code><a href="../components/ObservacionComponent.html" target="_self" >ObservacionComponent</a></code>
+                                <code><a href="../components/TipoOtComponent.html" target="_self" >TipoOtComponent</a></code>
+                                <code><a href="../components/SectorComponent.html" target="_self" >SectorComponent</a></code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./orden-de-trabajo.component.html</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrl</td>
+                <td class="col-md-9"><code>./orden-de-trabajo.component.scss</code></td>
+            </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#activo_tarea_descripSeleccionado" >activo_tarea_descripSeleccionado</a>
+                            </li>
+                            <li>
+                                <a href="#activos" >activos</a>
+                            </li>
+                            <li>
+                                <a href="#codigo_unico" >codigo_unico</a>
+                            </li>
+                            <li>
+                                <a href="#edificios" >edificios</a>
+                            </li>
+                            <li>
+                                <a href="#edificioSelecionado" >edificioSelecionado</a>
+                            </li>
+                            <li>
+                                <a href="#listaOrdenes" >listaOrdenes</a>
+                            </li>
+                            <li>
+                                <a href="#nuevaOrden" >nuevaOrden</a>
+                            </li>
+                            <li>
+                                <a href="#numero_de_orden" >numero_de_orden</a>
+                            </li>
+                            <li>
+                                <a href="#observacion" >observacion</a>
+                            </li>
+                            <li>
+                                <a href="#operarios" >operarios</a>
+                            </li>
+                            <li>
+                                <a href="#operarioSeleccionado" >operarioSeleccionado</a>
+                            </li>
+                            <li>
+                                <a href="#pisos" >pisos</a>
+                            </li>
+                            <li>
+                                <a href="#pisoSeleccionado" >pisoSeleccionado</a>
+                            </li>
+                            <li>
+                                <a href="#sectores" >sectores</a>
+                            </li>
+                            <li>
+                                <a href="#sectorSeleccionado" >sectorSeleccionado</a>
+                            </li>
+                            <li>
+                                <a href="#tarea_descrip" >tarea_descrip</a>
+                            </li>
+                            <li>
+                                <a href="#tipoOtSeleccionado" >tipoOtSeleccionado</a>
+                            </li>
+                            <li>
+                                <a href="#tiposOt" >tiposOt</a>
+                            </li>
+                            <li>
+                                <a href="#ubicaciones" >ubicaciones</a>
+                            </li>
+                            <li>
+                                <a href="#ubicacionSeleccionado" >ubicacionSeleccionado</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#crearOrdenDeTrabajo" >crearOrdenDeTrabajo</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(toastr: ToastrService, router: Router, orden: <a href="../injectables/OrdenDeTrabajoService.html" target="_self">OrdenDeTrabajoService</a>, operario: <a href="../injectables/OperarioService.html" target="_self">OperarioService</a>, ubicacion: <a href="../injectables/UbicacionService.html" target="_self">UbicacionService</a>, piso: <a href="../injectables/PisoService.html" target="_self">PisoService</a>, activo: <a href="../injectables/ActivoService.html" target="_self">ActivoService</a>, edificio: <a href="../injectables/EdificioService.html" target="_self">EdificioService</a>, tipoOt: <a href="../injectables/TipoOtService.html" target="_self">TipoOtService</a>, sector: <a href="../injectables/SectorService.html" target="_self">SectorService</a>, tarea_desc: <a href="../injectables/TareaService.html" target="_self">TareaService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts:78</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>toastr</td>
+                                                  
+                                                        <td>
+                                                                    <code>ToastrService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>router</td>
+                                                  
+                                                        <td>
+                                                                    <code>Router</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>orden</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/OrdenDeTrabajoService.html" target="_self" >OrdenDeTrabajoService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>operario</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/OperarioService.html" target="_self" >OperarioService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>ubicacion</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UbicacionService.html" target="_self" >UbicacionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>piso</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/PisoService.html" target="_self" >PisoService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>activo</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ActivoService.html" target="_self" >ActivoService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>edificio</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/EdificioService.html" target="_self" >EdificioService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>tipoOt</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TipoOtService.html" target="_self" >TipoOtService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>sector</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/SectorService.html" target="_self" >SectorService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>tarea_desc</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/TareaService.html" target="_self" >TareaService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="crearOrdenDeTrabajo"></a>
+                    <span class="name">
+                        <span ><b>crearOrdenDeTrabajo</b></span>
+                        <a href="#crearOrdenDeTrabajo"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>crearOrdenDeTrabajo()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="121"
+                                    class="link-to-prism">src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts:121</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="94"
+                                    class="link-to-prism">src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts:94</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="activo_tarea_descripSeleccionado"></a>
+                    <span class="name">
+                        <span ><b>activo_tarea_descripSeleccionado</b></span>
+                        <a href="#activo_tarea_descripSeleccionado"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts:65</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="activos"></a>
+                    <span class="name">
+                        <span ><b>activos</b></span>
+                        <a href="#activos"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/activo_desc.html" target="_self" >activo_desc[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts:71</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="codigo_unico"></a>
+                    <span class="name">
+                        <span ><b>codigo_unico</b></span>
+                        <a href="#codigo_unico"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts:77</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="edificios"></a>
+                    <span class="name">
+                        <span ><b>edificios</b></span>
+                        <a href="#edificios"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Edificio.html" target="_self" >Edificio[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="73" class="link-to-prism">src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts:73</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="edificioSelecionado"></a>
+                    <span class="name">
+                        <span ><b>edificioSelecionado</b></span>
+                        <a href="#edificioSelecionado"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts:59</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="listaOrdenes"></a>
+                    <span class="name">
+                        <span ><b>listaOrdenes</b></span>
+                        <a href="#listaOrdenes"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Orden.html" target="_self" >Orden[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts:67</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="nuevaOrden"></a>
+                    <span class="name">
+                        <span ><b>nuevaOrden</b></span>
+                        <a href="#nuevaOrden"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Orden.html" target="_self" >Orden</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+      id: 0,
+      tipo_ot_id: 0,
+      piso_id: 0,
+      sector_id: 0,
+      edificio_id: 0,
+      codigo_concatenado: &#x27;&#x27;,
+      observacion: &#x27;&#x27;,
+      usuario_id: 0,
+      activo_tarea_descrip_id: 0,
+      fecha_creacion: new Date(),
+      numero_de_orden: &#x27;&#x27;,
+      ubicacion_id: 0
+    }</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="numero_de_orden"></a>
+                    <span class="name">
+                        <span ><b>numero_de_orden</b></span>
+                        <a href="#numero_de_orden"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts:78</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="observacion"></a>
+                    <span class="name">
+                        <span ><b>observacion</b></span>
+                        <a href="#observacion"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts:76</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="operarios"></a>
+                    <span class="name">
+                        <span ><b>operarios</b></span>
+                        <a href="#operarios"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Operario.html" target="_self" >Operario[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts:68</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="operarioSeleccionado"></a>
+                    <span class="name">
+                        <span ><b>operarioSeleccionado</b></span>
+                        <a href="#operarioSeleccionado"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts:61</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pisos"></a>
+                    <span class="name">
+                        <span ><b>pisos</b></span>
+                        <a href="#pisos"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Piso.html" target="_self" >Piso[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts:70</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pisoSeleccionado"></a>
+                    <span class="name">
+                        <span ><b>pisoSeleccionado</b></span>
+                        <a href="#pisoSeleccionado"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts:62</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sectores"></a>
+                    <span class="name">
+                        <span ><b>sectores</b></span>
+                        <a href="#sectores"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Sector.html" target="_self" >Sector[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts:72</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sectorSeleccionado"></a>
+                    <span class="name">
+                        <span ><b>sectorSeleccionado</b></span>
+                        <a href="#sectorSeleccionado"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts:64</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="tarea_descrip"></a>
+                    <span class="name">
+                        <span ><b>tarea_descrip</b></span>
+                        <a href="#tarea_descrip"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Tarea.html" target="_self" >Tarea[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts:74</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="tipoOtSeleccionado"></a>
+                    <span class="name">
+                        <span ><b>tipoOtSeleccionado</b></span>
+                        <a href="#tipoOtSeleccionado"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts:63</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="tiposOt"></a>
+                    <span class="name">
+                        <span ><b>tiposOt</b></span>
+                        <a href="#tiposOt"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Tipo_ot.html" target="_self" >Tipo_ot[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts:75</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ubicaciones"></a>
+                    <span class="name">
+                        <span ><b>ubicaciones</b></span>
+                        <a href="#ubicaciones"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/Ubicacion.html" target="_self" >Ubicacion[]</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>[]</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts:69</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ubicacionSeleccionado"></a>
+                    <span class="name">
+                        <span ><b>ubicacionSeleccionado</b></span>
+                        <a href="#ubicacionSeleccionado"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/components/gestiones/gestion_ordenes/orden-de-trabajo/orden-contenedor/orden-de-trabajo.component.ts:60</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+  import { FormsModule} from &#x27;@angular/forms&#x27;;
+  import { CommonModule } from &#x27;@angular/common&#x27;;
+  import { Router } from &#x27;@angular/router&#x27;;
+
+  import { EdificioComponent } from &quot;../edificio/edificio.component&quot;;
+  import { PisoComponent } from &quot;../piso/piso.component&quot;;
+  import { ActivoComponent } from &quot;../activo/activo.component&quot;;
+  import { UbicacionComponent } from &quot;../ubicacion/ubicacion.component&quot;;
+  import { OperariosComponent } from &quot;../operarios/operarios.component&quot;;
+  import { ObservacionComponent } from &quot;../observacion/observacion.component&quot;;
+  import { TipoOtComponent } from &quot;../tipo-ot/tipo-ot.component&quot;;
+  import { SectorComponent } from &quot;../sector/sector.component&quot;;
+
+  import { ToastrService } from &#x27;ngx-toastr&#x27;;
+import { Orden } from &#x27;../../../../../interfaces/orden&#x27;;
+import { Operario } from &#x27;../../../../../interfaces/operario&#x27;;
+import { Ubicacion } from &#x27;../../../../../interfaces/ubicacion&#x27;;
+import { Piso } from &#x27;../../../../../interfaces/piso&#x27;;
+import { activo_desc } from &#x27;../../../../../interfaces/activo_tarea_descrip&#x27;;
+import { Sector } from &#x27;../../../../../interfaces/sector&#x27;;
+import { Edificio } from &#x27;../../../../../interfaces/edificio&#x27;;
+import { Tarea } from &#x27;../../../../../interfaces/tarea&#x27;;
+import { Tipo_ot } from &#x27;../../../../../interfaces/tipo_ot&#x27;;
+import { OrdenDeTrabajoService } from &#x27;../../../../../services/orden-de-trabajo.service&#x27;;
+import { OperarioService } from &#x27;../../../../../services/operario.service&#x27;;
+import { UbicacionService } from &#x27;../../../../../services/ubicacion.service&#x27;;
+import { PisoService } from &#x27;../../../../../services/piso.service&#x27;;
+import { ActivoService } from &#x27;../../../../../services/activo.service&#x27;;
+import { EdificioService } from &#x27;../../../../../services/edificio.service&#x27;;
+import { TipoOtService } from &#x27;../../../../../services/tipo-ot.service&#x27;;
+import { SectorService } from &#x27;../../../../../services/sector.service&#x27;;
+import { TareaService } from &#x27;../../../../../services/tarea_descrip.service&#x27;;
+
+  @Component({
+    selector: &#x27;app-orden-de-trabajo&#x27;,
+    standalone: true,
+    imports: [FormsModule, CommonModule, EdificioComponent, PisoComponent, ActivoComponent, UbicacionComponent, OperariosComponent, ObservacionComponent, TipoOtComponent, SectorComponent],
+    templateUrl: &#x27;./orden-de-trabajo.component.html&#x27;,
+    styleUrl: &#x27;./orden-de-trabajo.component.scss&#x27;
+  })
+  export class OrdenDeTrabajoComponent implements OnInit{
+
+    nuevaOrden: Orden &#x3D; {
+      id: 0,
+      tipo_ot_id: 0,
+      piso_id: 0,
+      sector_id: 0,
+      edificio_id: 0,
+      codigo_concatenado: &#x27;&#x27;,
+      observacion: &#x27;&#x27;,
+      usuario_id: 0,
+      activo_tarea_descrip_id: 0,
+      fecha_creacion: new Date(),
+      numero_de_orden: &#x27;&#x27;,
+      ubicacion_id: 0
+    }
+
+    edificioSelecionado:number &#x3D; 0;
+    ubicacionSeleccionado: number &#x3D; 0;
+    operarioSeleccionado: number &#x3D; 0; 
+    pisoSeleccionado: number &#x3D; 0;
+    tipoOtSeleccionado: number &#x3D; 0;
+    sectorSeleccionado: number &#x3D; 0;
+    activo_tarea_descripSeleccionado: number &#x3D; 0;
+
+    listaOrdenes: Orden[] &#x3D; [];
+    operarios: Operario[] &#x3D; [];
+    ubicaciones: Ubicacion[] &#x3D; [];
+    pisos: Piso[] &#x3D; [];
+    activos: activo_desc[] &#x3D; [];
+    sectores: Sector[] &#x3D; [];
+    edificios: Edificio[] &#x3D; [];
+    tarea_descrip: Tarea[] &#x3D; [];
+    tiposOt: Tipo_ot[] &#x3D; [];
+    observacion: string &#x3D; &#x27;&#x27;;
+    codigo_unico: string &#x3D; &#x27;&#x27;;
+    numero_de_orden: string &#x3D; &#x27;&#x27;;
+
+    constructor(
+      private toastr: ToastrService,
+      private router: Router,
+      private orden: OrdenDeTrabajoService,
+      private operario: OperarioService,
+      private ubicacion: UbicacionService,
+      private piso: PisoService,
+      private activo: ActivoService,
+      private edificio: EdificioService,
+      private tipoOt: TipoOtService,
+      private sector: SectorService,
+      private tarea_desc: TareaService
+    ) {}
+
+    ngOnInit(): void {
+      this.operario.obtenerOperarios().subscribe(data &#x3D;&gt; {
+        this.operarios &#x3D; data;
+      });
+      this.ubicacion.obtenerUbicacion().subscribe(data &#x3D;&gt; {
+        this.ubicaciones &#x3D; data;
+      });
+      this.piso.obtenerPiso().subscribe(data &#x3D;&gt; {
+        this.pisos &#x3D; data
+      });
+      this.activo.obtenerActivo().subscribe(data &#x3D;&gt; {
+        this.activos &#x3D; data;
+      });
+      this.edificio.obtenerEdificio().subscribe(data &#x3D;&gt; {
+        this.edificios &#x3D; data;
+      });
+      this.tipoOt.obtenerTipo_Orden().subscribe(data &#x3D;&gt; {
+        this.tiposOt &#x3D; data;
+      });
+      this.sector.obtenerSector().subscribe(data &#x3D;&gt; {
+        this.sectores &#x3D; data;
+      });
+      this.tarea_desc.obtenerTarea_descrip().subscribe(data &#x3D;&gt; {
+        this.tarea_descrip &#x3D; data;
+      })
+    }
+
+    crearOrdenDeTrabajo() {
+      this.nuevaOrden.tipo_ot_id &#x3D; this.tipoOtSeleccionado
+      this.nuevaOrden.piso_id &#x3D; this.pisoSeleccionado
+      this.nuevaOrden.sector_id &#x3D; this.sectorSeleccionado
+      this.nuevaOrden.edificio_id &#x3D; this.edificioSelecionado 
+      this.nuevaOrden.codigo_concatenado &#x3D; this.codigo_unico;
+      this.nuevaOrden.observacion &#x3D; this.observacion;
+      this.nuevaOrden.usuario_id &#x3D; this.operarioSeleccionado;
+      this.nuevaOrden.activo_tarea_descrip_id &#x3D; this.activo_tarea_descripSeleccionado;
+      this.nuevaOrden.fecha_creacion &#x3D; new Date();
+      this.nuevaOrden.numero_de_orden &#x3D; this.numero_de_orden;
+      this.nuevaOrden.ubicacion_id &#x3D; this.ubicacionSeleccionado;
+
+      this.orden.crearOrden(this.nuevaOrden).subscribe({
+        next: (response) &#x3D;&gt; {
+          this.toastr.success(&#x27;Orden creada con éxito&#x27;);
+          this.router.navigate([&#x27;/menu/plantilla&#x27;, response.id]);
+        },
+        error: (err) &#x3D;&gt; {
+          this.toastr.error(&#x27;Error al crear la orden&#x27;);
+          console.error(err);
+        } 
+      })
+    }
+  }
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;dashboard&quot;&gt;
+    &lt;div class&#x3D;&quot;contenedor&quot;&gt;
+        &lt;form class&#x3D;&quot;formulario&quot;&gt;
+            &lt;div class&#x3D;&quot;welcome&quot;&gt;
+                &lt;span&gt;Complete la información de la&lt;/span&gt;
+                &lt;h1&gt;Orden de Trabajo&lt;/h1&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;informacion&quot;&gt;
+                &lt;app-activo
+                [activos]&#x3D;&quot;activos&quot;
+                (activoSeleccionado)&#x3D;&quot;activo_tarea_descripSeleccionado &#x3D; $event&quot;
+                &gt;&lt;/app-activo&gt;
+    
+                &lt;app-edificio
+                [edificios]&#x3D;&quot;edificios&quot;
+                (edificioSeleccionado)&#x3D;&quot;edificioSelecionado &#x3D; $event&quot;
+                &gt;&lt;/app-edificio&gt;
+            
+                &lt;app-piso
+                [pisos]&#x3D;&quot;pisos&quot;
+                (pisoSeleccionado)&#x3D;&quot;pisoSeleccionado &#x3D; $event&quot;
+                &gt;&lt;/app-piso&gt;
+    
+                &lt;app-sector
+                [sectores]&#x3D;&quot;sectores&quot;
+                (sectorSeleccionado)&#x3D;&quot;sectorSeleccionado &#x3D; $event&quot;
+                &gt;&lt;/app-sector&gt;
+    
+                &lt;app-ubicacion
+                [ubicaciones]&#x3D;&quot;ubicaciones&quot;
+                (ubicacionSeleccionado)&#x3D;&quot;ubicacionSeleccionado &#x3D; $event&quot;
+                &gt;&lt;/app-ubicacion&gt;
+    
+                &lt;app-operarios
+                [operarios]&#x3D;&quot;operarios&quot;
+                (operarioSeleccionado)&#x3D;&quot;operarioSeleccionado &#x3D; $event&quot;
+                &gt;&lt;/app-operarios&gt;
+    
+                &lt;app-tipo-ot
+                [tiposOt]&#x3D;&quot;tiposOt&quot;
+                (tipoOtSeleccionado)&#x3D;&quot;tipoOtSeleccionado &#x3D; $event&quot;
+                &gt;&lt;/app-tipo-ot&gt;
+    
+                &lt;app-observacion
+                (observacionSeleccionado)&#x3D;&quot;observacion &#x3D; $event&quot;
+                &gt;&lt;/app-observacion&gt;
+                
+                &lt;button (click)&#x3D;&quot;crearOrdenDeTrabajo()&quot;&gt;Crear Orden&lt;/button&gt;
+            &lt;/div&gt;     
+        &lt;/form&gt;
+    &lt;/div&gt;
+    
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="dashboard">    <div class="contenedor">        <form class="formulario">            <div class="welcome">                <span>Complete la información de la</span>                <h1>Orden de Trabajo</h1>            </div>            <div class="informacion">                <app-activo                [activos]="activos"                (activoSeleccionado)="activo_tarea_descripSeleccionado = $event"                ></app-activo>                    <app-edificio                [edificios]="edificios"                (edificioSeleccionado)="edificioSelecionado = $event"                ></app-edificio>                            <app-piso                [pisos]="pisos"                (pisoSeleccionado)="pisoSeleccionado = $event"                ></app-piso>                    <app-sector                [sectores]="sectores"                (sectorSeleccionado)="sectorSeleccionado = $event"                ></app-sector>                    <app-ubicacion                [ubicaciones]="ubicaciones"                (ubicacionSeleccionado)="ubicacionSeleccionado = $event"                ></app-ubicacion>                    <app-operarios                [operarios]="operarios"                (operarioSeleccionado)="operarioSeleccionado = $event"                ></app-operarios>                    <app-tipo-ot                [tiposOt]="tiposOt"                (tipoOtSeleccionado)="tipoOtSeleccionado = $event"                ></app-tipo-ot>                    <app-observacion                (observacionSeleccionado)="observacion = $event"                ></app-observacion>                                <button (click)="crearOrdenDeTrabajo()">Crear Orden</button>            </div>             </form>    </div>    </div></div>'
+    var COMPONENTS = [{'name': 'ActivoComponent', 'selector': 'app-activo'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BtnAtrasComponent', 'selector': 'app-btn-atras'},{'name': 'CalendarioComponent', 'selector': 'app-calendario'},{'name': 'CodigoUnicoComponent', 'selector': 'app-codigo-unico'},{'name': 'ConfiguracionComponent', 'selector': 'app-configuracion'},{'name': 'CrearActivoComponent', 'selector': 'app-crear-activo'},{'name': 'CrearEdificioComponent', 'selector': 'app-crear-edificio'},{'name': 'CrearOperarioComponent', 'selector': 'app-crear-operario'},{'name': 'CrearPisoComponent', 'selector': 'app-crear-piso'},{'name': 'CrearSectorComponent', 'selector': 'app-crear-sector'},{'name': 'CrearUbicacionComponent', 'selector': 'app-crear-ubicacion'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DescripcionComponent', 'selector': 'app-descripcion'},{'name': 'EdificioComponent', 'selector': 'app-edificio'},{'name': 'FooterContenedorComponent', 'selector': 'app-footer-contenedor'},{'name': 'GraficoOrdenesComponent', 'selector': 'app-grafico-ordenes'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HeaderLogoComponent', 'selector': 'app-header-logo'},{'name': 'InfraestructuraComponent', 'selector': 'app-infraestructura'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MenuPrincipalComponent', 'selector': 'app-menu-principal'},{'name': 'ModificarActivoComponent', 'selector': 'app-modificar-activo'},{'name': 'NavegacionComponent', 'selector': 'app-navegacion'},{'name': 'ObservacionComponent', 'selector': 'app-observacion'},{'name': 'OperariosComponent', 'selector': 'app-operarios'},{'name': 'OperariosComponent', 'selector': 'app-operarios'},{'name': 'OrdenDeTrabajoComponent', 'selector': 'app-orden-de-trabajo'},{'name': 'OrdenesComponent', 'selector': 'app-ordenes'},{'name': 'PisoComponent', 'selector': 'app-piso'},{'name': 'PlantillaComponent', 'selector': 'app-plantilla'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SectorComponent', 'selector': 'app-sector'},{'name': 'SvgBasuraComponent', 'selector': 'app-svg-basura'},{'name': 'SvgChecklistComponent', 'selector': 'app-svg-checklist'},{'name': 'SvgConfiguracionComponent', 'selector': 'app-svg-configuracion'},{'name': 'SvgDashboardComponent', 'selector': 'app-svg-dashboard'},{'name': 'SvgEdificioComponent', 'selector': 'app-svg-edificio'},{'name': 'SvgEditarComponent', 'selector': 'app-svg-editar'},{'name': 'SvgFlechaComponent', 'selector': 'app-svg-flecha'},{'name': 'SvgInfraestructuraComponent', 'selector': 'app-svg-infraestructura'},{'name': 'SvgLlaveComponent', 'selector': 'app-svg-llave'},{'name': 'SvgOperadorComponent', 'selector': 'app-svg-operador'},{'name': 'SvgOperariosComponent', 'selector': 'app-svg-operarios'},{'name': 'SvgOrdenComponent', 'selector': 'app-svg-orden'},{'name': 'SvgUtnComponent', 'selector': 'app-svg-utn'},{'name': 'TareaComponent', 'selector': 'app-tarea'},{'name': 'TipoOtComponent', 'selector': 'app-tipo-ot'},{'name': 'UbicacionComponent', 'selector': 'app-ubicacion'},{'name': 'VerActivoComponent', 'selector': 'app-ver-activo'},{'name': 'VerEdificioComponent', 'selector': 'app-ver-edificio'},{'name': 'VerOperariosComponent', 'selector': 'app-ver-operarios'},{'name': 'VerPisoComponent', 'selector': 'app-ver-piso'},{'name': 'VerSectorComponent', 'selector': 'app-ver-sector'},{'name': 'VerUbicacionComponent', 'selector': 'app-ver-ubicacion'},{'name': 'VistaOrdenComponent', 'selector': 'app-vista-orden'},{'name': 'VistaOrdenOperarioComponent', 'selector': 'app-vista-orden-operario'},{'name': 'VistaUsuarioComponent', 'selector': 'app-vista-usuario'},{'name': 'WelcomeComponent', 'selector': 'app-welcome'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'OrdenDeTrabajoComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'OrdenDeTrabajoComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
