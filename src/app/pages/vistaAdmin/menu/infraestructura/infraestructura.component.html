@@ -13,8 +13,6 @@
             <div class="dropdown-menu">
                 <a [routerLink]="['/menu', 'ver-activos']">Ver Activos</a>
                 <a [routerLink]="['/menu', 'crear-activo']">Crear Activo</a>
-                <a [routerLink]="['/menu', 'editar-activos']">Editar Activo</a>
-                <a [routerLink]="['/menu', 'eliminar-activos']">Eliminar Activo</a>
             </div>
         </div>
 
@@ -26,8 +24,6 @@
             <div class="dropdown-menu">
                 <a [routerLink]="['/menu', 'ver-sectores']">Ver Sectores</a>
                 <a [routerLink]="['/menu', 'crear-sector']">Crear Sector</a>
-                <a [routerLink]="['/menu', 'editar-sectores']">Editar Sector</a>
-                <a [routerLink]="['/menu', 'eliminar-sectores']">Eliminar Sector</a>
             </div>
         </div>
         <div class="cuadrado">
@@ -38,27 +34,27 @@
             <div class="dropdown-menu">
                 <a [routerLink]="['/menu', 'ver-edificios']">Ver Edificios</a>
                 <a [routerLink]="['/menu', 'crear-edificio']">Crear Edificio</a>
-                <a [routerLink]="['/menu', 'editar-edificios']">Editar edificios</a>
-                <a [routerLink]="['/menu', 'eliminar-edificios']">Eliminar Edificio</a>
             </div>
         </div>
         <div class="cuadrado">
-            <button [routerLink]="['/menu', 'ordenes']"  routerLinkActive="active">
+            <button>
                 <span class="texto">Piso</span>
                 <span class="tooltip">Gestion de los pisos</span>
             </button> 
             <div class="dropdown-menu">
                 <a [routerLink]="['/menu', 'ver-pisos']">Ver Pisos</a>
                 <a [routerLink]="['/menu', 'crear-piso']">Crear Piso</a>
-                <a [routerLink]="['/menu', 'editar-piso']">Editar Piso</a>
-                <a [routerLink]="['/menu', 'eliminar-piso']">Eliminar Piso</a>
             </div>
         </div>
         <div class="cuadrado">
-            <button [routerLink]="['/menu', 'ordenes']"  routerLinkActive="active">
+            <button>
                 <span class="texto">Ubicación</span>
                 <span class="tooltip">Gestion de las ubicaciones</span>
             </button> 
+            <div class="dropdown-menu">
+                <a [routerLink]="['/menu', 'ver-ubicaciones']">Ver Ubicaciones</a>
+                <a [routerLink]="['/menu', 'crear-ubicacion']">Crear Ubicación</a>
+            </div>
         </div>
     </div>
 </div>

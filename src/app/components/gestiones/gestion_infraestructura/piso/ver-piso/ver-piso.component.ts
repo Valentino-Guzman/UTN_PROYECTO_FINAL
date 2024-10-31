@@ -11,7 +11,7 @@ import { NgFor } from '@angular/common';
   styleUrl: './ver-piso.component.scss'
 })
 export class VerPisoComponent implements OnInit {
-  pisos: Piso [] = []
+  pisos: Piso [] = [];
 
   constructor (
     private piso: PisoService

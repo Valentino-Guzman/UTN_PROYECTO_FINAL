@@ -25,7 +25,10 @@ import { VerEdificioComponent } from './components/gestiones/gestion_infraestruc
 import { CrearPisoComponent } from './components/gestiones/gestion_infraestructura/piso/crear-piso/crear-piso.component';
 import { VerPisoComponent } from './components/gestiones/gestion_infraestructura/piso/ver-piso/ver-piso.component';
 import { VerUbicacionComponent } from './components/gestiones/gestion_infraestructura/ubicacion/ver-ubicacion/ver-ubicacion.component';
-// import { CrearUbicaciomComponent } from './components/gestiones/gestion_infraestructura/ubicacion/crear-ubicacion/crear-ubicacion.component';
+import { VistaUsuarioComponent } from './pages/vistaOperario/vista-operario/vista-usuario.component';
+import { CrearUbicacionComponent } from './components/gestiones/gestion_infraestructura/ubicacion/crear-ubicacion/crear-ubicacion.component';
+import { PisoComponent } from './components/gestiones/gestion_ordenes/orden-de-trabajo/piso/piso.component';
+import { VistaOrdenComponent } from './components/gestiones/gestion_ordenes/verOrden/vista-orden/vista-orden.component';
 
 
 
@@ -41,6 +44,7 @@ export const routes:Routes = [
         children: [
             { path: 'dashboard', component: DashboardComponent },
             { path: 'ordenes', component: OrdenesComponent },
+            { path: 'ver-ordenes', component: VistaOrdenComponent },
             { path: 'generar-orden', component: OrdenDeTrabajoComponent },
             { path: 'plantilla/:id', component: PlantillaComponent },
             { path: 'infraestructura', component: InfraestructuraComponent },
@@ -57,18 +61,24 @@ export const routes:Routes = [
 
             { path: 'configuracion', component: ConfiguracionComponent },
 
-            {path: 'crear-edificio', component: CrearEdificioComponent},
-            {path: 'ver-edificio', component: VerEdificioComponent},
+            { path: 'crear-edificio', component: CrearEdificioComponent },
+            { path: 'ver-edificio', component: VerEdificioComponent },
 
-            {path: 'crear-piso', component: CrearPisoComponent},
-            {path: 'ver-piso',component: VerPisoComponent},
+            { path: 'crear-piso', component: CrearPisoComponent },
+            { path: 'ver-piso',component: VerPisoComponent },
 
-            {path: 'ver-ubicacion',component: VerUbicacionComponent},
-            // {path: 'crear-ubicacion', component: CrearUbicaciomComponent}
+            { path: 'ver-ubicaciones',component: VerUbicacionComponent },
+            { path: 'crear-ubicacion', component: CrearUbicacionComponent },
+
+            { path: 'ver-pisos',component: VerPisoComponent },
+            { path: 'crear-piso', component: CrearPisoComponent },
+
+            { path: 'ver-edificios',component: VerEdificioComponent },
+            { path: 'crear-piso', component: CrearEdificioComponent }
 
         ]
     },
     
-    { path: 'vistaUsuario', component:VistaOrdenOperarioComponent},
+    { path: 'vistaUsuario', component:VistaUsuarioComponent},
     { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];
