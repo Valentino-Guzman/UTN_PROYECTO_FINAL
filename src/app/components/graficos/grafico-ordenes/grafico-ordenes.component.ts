@@ -30,9 +30,6 @@ export class GraficoOrdenesComponent implements OnInit {
 
   obtenerCantidades() {
     this.ordenEstado.obtenerEstadoOrdenes().subscribe((data: OrdenResponse) => {
-      console.log(data); // Verifica qué tipo de datos se está recibiendo
-
-      // Asegúrate de que la respuesta tenga las propiedades esperadas
       this.single = [
         { name: "Completadas", value: Number(data.completas) },
         { name: "En Progreso", value: Number(data.en_progreso) },

@@ -1,0 +1,37 @@
+.card {
+    display: flex;
+    max-width: 1100px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    background-color: #fff; 
+    border: 1px solid #060640;
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+    animation: fadeIn 0.8s ease backwards;
+}
+
+.orden-tabla  {
+    width: 1100px; 
+    border-collapse: collapse; 
+    font-size: 14px; 
+    border-bottom: 1px solid #060640;
+    border-right: 1px solid #060640;
+    animation: fadeIn 0.8s ease backwards;
+}
+
+
+.orden-tabla th, .orden-tabla td {
+    border-left: 1px solid #060640;
+    border-top: 1px solid #060640;
+    padding: 4px;  
+}
+
+.orden-tabla td {
+    height: 24px;
+}
+
+.orden-tabla th {
+    background-color: #ecf9ff;
+}

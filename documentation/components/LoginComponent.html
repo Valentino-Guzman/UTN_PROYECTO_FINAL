@@ -480,6 +480,7 @@ export class LoginComponent {
         this.cookie.set(&#x27;authtoken&#x27;, response.token);
         this.cookie.set(&#x27;operario&#x27;, response.user.name)
         this.cookie.set(&#x27;role&#x27;, response.user.rol);
+        this.cookie.set(&#x27;operarioId&#x27;, response.user.id.toString());
         this.router.navigate([&#x27;/menu/dashboard&#x27;])
       },
         error: () &#x3D;&gt; {

@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/api'
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { Orden, OrdenResponse, OrdenStatus } from '../interfaces/orden';
+import { Observable, Subject } from 'rxjs';
+import { Orden, OrdenResponse, OrdenStatus, OrdenTiempo} from '../interfaces/orden';
 
 
 @Injectable({
@@ -33,4 +33,9 @@ export class OrdenDeTrabajoService {
   modificarEstadoOrdenes(id: number, estado: string) {
     return this.http.put<OrdenStatus>(`${this.apiUrl}/ordenes/${id}/estado`, {estado});
   }
+
+  obtenerOrdenOperario(id:number): Observable<Orden[]> {
+    return this.http.get<Orden[]>(`${this.apiUrl}/ordenes/operario/${id}`)
+  }
+
 }

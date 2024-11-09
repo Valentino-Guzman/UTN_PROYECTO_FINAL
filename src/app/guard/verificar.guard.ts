@@ -8,12 +8,13 @@ export const verificarGuard: CanActivateFn = (route, state) => {
   const router = inject(Router);
 
   const userRole = cookieService.get('role');
+  const userId = cookieService.get('operarioId');
 
   if (userRole === 'admin') {
     return true; 
   } else {
     console.log('Usuario no es admin.');
-    router.navigate(['vistaUsuario']);  
+    router.navigate([`vistaUsuario/${userId}`]);  
     return false;  
   }
 };

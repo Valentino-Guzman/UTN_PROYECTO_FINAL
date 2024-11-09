@@ -179,6 +179,13 @@
                                         </a>
                                 </li>
                                 <li>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#fecha_creacion_formateada" 
+>
+                                            fecha_creacion_formateada
+                                        </a>
+                                </li>
+                                <li>
                                         <a href="#id" 
 >
                                             id
@@ -440,6 +447,44 @@
                                         </td>
                                     </tr>
 
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="fecha_creacion_formateada"></a>
+                                        <span class="name "><b>fecha_creacion_formateada</b>
+                                            <a href="#fecha_creacion_formateada">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>fecha_creacion_formateada:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
 
 
 
@@ -735,6 +780,7 @@
     activo_nombre?: string;
     descripciones?: string;
     numero_de_orden?: string;
+    fecha_creacion_formateada?: string;
 }
 
 export interface OrdenStatus {
@@ -751,7 +797,13 @@ export interface OrdenResponse {
 export interface GraficoOrden {
     name: string; 
     value: number;
-  }
+}
+
+export interface OrdenTiempo {
+    tiempoInicio: number;
+    tiempoTranscurrido: number;
+    intervalId: any;
+}
 </code></pre>
     </div>
 </div>

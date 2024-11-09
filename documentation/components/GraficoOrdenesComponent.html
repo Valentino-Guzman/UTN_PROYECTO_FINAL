@@ -481,9 +481,6 @@ export class GraficoOrdenesComponent implements OnInit {
 
   obtenerCantidades() {
     this.ordenEstado.obtenerEstadoOrdenes().subscribe((data: OrdenResponse) &#x3D;&gt; {
-      console.log(data); // Verifica qué tipo de datos se está recibiendo
-
-      // Asegúrate de que la respuesta tenga las propiedades esperadas
       this.single &#x3D; [
         { name: &quot;Completadas&quot;, value: Number(data.completas) },
         { name: &quot;En Progreso&quot;, value: Number(data.en_progreso) },
@@ -502,8 +499,6 @@ export class GraficoOrdenesComponent implements OnInit {
   [results]&#x3D;&quot;single&quot;
   [gradient]&#x3D;&quot;false&quot;
   [xAxis]&#x3D;&quot;true&quot;
-  [yAxisLabel]&#x3D;&quot;&#x27;&#x27;&quot;
-  [xAxisLabel]&#x3D;&quot;&#x27;Estado de Órdenes&#x27;&quot;
   [animations]&#x3D;&quot;true&quot;&gt;
 &lt;/ngx-charts-bar-vertical&gt;
 &lt;/div&gt;</code></pre>
@@ -544,7 +539,7 @@ export class GraficoOrdenesComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="grafico-container">    <ngx-charts-bar-vertical  [scheme]="colors"  [results]="single"  [gradient]="false"  [xAxis]="true"  [yAxisLabel]="\'\'"  [xAxisLabel]="\'Estado de Órdenes\'"  [animations]="true"></ngx-charts-bar-vertical></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="grafico-container">    <ngx-charts-bar-vertical  [scheme]="colors"  [results]="single"  [gradient]="false"  [xAxis]="true"  [animations]="true"></ngx-charts-bar-vertical></div></div>'
     var COMPONENTS = [{'name': 'ActivoComponent', 'selector': 'app-activo'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BtnAtrasComponent', 'selector': 'app-btn-atras'},{'name': 'CalendarioComponent', 'selector': 'app-calendario'},{'name': 'CodigoUnicoComponent', 'selector': 'app-codigo-unico'},{'name': 'ConfiguracionComponent', 'selector': 'app-configuracion'},{'name': 'CrearActivoComponent', 'selector': 'app-crear-activo'},{'name': 'CrearEdificioComponent', 'selector': 'app-crear-edificio'},{'name': 'CrearOperarioComponent', 'selector': 'app-crear-operario'},{'name': 'CrearPisoComponent', 'selector': 'app-crear-piso'},{'name': 'CrearSectorComponent', 'selector': 'app-crear-sector'},{'name': 'CrearUbicacionComponent', 'selector': 'app-crear-ubicacion'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'DescripcionComponent', 'selector': 'app-descripcion'},{'name': 'EdificioComponent', 'selector': 'app-edificio'},{'name': 'FooterContenedorComponent', 'selector': 'app-footer-contenedor'},{'name': 'GraficoOrdenesComponent', 'selector': 'app-grafico-ordenes'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HeaderLogoComponent', 'selector': 'app-header-logo'},{'name': 'InfraestructuraComponent', 'selector': 'app-infraestructura'},{'name': 'InicioComponent', 'selector': 'app-inicio'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MenuPrincipalComponent', 'selector': 'app-menu-principal'},{'name': 'ModificarActivoComponent', 'selector': 'app-modificar-activo'},{'name': 'NavegacionComponent', 'selector': 'app-navegacion'},{'name': 'ObservacionComponent', 'selector': 'app-observacion'},{'name': 'OperariosComponent', 'selector': 'app-operarios'},{'name': 'OperariosComponent', 'selector': 'app-operarios'},{'name': 'OrdenDeTrabajoComponent', 'selector': 'app-orden-de-trabajo'},{'name': 'OrdenesComponent', 'selector': 'app-ordenes'},{'name': 'PisoComponent', 'selector': 'app-piso'},{'name': 'PlantillaComponent', 'selector': 'app-plantilla'},{'name': 'RegisterComponent', 'selector': 'app-register'},{'name': 'SectorComponent', 'selector': 'app-sector'},{'name': 'SvgBasuraComponent', 'selector': 'app-svg-basura'},{'name': 'SvgChecklistComponent', 'selector': 'app-svg-checklist'},{'name': 'SvgConfiguracionComponent', 'selector': 'app-svg-configuracion'},{'name': 'SvgDashboardComponent', 'selector': 'app-svg-dashboard'},{'name': 'SvgEdificioComponent', 'selector': 'app-svg-edificio'},{'name': 'SvgEditarComponent', 'selector': 'app-svg-editar'},{'name': 'SvgFlechaComponent', 'selector': 'app-svg-flecha'},{'name': 'SvgInfraestructuraComponent', 'selector': 'app-svg-infraestructura'},{'name': 'SvgLlaveComponent', 'selector': 'app-svg-llave'},{'name': 'SvgOperadorComponent', 'selector': 'app-svg-operador'},{'name': 'SvgOperariosComponent', 'selector': 'app-svg-operarios'},{'name': 'SvgOrdenComponent', 'selector': 'app-svg-orden'},{'name': 'SvgUtnComponent', 'selector': 'app-svg-utn'},{'name': 'TareaComponent', 'selector': 'app-tarea'},{'name': 'TipoOtComponent', 'selector': 'app-tipo-ot'},{'name': 'UbicacionComponent', 'selector': 'app-ubicacion'},{'name': 'VerActivoComponent', 'selector': 'app-ver-activo'},{'name': 'VerEdificioComponent', 'selector': 'app-ver-edificio'},{'name': 'VerOperariosComponent', 'selector': 'app-ver-operarios'},{'name': 'VerPisoComponent', 'selector': 'app-ver-piso'},{'name': 'VerSectorComponent', 'selector': 'app-ver-sector'},{'name': 'VerUbicacionComponent', 'selector': 'app-ver-ubicacion'},{'name': 'VistaOrdenComponent', 'selector': 'app-vista-orden'},{'name': 'VistaOrdenOperarioComponent', 'selector': 'app-vista-orden-operario'},{'name': 'VistaUsuarioComponent', 'selector': 'app-vista-usuario'},{'name': 'WelcomeComponent', 'selector': 'app-welcome'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'GraficoOrdenesComponent'};

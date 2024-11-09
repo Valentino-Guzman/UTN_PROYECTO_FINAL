@@ -320,6 +320,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/OrdenStatus.html" data-type="entity-link" >OrdenStatus</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/OrdenTiempo.html" data-type="entity-link" >OrdenTiempo</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/Piso.html" data-type="entity-link" >Piso</a>
                             </li>
                             <li class="link">

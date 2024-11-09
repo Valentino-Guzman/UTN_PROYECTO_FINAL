@@ -42,6 +42,7 @@ export class LoginComponent {
         this.cookie.set('authtoken', response.token);
         this.cookie.set('operario', response.user.name)
         this.cookie.set('role', response.user.rol);
+        this.cookie.set('operarioId', response.user.id.toString());
         this.router.navigate(['/menu/dashboard'])
       },
         error: () => {

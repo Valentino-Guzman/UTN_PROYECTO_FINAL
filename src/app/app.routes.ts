@@ -46,7 +46,6 @@ export const routes:Routes = [
             { path: 'ordenes', component: OrdenesComponent },
             { path: 'ver-ordenes', component: VistaOrdenComponent },
             { path: 'generar-orden', component: OrdenDeTrabajoComponent },
-            { path: 'plantilla/:id', component: PlantillaComponent },
             { path: 'infraestructura', component: InfraestructuraComponent },
             { path: 'operarios', component: OperariosComponent },
 
@@ -78,7 +77,7 @@ export const routes:Routes = [
 
         ]
     },
-    
-    { path: 'vistaUsuario', component:VistaUsuarioComponent},
+    { path: 'menu/plantilla/:id', component: PlantillaComponent },
+    { path: 'vistaUsuario/:id', component:VistaUsuarioComponent},
     { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];

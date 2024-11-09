@@ -223,12 +223,13 @@
   const router &#x3D; inject(Router);
 
   const userRole &#x3D; cookieService.get(&#x27;role&#x27;);
+  const userId &#x3D; cookieService.get(&#x27;operarioId&#x27;);
 
   if (userRole &#x3D;&#x3D;&#x3D; &#x27;admin&#x27;) {
     return true; 
   } else {
     console.log(&#x27;Usuario no es admin.&#x27;);
-    router.navigate([&#x27;vistaUsuario&#x27;]);  
+    router.navigate([&#x60;vistaUsuario/${userId}&#x60;]);  
     return false;  
   }
 }</code>

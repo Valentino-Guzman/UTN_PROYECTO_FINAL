@@ -13,6 +13,7 @@ export interface Orden {
     activo_nombre?: string;
     descripciones?: string;
     numero_de_orden?: string;
+    fecha_creacion_formateada?: string;
 }
 
 export interface OrdenStatus {
@@ -29,4 +30,10 @@ export interface OrdenResponse {
 export interface GraficoOrden {
     name: string; 
     value: number;
-  }
+}
+
+export interface OrdenTiempo {
+    tiempoInicio: number;
+    tiempoTranscurrido: number;
+    intervalId: any;
+}
