@@ -1,17 +1,25 @@
-<div class="crear-operario-form">
-    <h2>Crear nuevo usuario</h2>
-    <form (ngSubmit)="crearOperario()">
-      <label for="nombre">Ingresar nombre:</label>
-      <input id="nombre" type="text" [(ngModel)]="nuevoOperarioData.name" name="nombre" required />
-  
-      <label for="correo">Ingresar correo:</label>
-      <input id="correo" type="email" [(ngModel)]="nuevoOperarioData.email" name="correo" required />
-  
-      <label for="contraseña">Ingresar contraseña:</label>
-      <input id="contraseña" type="password" [(ngModel)]="nuevoOperarioData.password" name="contraseña" required />
-  
-      <button type="submit">Crear</button>
-      <button type="button" >Regresar</button>
-    </form>
+<div class="operario-contenedor">
+  <button class="btn-atras" [routerLink]="['/menu/operarios']">Atrás</button>
+  <div class="contenedor">
+      <div class="welcome">
+          <span>Complete los datos</span>
+          <h1>Crear Operario</h1>
+      </div>  
+      <div class="card">
+          <form class="formulario">
+              <div class="operario">
+                  <label for="nombre">Ingresar nombre</label>
+                  <input type="text" id="nombre" name="nombre"
+                      [(ngModel)]="nuevoOperarioData.name" required />
+                  <label for="nombre">Ingresar email</label>
+                  <input type="text" id="email" name="email"
+                      [(ngModel)]="nuevoOperarioData.email" required />
+                  <label for="nombre">Ingresar contraseña</label>
+                  <input type="text" id="password" name="password"
+                      [(ngModel)]="nuevoOperarioData.password" required />
+              </div>
+              <button (click)="crearOperario()">Crear</button>
+          </form>
+      </div>
+  </div>
 </div>
-  

@@ -63,10 +63,8 @@
             
                     <div class="container-fecha">
                         <div class="tiempo">
-                            <span>Tiempo total utilizado:</span>
-                            <span *ngIf="tiempoTotal !== undefined">Tiempo total utilizado: {{ tiempoTotal }} minutos</span>
-                            <span *ngIf="tiempoTotal === undefined">No se ha registrado el tiempo total.</span>
-                        </div>
+                            <p> La tarea fue realizada en: {{ tiempoTranscurrido }} minutos</p>
+                          </div>
                         <div class="tarea_operario">
                             <div class="realizada">
                                 <span>Tarea Realizada por:</span>

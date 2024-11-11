@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/api'
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 import { Orden, OrdenResponse, OrdenStatus, OrdenTiempo} from '../interfaces/orden';
 
@@ -30,7 +30,7 @@ export class OrdenDeTrabajoService {
     return this.http.get<OrdenResponse>(`${this.apiUrl}/ordenesCantidades`);
   }
 
-  modificarEstadoOrdenes(id: number, estado: string) {
+  modificarEstadoOrdenes(id: number, estado: string, tiempoTranscurrido?: number) {
     return this.http.put<OrdenStatus>(`${this.apiUrl}/ordenes/${id}/estado`, {estado});
   }
 

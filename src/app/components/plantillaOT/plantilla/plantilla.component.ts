@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Orden } from '../../../interfaces/orden';
 import { NgFor, NgIf } from '@angular/common';
 import { Subscription } from 'rxjs';
+import { TiempoService } from '../../../services/tiempo.service';
 
 @Component({
   selector: 'app-plantilla',
@@ -12,18 +13,18 @@ import { Subscription } from 'rxjs';
   templateUrl: './plantilla.component.html',
   styleUrls: ['./plantilla.component.scss']
 })
-export class PlantillaComponent implements OnInit, OnDestroy {
+export class PlantillaComponent implements OnInit {
 
   ordenes: Orden | undefined;
   fechaCreacion: string | undefined;
   descripcionDelActivo: string[] = [];
-  tiempoFinalizadoSub: Subscription | undefined;
-  tiempoTotal: number | undefined;
+
+  tiempoTranscurrido: number = 0;
 
   constructor(
     private orden: OrdenDeTrabajoService,
     private route: ActivatedRoute,
-    private tiempo: OrdenDeTrabajoService
+    private tiempoService: TiempoService
   ) {}
 
   ngOnInit(): void {
@@ -44,17 +45,14 @@ export class PlantillaComponent implements OnInit, OnDestroy {
         });
   
         this.descripcionDelActivo = (this.ordenes.descripciones ?? '').split('\n');
+        
+        if (this.ordenes.tiempo_transcurrido) {
+          this.tiempoTranscurrido = Math.floor(this.ordenes.tiempo_transcurrido / (1000 * 60));
+        }
       }
     });
   }
-
-  ngOnDestroy(): void {
-    // Asegúrate de desuscribirte cuando el componente se destruya
-    if (this.tiempoFinalizadoSub) {
-      this.tiempoFinalizadoSub.unsubscribe();
-    }
-  }
-
+  
   print() {
     window.print();
   }

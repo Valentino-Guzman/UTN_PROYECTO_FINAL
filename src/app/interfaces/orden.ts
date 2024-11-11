@@ -14,6 +14,7 @@ export interface Orden {
     descripciones?: string;
     numero_de_orden?: string;
     fecha_creacion_formateada?: string;
+    tiempo_transcurrido?: number
 }
 
 export interface OrdenStatus {
@@ -35,5 +36,4 @@ export interface GraficoOrden {
 export interface OrdenTiempo {
     tiempoInicio: number;
     tiempoTranscurrido: number;
-    intervalId: any;
 }

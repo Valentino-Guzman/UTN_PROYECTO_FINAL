@@ -1,0 +1,17 @@
+<div class="eliminar-operario">
+    <h2>Eliminar Operario</h2>
+
+    <label for="buscar-operario">Buscar operario:</label>
+    <input id="buscar-operario" type="text" [(ngModel)]="buscarId" placeholder="ID o nombre del operario" />
+    <button (click)="buscarOperario()">Buscar</button>
+
+    <div *ngIf="operarioData">
+        <p><strong>Nombre:</strong> {{ operarioData.name }}</p>
+        <p><strong>Correo:</strong> {{ operarioData.email }}</p>
+        <button (click)="eliminarOperario()">Confirmar Eliminación</button>
+        <button (click)="regresar()">Cancelar</button>
+    </div>
+
+    <p *ngIf="operarioNoEncontrado">Operario no encontrado. Intenta con otro ID o nombre.</p>
+</div>
+

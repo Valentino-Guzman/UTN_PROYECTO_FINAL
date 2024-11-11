@@ -1,35 +1,33 @@
 .card {
     display: flex;
-    max-width: 1100px;
-    padding: 10px;
+    max-width: 1200px; 
+    padding: 8px;
     margin-left: 10px;
     margin-bottom: 10px;
     background-color: #fff; 
     border: 1px solid #060640;
     border-radius: 8px; 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin-right: 10px;
-    animation: fadeIn 0.8s ease backwards;
+    overflow-x: auto;
 }
 
-.orden-tabla  {
-    width: 1100px; 
-    border-collapse: collapse; 
-    font-size: 14px; 
+.orden-tabla {
+    border-collapse: collapse;
+    font-size: 13px;
     border-bottom: 1px solid #060640;
     border-right: 1px solid #060640;
     animation: fadeIn 0.8s ease backwards;
+    max-width: 100%;
 }
-
 
 .orden-tabla th, .orden-tabla td {
     border-left: 1px solid #060640;
     border-top: 1px solid #060640;
-    padding: 4px;  
+    padding: 2px 4px;
 }
 
 .orden-tabla td {
-    height: 24px;
+    height: 20px;
 }
 
 .orden-tabla th {

@@ -1,37 +1,25 @@
-<div class="vista-usuario">
-    <h2>Bienvenido, {{ nombreOperario }}</h2>
-  
-    <h2>Órdenes de Trabajo asignadas</h2>
-  <div class="card">
-    <table class="orden-tabla">
-        <thead>
-            <tr>
-                <th>Número de orden</th>
-                <th>Tipo de orden</th>
-                <th>Activo</th>
-                <th>Piso</th>
-                <th>Sector</th>
-                <th>Edificio</th>
-                <th>Observación</th>
-                <th>Fecha Creación</th>
-                <th>Ver</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let orden of ordenes">
-              <td> {{ orden.numero_de_orden}}</td>
-              <td>{{ orden.tipo_ot_id }}</td>
-              <td>{{ orden.activo_nombre }}</td>
-              <td>{{ orden.piso_id }}</td>
-              <td>{{ orden.sector_id }}</td>
-              <td>{{ orden.edificio_id }}</td>
-              <td>{{ orden.observacion }}</td>
-              <td>{{ orden.fecha_creacion }}</td>
-              <td><button (click)="verOrden(orden.id)">Ver</button></td>
-              <td><button (click)="comenzarContador(orden.id)">Comenzar</button><button (click)="finalizarContador(orden.id)">Finalizar</button></td>
-            </tr>
-        </tbody>
-    </table>
+<div class="dashboard">
+  <div class="welcome">
+        <h2>Bienvenido, {{ nombreOperario }}</h2>
+  </div>
+  <div class="contenedor-contenido">
+      <div class="cuadrado">
+          <button [routerLink]="['/vistaUsuario', operarioId, 'ordenesOperario']" routerLinkActive="active">
+              <span class="texto">Ordenes</span>
+              <span class="tooltip">Ver las ordenes</span>
+          </button>
+      </div>
+      <div class="cuadrado">
+          <button [routerLink]="['/menu', 'ordenes-pendientes']"  routerLinkActive="active">
+              <span class="texto">Ordenes pendientes</span>
+              <span class="tooltip">Ver lista de las ordenes pendientes</span>
+          </button>
+      </div>
+      <div class="cuadrado">
+          <button [routerLink]="['/menu', 'generar-orden']"  routerLinkActive="active">
+              <span class="texto">Generar orden</span>
+              <span class="tooltip">Crea una nueva orden de trabajo</span>
+          </button> 
+      </div>
   </div>
 </div>

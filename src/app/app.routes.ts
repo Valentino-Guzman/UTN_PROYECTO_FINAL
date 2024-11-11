@@ -17,7 +17,7 @@ import { SectorComponent } from './components/gestiones/gestion_ordenes/orden-de
 import { CrearActivoComponent } from './components/gestiones/gestion_infraestructura/activo/crear-activo/crear-activo.component';
 import { VerSectorComponent } from './components/gestiones/gestion_infraestructura/sector/ver-sector/ver-sector.component';
 import { ConfiguracionComponent } from './components/configuracion/configuracion.component';
-import { VerOperariosComponent } from './components/gestiones/gestion_operarios/ver-operarios/ver-operarios.component';
+import { VerOperarioComponent } from './components/gestiones/gestion_operarios/ver-operarios/ver-operarios.component';
 import { CrearOperarioComponent } from './components/gestiones/gestion_operarios/crear-operario/crear-operario.component';
 import { OrdenesComponent } from './pages/vistaAdmin/menu/ordenes/ordenes.component';
 import { CrearEdificioComponent } from './components/gestiones/gestion_infraestructura/edificio/crear-edificio/crear-edificio.component';
@@ -25,10 +25,10 @@ import { VerEdificioComponent } from './components/gestiones/gestion_infraestruc
 import { CrearPisoComponent } from './components/gestiones/gestion_infraestructura/piso/crear-piso/crear-piso.component';
 import { VerPisoComponent } from './components/gestiones/gestion_infraestructura/piso/ver-piso/ver-piso.component';
 import { VerUbicacionComponent } from './components/gestiones/gestion_infraestructura/ubicacion/ver-ubicacion/ver-ubicacion.component';
-import { VistaUsuarioComponent } from './pages/vistaOperario/vista-operario/vista-usuario.component';
 import { CrearUbicacionComponent } from './components/gestiones/gestion_infraestructura/ubicacion/crear-ubicacion/crear-ubicacion.component';
-import { PisoComponent } from './components/gestiones/gestion_ordenes/orden-de-trabajo/piso/piso.component';
 import { VistaOrdenComponent } from './components/gestiones/gestion_ordenes/verOrden/vista-orden/vista-orden.component';
+import { VistaUsuarioComponent } from './pages/vistaOperario/vista-operario/vista-usuario.component';
+import { OrdenesComponentOperario } from './pages/vistaOperario/ordenes/ordenes.component';
 
 
 
@@ -55,7 +55,7 @@ export const routes:Routes = [
             { path: 'ver-sectores', component: VerSectorComponent },
             { path: 'crear-sector', component: CrearSectorComponent},
             
-            { path: 'ver-operarios', component: VerOperariosComponent },
+            { path: 'ver-operarios', component: VerOperarioComponent },
             { path: 'crear-operario', component: CrearOperarioComponent },
 
             { path: 'configuracion', component: ConfiguracionComponent },
@@ -78,6 +78,7 @@ export const routes:Routes = [
         ]
     },
     { path: 'menu/plantilla/:id', component: PlantillaComponent },
-    { path: 'vistaUsuario/:id', component:VistaUsuarioComponent},
+    { path: 'vistaUsuario/:id', component: VistaUsuarioComponent },
+    { path: 'vistaUsuario/:id/ordenesOperario', component: OrdenesComponentOperario },
     { path: '', redirectTo: '/home', pathMatch: 'full' },
 ];

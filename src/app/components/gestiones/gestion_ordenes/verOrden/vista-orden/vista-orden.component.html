@@ -1,26 +1,70 @@
 <div class="card">
     <table class="orden-tabla">
-        <thead>
-            <tr>
-                <th>Número de Orden</th>
-                <th>Nombre del Activo</th>
-                <th>Código Único</th>
-                <th>Fecha de Creación</th>
-                <th>Nombre del Piso</th>
-                <th>Nombre del Edificio</th>
-                <th>Ver</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let orden of ordenes">
-                <td>{{ orden.numero_de_orden }}</td>
-                <td>{{ orden.activo_nombre }}</td>
-                <td>{{ orden.codigo_concatenado}}</td>
-                <td>{{ orden.fecha_creacion_formateada }}</td>
-                <td>{{ orden.piso_id }}</td>
-                <td>{{ orden.edificio_id}}</td>
-                <td><button (click)="verOrden(orden.id)">Ver</button></td>
-            </tr>
-        </tbody>
+      <thead>
+        <tr>
+          <th>Número de Orden</th>
+          <th>Nombre del Activo</th>
+          <th>Código Único</th>
+          <th>Fecha de Creación</th>
+          <th>Nombre del Piso</th>
+          <th>Nombre del Edificio</th>
+          <th>Operario</th> <!-- Nueva columna "Operario" -->
+          <th>Ver</th>
+        </tr>
+        <tr>
+          <th>
+            <select (click)="filtrarOrdenes()" id="numero_de_orden" [(ngModel)]="filtros.numero_orden" name="numero_de_orden">
+              <option value="">Seleccione Número de Orden</option>
+              <option *ngFor="let orden of ordenes" [value]="orden.numero_de_orden">{{ orden.numero_de_orden }}</option>
+            </select>
+          </th>
+          <th>
+            <select (click)="filtrarOrdenes()" id="nombre_activo" [(ngModel)]="filtros.nombre_activo" name="nombre_activo">
+              <option value="">Seleccione Activo</option>
+              <option *ngFor="let activo of activos" [value]="activo.nombre">{{ activo.nombre }}</option>
+            </select>
+          </th>
+          <th>
+            <select (click)="filtrarOrdenes()" id="nombre_activo" [(ngModel)]="filtros.fecha" name="nombre_activo">
+                <option value="">Seleccione Codigo de activo</option>
+                <option *ngFor="let orden of ordenes" [value]="orden.fecha_creacion">{{ orden.fecha_creacion }}</option>
+              </select>
+          </th>
+          <th>
+            <select (click)="filtrarOrdenes()" id="nombre_activo" [(ngModel)]="filtros.fecha" name="nombre_activo">
+                <option value="">Seleccione Fecha</option>
+                <option *ngFor="let orden of ordenes" [value]="orden.fecha_creacion">{{ orden.fecha_creacion }}</option>
+              </select>
+          </th>
+          <th>
+            <select (click)="filtrarOrdenes()" id="piso_id" [(ngModel)]="filtros.piso_id" name="piso_id">
+                <option value="">Seleccione Piso</option>
+                <option *ngFor="let piso of pisos" [value]="piso.numero">{{ piso.numero }}</option>
+              </select>
+          </th>
+          <th> <select (click)="filtrarOrdenes()" id="edificio_id" [(ngModel)]="filtros.edificio_id" name="edificio_id">
+            <option value="">Seleccione Edificio</option>
+            <option *ngFor="let edificio of edificios" [value]="edificio.nombre">{{ edificio.nombre }}</option>
+          </select></th>
+          <th><select (click)="filtrarOrdenes()" id="operario_id" [(ngModel)]="filtros.operario_id" name="operario_id">
+            <option value="">Seleccione Operario</option>
+            <option *ngFor="let operario of operarios" [value]="operario.nombre">{{ operario.nombre }}</option>
+          </select></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let orden of ordenesFiltradas">
+          <td>{{ orden.numero_de_orden }}</td>
+          <td>{{ orden.activo_nombre }}</td>
+          <td>{{ orden.codigo_concatenado }}</td>
+          <td>{{ orden.fecha_creacion_formateada }}</td>
+          <td>{{ orden.piso_id }}</td>
+          <td>{{ orden.edificio_id }}</td>
+          <td>{{ orden.usuario_id }}</td>
+          <td><button (click)="verOrden(orden.id)">Ver</button></td>
+        </tr>
+      </tbody>
     </table>
-</div>
+  </div>
+  

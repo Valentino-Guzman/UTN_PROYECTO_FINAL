@@ -1,0 +1,43 @@
+<div class="main">
+    <div class="contenedor">
+        <div class="contenedor-contenido">
+          <div class="vista-usuario">
+            <h2>Ordenes de Trabajo asignadas</h2>
+          <div class="card">
+            <table class="orden-tabla">
+                <thead>
+                    <tr>
+                        <th>Número de orden</th>
+                        <th>Tipo de orden</th>
+                        <th>Activo</th>
+                        <th>Piso</th>
+                        <th>Sector</th>
+                        <th>Edificio</th>
+                        <th>Observación</th> 
+                        <th>Fecha Creación</th>
+                        <th>Ver</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let orden of ordenes">
+                      <td> {{ orden.numero_de_orden}}</td>
+                      <td>{{ orden.tipo_ot_id }}</td>
+                      <td>{{ orden.activo_nombre }}</td>
+                      <td>{{ orden.piso_id }}</td>
+                      <td>{{ orden.sector_id }}</td>
+                      <td>{{ orden.edificio_id }}</td>
+                      <td>{{ orden.observacion }}</td>
+                      <td>{{ orden.fecha_creacion }}</td>
+                      <td><button (click)="verOrden(orden.id)">Ver</button></td>
+                      <td>
+                        <button (click)="comenzar(orden.id)">Comenzar</button>
+                        <button (click)="finalizar(orden.id)">Finalizar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+        </div>
+        </div>
+    </div>
+  </div>

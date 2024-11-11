@@ -1,1 +1,34 @@
-<p>ver-operarios works!</p>
+<div class="activo-contenedor">
+    <button class="btn-atras" (click)="regresar()">Atras</button>
+    <div class="contenedor">
+        <div class="welcome">
+            <h1>Lista Activos</h1>
+        </div>
+        <div class="card">
+            <table class="activos-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre del operario</th> 
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let operario of operarios">
+                        <td>{{ operario.id }}</td>
+                        <td>{{ operario.nombre }}</td>
+                        <td class="acciones">
+                            <button (click)="editar()" class="btn-editar">
+                               <app-svg-editar></app-svg-editar>
+                            </button>
+                            <button (click)="eliminar()" class="btn-eliminar">
+                                <app-svg-basura></app-svg-basura>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
