@@ -3,7 +3,6 @@ import { OrdenDeTrabajoService } from '../../../services/orden-de-trabajo.servic
 import { ActivatedRoute } from '@angular/router';
 import { Orden } from '../../../interfaces/orden';
 import { NgFor, NgIf } from '@angular/common';
-import { Subscription } from 'rxjs';
 import { TiempoService } from '../../../services/tiempo.service';
 
 @Component({
